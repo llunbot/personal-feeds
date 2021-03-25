@@ -46,6 +46,7 @@
       <outline htmlUrl="https://neizod.github.io/" type="rss" xmlUrl="https://neizod.github.io/feed.xml" title="neizod's speculation" text="neizod's speculation" />
       <outline type="rss" htmlUrl="https://thanapon.info" xmlUrl="https://thanapon.info/feed/" title="Thanapon" text="Thanapon" />
       <outline type="rss" htmlUrl="https://srakrn.me/blog" text="@srakrn's Blog" xmlUrl="https://srakrn.me/blog/feed/" title="@srakrn's Blog" />
+      <outline title="เม่น • บล็อก" type="rss" xmlUrl="https://menn.blog/rss/" text="เม่น • บล็อก" htmlUrl="https://menn.blog/" />
     </outline>
   </body>
 </opml>
