@@ -29,7 +29,6 @@
       <outline title="cheeaunblog" xmlUrl="https://cheeaun.com/blog/feed.xml" type="rss" htmlUrl="https://cheeaun.com/blog" text="cheeaunblog" />
       <outline type="rss" xmlUrl="https://alistapart.com/main/feed/" text="A List Apart: The Full Feed" title="A List Apart: The Full Feed" htmlUrl="https://alistapart.com" />
       <outline title="Daring Fireball" htmlUrl="https://daringfireball.net/" xmlUrl="https://daringfireball.net/feeds/main" type="rss" text="Daring Fireball" />
-      <outline text="tAp's blog" htmlUrl="http://visibletrap.blogspot.com/" xmlUrl="http://visibletrap.blogspot.com/feeds/posts/default" type="rss" title="tAp's blog" />
       <outline type="rss" text="Articles on Smashing Magazine — For Web Designers And Developers" htmlUrl="https://www.smashingmagazine.com/" title="Articles on Smashing Magazine — For Web Designers And Developers" xmlUrl="https://www.smashingmagazine.com/feed/" />
       <outline xmlUrl="https://www.informationisbeautiful.net/feed" type="rss" htmlUrl="https://informationisbeautiful.net" text="Information is Beautiful" title="Information is Beautiful" />
       <outline xmlUrl="https://webkit.org/blog/feed/" text="Blog – WebKit" title="Blog – WebKit" htmlUrl="https://webkit.org" type="rss" />
@@ -47,6 +46,7 @@
       <outline type="rss" htmlUrl="https://thanapon.info" xmlUrl="https://thanapon.info/feed/" title="Thanapon" text="Thanapon" />
       <outline type="rss" htmlUrl="https://srakrn.me/blog" text="@srakrn's Blog" xmlUrl="https://srakrn.me/blog/feed/" title="@srakrn's Blog" />
       <outline title="เม่น • บล็อก" type="rss" xmlUrl="https://menn.blog/rss/" text="เม่น • บล็อก" htmlUrl="https://menn.blog/" />
+      <outline text="tAp's blog" htmlUrl="http://visibletrap.blogspot.com/" xmlUrl="http://visibletrap.blogspot.com/feeds/posts/default" type="rss" title="tAp's blog" />
     </outline>
   </body>
 </opml>
