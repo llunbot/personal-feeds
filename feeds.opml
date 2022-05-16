@@ -21,7 +21,7 @@
       <outline text="DC Rainmaker" title="DC Rainmaker" htmlUrl="https://www.dcrainmaker.com" xmlUrl="https://www.dcrainmaker.com/feed" type="rss" />
     </outline>
     <outline title="Me" text="Me">
-      <outline type="rss" text="@llun story" title="@llun story" xmlUrl="https://www.llun.me/feeds/main" htmlUrl="https://www.llun.me/" />
+      <outline type="rss" text="@llun story" title="@llun story" xmlUrl="https://www.llun.me/feeds/atom.xml" htmlUrl="https://www.llun.me/" />
     </outline>
     <outline text="Tech" title="Tech">
       <outline text="AWS News Blog" title="AWS News Blog" htmlUrl="https://aws.amazon.com/blogs/aws/" xmlUrl="https://aws.amazon.com/blogs/aws/feed/" type="rss" />
