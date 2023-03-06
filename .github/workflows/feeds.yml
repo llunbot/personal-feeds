@@ -15,5 +15,5 @@ jobs:
       - name: Run Action
         uses: llun/feeds@refactor-storage
         with:
-          outputDirectory: contents
+          storageType: files
           customDomain: feeds.llun.dev
