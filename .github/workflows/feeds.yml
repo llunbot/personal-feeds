@@ -13,7 +13,7 @@ jobs:
     name: Build static feeds site
     steps:
       - name: Run Action
-        uses: llun/feeds@2.5
+        uses: llun/feeds@2.5.1
         with:
           storageType: files
           customDomain: feeds.llun.dev
