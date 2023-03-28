@@ -33,6 +33,7 @@
       <outline xmlUrl="https://www.informationisbeautiful.net/feed" type="rss" htmlUrl="https://informationisbeautiful.net" text="Information is Beautiful" title="Information is Beautiful" />
       <outline xmlUrl="https://webkit.org/blog/feed/" text="Blog – WebKit" title="Blog – WebKit" htmlUrl="https://webkit.org" type="rss" />
       <outline htmlUrl="https://arstechnica.com" xmlUrl="http://feeds.arstechnica.com/arstechnica/BAaf" type="rss" title="Ars Technica" text="Ars Technica" />
+      <outline htmlUrl="https://news.ycombinator.com" xmlUrl="https://news.ycombinator.com/rss" type="rss" title="Hacker News" text="Links for the intellectually curious, ranked by readers." />
     </outline>
     <outline title="Thai" text="Thai">
       <outline xmlUrl="https://iannnnn.com/feed" title="iannnnn.com" type="rss" text="iannnnn.com" htmlUrl="https://iannnnn.com" />
