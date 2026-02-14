@@ -62,6 +62,10 @@
       <outline htmlUrl="https://news.ycombinator.com" xmlUrl="https://news.ycombinator.com/rss"
         type="rss" title="Hacker News"
         text="Links for the intellectually curious, ranked by readers." />
+      <outline type="rss" text="Simon Willison’s Weblog" title="Simon Willison’s Weblog"
+        htmlUrl="https://simonwillison.net/" xmlUrl="https://simonwillison.net/atom/entries/" />
+      <outline type="rss" text="Sebastian Raschka" title="Sebastian Raschka"
+        htmlUrl="https://sebastianraschka.com/blog/" xmlUrl="https://sebastianraschka.com/blog/rss.xml" />
     </outline>
     <outline title="Thai" text="Thai">
       <outline xmlUrl="https://iannnnn.com/feed" title="iannnnn.com" type="rss" text="iannnnn.com"
