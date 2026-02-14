@@ -17,10 +17,6 @@
         xmlUrl="https://bikerumor.com/feed/" />
       <outline text="The Radavist" type="rss" htmlUrl="https://theradavist.com"
         xmlUrl="https://theradavist.com/feed/" title="The Radavist" />
-      <outline text="Moots" xmlUrl="https://moots.com/feed/" type="rss" htmlUrl="https://moots.com"
-        title="Moots" />
-      <outline title="BikeRadar" htmlUrl="https://www.bikeradar.com" type="rss"
-        xmlUrl="https://www.bikeradar.com/feed/" text="BikeRadar" />
       <outline text="CyclingTips" type="rss" htmlUrl="https://cyclingtips.com" title="CyclingTips"
         xmlUrl="https://cyclingtips.com/feed  " />
       <outline htmlUrl="https://www.hambini.com" text="Hambini Engineering"
