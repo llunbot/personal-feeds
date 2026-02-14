@@ -29,6 +29,8 @@
         htmlUrl="https://www.rouleur.cc/blogs/the-rouleur-journal" />
       <outline text="DC Rainmaker" title="DC Rainmaker" htmlUrl="https://www.dcrainmaker.com"
         xmlUrl="https://www.dcrainmaker.com/feed" type="rss" />
+      <outline text="Moots" title="Moots" htmlUrl="https://moots.com/blogs/news"
+        xmlUrl="https://moots.com/blogs/news.atom" type="rss" />
     </outline>
     <outline title="Me" text="Me">
       <outline type="rss" text="@llun story" title="@llun story"
