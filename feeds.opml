@@ -68,6 +68,8 @@
         htmlUrl="https://simonwillison.net/" xmlUrl="https://simonwillison.net/atom/entries/" />
       <outline type="rss" text="Sebastian Raschka" title="Sebastian Raschka"
         htmlUrl="https://sebastianraschka.com/blog/" xmlUrl="https://sebastianraschka.com/blog/rss.xml" />
+      <outline type="rss" text="LessWrong" title="LessWrong"
+        htmlUrl="https://www.lesswrong.com/" xmlUrl="https://www.lesswrong.com/feed.xml?view=curated-rss" />
     </outline>
     <outline title="Thai" text="Thai">
       <outline xmlUrl="https://iannnnn.com/feed" title="iannnnn.com" type="rss" text="iannnnn.com"
