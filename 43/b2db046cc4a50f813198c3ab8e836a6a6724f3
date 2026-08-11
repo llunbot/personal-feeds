@@ -1,0 +1,14 @@
+.github/workflows/feeds.yml
+  h_580a04e334fef4 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "43b2db046cc4a50f813198c3ab8e836a6a6724f3",
+  "prompts": {},
+  "humans": {
+    "h_580a04e334fef4": {
+      "author": "Maythee Anegboonlap <contact@llun.dev>"
+    }
+  }
+}
