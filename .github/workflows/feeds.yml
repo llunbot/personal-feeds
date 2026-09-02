@@ -5,14 +5,19 @@ on:
     branches:
       - main
   workflow_dispatch:
+  issues:
+    types: [opened]
 
 jobs:
   feeds:
     runs-on: ubuntu-latest
     name: Build static feeds site
+    permissions:
+      contents: write
+      issues: write
     steps:
       - name: Run Action
-        uses: llun/feeds@4.5.1
+        uses: llun/feeds@4.6.0
         with:
           storageType: files
           customDomain: feeds.llun.dev
