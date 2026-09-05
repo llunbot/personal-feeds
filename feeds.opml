@@ -1,0 +1,50 @@
+<opml version="2.0">
+  <head>
+    <title>Feeds</title>
+  </head>
+  <body>
+    <outline text="Apple" title="Apple">
+      <outline type="rss" text="Macworld" title="Macworld" xmlUrl="http://www.macworld.com/index.rss" htmlUrl="https://www.macworld.com"/>
+      <outline type="rss" text="MacRumors: Mac News and Rumors - All Stories" title="MacRumors: Mac News and Rumors - All Stories" xmlUrl="http://feeds.macrumors.com/MacRumors-All" htmlUrl="https://www.macrumors.com"/>
+    </outline>
+    <outline text="Cycling" title="Cycling">
+      <outline type="rss" text="Bikerumor" title="Bikerumor" xmlUrl="https://bikerumor.com/feed/" htmlUrl="https://bikerumor.com"/>
+      <outline type="rss" text="The Radavist" title="The Radavist" xmlUrl="https://theradavist.com/feed/" htmlUrl="https://theradavist.com"/>
+      <outline type="rss" text="CyclingTips" title="CyclingTips" xmlUrl="https://cyclingtips.com/feed  " htmlUrl="https://cyclingtips.com"/>
+      <outline type="rss" text="Cyclist.co.uk" title="Cyclist.co.uk" xmlUrl="https://www.cyclist.co.uk/feeds/all" htmlUrl="https://www.cyclist.co.uk/feeds/all"/>
+      <outline type="rss" text="DC Rainmaker" title="DC Rainmaker" xmlUrl="https://www.dcrainmaker.com/feed" htmlUrl="https://www.dcrainmaker.com"/>
+      <outline type="rss" text="Moots" title="Moots" xmlUrl="https://moots.com/blogs/news.atom" htmlUrl="https://moots.com/blogs/news"/>
+    </outline>
+    <outline text="Me" title="Me">
+      <outline type="rss" text="@llun story" title="@llun story" xmlUrl="https://www.llun.me/feeds/atom.xml" htmlUrl="https://www.llun.me/"/>
+    </outline>
+    <outline text="Tech" title="Tech">
+      <outline type="rss" text="AWS News Blog" title="AWS News Blog" xmlUrl="https://aws.amazon.com/blogs/aws/feed/" htmlUrl="https://aws.amazon.com/blogs/aws/"/>
+      <outline type="rss" text="HashiCorp Blog" title="HashiCorp Blog" xmlUrl="https://www.hashicorp.com/blog/feed.xml" htmlUrl="https://hashicorp.com/blog"/>
+      <outline type="rss" text="cheeaunblog" title="cheeaunblog" xmlUrl="https://cheeaun.com/blog/feed.xml" htmlUrl="https://cheeaun.com/blog"/>
+      <outline type="rss" text="A List Apart: The Full Feed" title="A List Apart: The Full Feed" xmlUrl="https://alistapart.com/main/feed/" htmlUrl="https://alistapart.com"/>
+      <outline type="rss" text="Daring Fireball" title="Daring Fireball" xmlUrl="https://daringfireball.net/feeds/main" htmlUrl="https://daringfireball.net/"/>
+      <outline type="rss" text="Articles on Smashing Magazine — For Web Designers And Developers" title="Articles on Smashing Magazine — For Web Designers And Developers" xmlUrl="https://www.smashingmagazine.com/feed/" htmlUrl="https://www.smashingmagazine.com/"/>
+      <outline type="rss" text="Information is Beautiful" title="Information is Beautiful" xmlUrl="https://www.informationisbeautiful.net/feed" htmlUrl="https://informationisbeautiful.net"/>
+      <outline type="rss" text="Blog – WebKit" title="Blog – WebKit" xmlUrl="https://webkit.org/blog/feed/" htmlUrl="https://webkit.org"/>
+      <outline type="rss" text="Ars Technica" title="Ars Technica" xmlUrl="http://feeds.arstechnica.com/arstechnica/BAaf" htmlUrl="https://arstechnica.com"/>
+      <outline type="rss" text="Links for the intellectually curious, ranked by readers." title="Hacker News" xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com"/>
+      <outline type="rss" text="Simon Willison’s Weblog" title="Simon Willison’s Weblog" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net/"/>
+      <outline type="rss" text="LessWrong" title="LessWrong" xmlUrl="https://www.lesswrong.com/feed.xml?view=curated-rss" htmlUrl="https://www.lesswrong.com/"/>
+      <outline type="rss" text="Google Deepmind news" title="Google Deepmind news" xmlUrl="https://deepmind.google/blog/rss.xml"/>
+      <outline type="rss" text="Google AI feed" title="Google AI feed" xmlUrl="https://blog.google/innovation-and-ai/technology/ai/rss/"/>
+    </outline>
+    <outline text="Thai" title="Thai">
+      <outline type="rss" text="iannnnn.com" title="iannnnn.com" xmlUrl="https://iannnnn.com/feed" htmlUrl="https://iannnnn.com"/>
+      <outline type="rss" text="markpeak.net" title="markpeak.net" xmlUrl="https://markpeak.net/feed/" htmlUrl="https://markpeak.net"/>
+      <outline type="rss" text="LewCPE&apos;s Blog" title="LewCPE&apos;s Blog" xmlUrl="http://lewcpe.com/blog/feed" htmlUrl="https://lewcpe.com/blog"/>
+      <outline type="rss" text="Blognone" title="Blognone" xmlUrl="https://www.blognone.com/node/feed" htmlUrl="https://www.blognone.com"/>
+      <outline type="rss" text="cc :: somkiat" title="cc :: somkiat" xmlUrl="https://www.somkiat.cc/feed/" htmlUrl="https://www.somkiat.cc"/>
+      <outline type="rss" text="icez network" title="icez network" xmlUrl="https://www.icez.net/blog/feed" htmlUrl="https://www.icez.net/blog"/>
+      <outline type="rss" text="neizod&apos;s speculation" title="neizod&apos;s speculation" xmlUrl="https://neizod.github.io/feed.xml" htmlUrl="https://neizod.github.io/"/>
+      <outline type="rss" text="Thanapon" title="Thanapon" xmlUrl="https://thanapon.info/feed/" htmlUrl="https://thanapon.info"/>
+      <outline type="rss" text="เม่น • บล็อก" title="เม่น • บล็อก" xmlUrl="https://menn.blog/rss/" htmlUrl="https://menn.blog/"/>
+      <outline type="rss" text="tAp&apos;s blog" title="tAp&apos;s blog" xmlUrl="http://visibletrap.blogspot.com/feeds/posts/default" htmlUrl="http://visibletrap.blogspot.com/"/>
+    </outline>
+  </body>
+</opml>
