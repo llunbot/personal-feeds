@@ -33,6 +33,7 @@
       <outline type="rss" text="LessWrong" title="LessWrong" xmlUrl="https://www.lesswrong.com/feed.xml?view=curated-rss" htmlUrl="https://www.lesswrong.com/"/>
       <outline type="rss" text="Google Deepmind news" title="Google Deepmind news" xmlUrl="https://deepmind.google/blog/rss.xml"/>
       <outline type="rss" text="Google AI feed" title="Google AI feed" xmlUrl="https://blog.google/innovation-and-ai/technology/ai/rss/"/>
+      <outline type="rss" text="Piccalilli" title="Piccalilli" xmlUrl="https://piccalil.li/feed.xml"/>
     </outline>
     <outline text="Thai" title="Thai">
       <outline type="rss" text="iannnnn.com" title="iannnnn.com" xmlUrl="https://iannnnn.com/feed" htmlUrl="https://iannnnn.com"/>
