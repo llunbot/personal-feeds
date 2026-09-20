@@ -17,7 +17,7 @@ jobs:
       issues: write
     steps:
       - name: Run Action
-        uses: llun/feeds@4.7.0
+        uses: llun/feeds@4.7.1
         with:
           storageType: files
           customDomain: feeds.llun.dev
