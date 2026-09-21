@@ -1,0 +1,19 @@
+.github/workflows/feeds.yml
+  s_47f7d9428e21b3::t_6a6f457042e55a 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "50c5ea4025dc90e0a1c83d2ed6e3daf6beb63eb3",
+  "prompts": {},
+  "sessions": {
+    "s_47f7d9428e21b3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f4c0d726-0d11-48ab-bef5-ebc4bfd7510d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Maythee Anegboonlap <contact@llun.dev>"
+    }
+  }
+}
