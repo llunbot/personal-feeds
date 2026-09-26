@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:12e071ac-0809-57f9-b228-ada53f88e607</id>
   <title>Cycling — Feeds</title>
-  <updated>2026-09-26T18:51:50.000Z</updated>
+  <updated>2026-09-26T21:16:04.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,25 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Cycling</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:96e208fe-8f3d-57c7-9b2d-19fae0edbdfc</id>
+    <title>Kasia v. Demi: Worlds Provided Another Chapter in One of Cycling’s Great Rivalries</title>
+    <updated>2026-09-26T21:16:04.000Z</updated>
+    <author>
+      <name>Logan Jones-Wilkins</name>
+    </author>
+    <published>2026-09-26T21:16:04.000Z</published>
+    <link rel="alternate" href="https://velo.outsideonline.com/road/road-racing/uci-road-worlds-kasia-v-demi-great-rivalry/"/>
+    <category term="Cycling"/>
+    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/3d0c677dd891634678e9ca8f414f2d8019c130800dfe1176c5d7af7af90ffc19.jpg" alt="Kasia v. Demi: Worlds Provided Another Chapter in One of Cycling’s Great Rivalries" /&gt;&lt;/figure&gt;
+&lt;p&gt;In a sport with its history defined by one-on-one battles, the tow-up sprint finish between Demi Vollering and Kasia Niewiadoma showed just how special the rivalry has become. &lt;/p&gt;
+&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/uci-road-worlds-kasia-v-demi-great-rivalry/"&gt;Kasia v. Demi: Worlds Provided Another Chapter in One of Cycling’s Great Rivalries&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
+    <source>
+      <title>CyclingTips</title>
+      <link rel="self" href="https://cyclingtips.com/feed  "/>
+      <link rel="alternate" href="https://velo.outsideonline.com/"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:abba1cba-9c76-509a-ba6d-5d566dc5697f</id>
     <title>Slovakia Team Masseur Thrust Into Elite Men’s Worlds Despite Last Competing Nine Years Ago</title>
@@ -4800,25 +4819,6 @@ At that exact moment, I was listening to “Little Balcony” by Hyukoh and Suns
       <title>Cyclist.co.uk</title>
       <link rel="self" href="https://www.cyclist.co.uk/feeds/all"/>
       <link rel="alternate" href="https://www.cyclist.co.uk/"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:5d90ca6d-88f6-5190-a900-954e690884f0</id>
-    <title>The 13lb XDS X-Lab RT9 is a Climbing Dream (With One Catch)</title>
-    <updated>2026-09-22T17:37:18.000Z</updated>
-    <author>
-      <name>Josh Ross</name>
-    </author>
-    <published>2026-09-22T17:37:18.000Z</published>
-    <link rel="alternate" href="https://velo.outsideonline.com/road/road-gear/xds-x-lab-rt9-long-term-review/"/>
-    <category term="Cycling"/>
-    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/7f907bc4c6f469fb671bba36ff0d189eb66c192f82558de5c988319b2431d5e9.jpg" alt="The 13lb XDS X-Lab RT9 is a Climbing Dream (With One Catch)" /&gt;&lt;/figure&gt;
-&lt;p&gt;An Everest Roam, seven centuries in seven days, and over 2,000 miles of testing. Here is the definitive verdict on the world's lightest production road bike.&lt;/p&gt;
-&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-gear/xds-x-lab-rt9-long-term-review/"&gt;The 13lb XDS X-Lab RT9 is a Climbing Dream (With One Catch)&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
-    <source>
-      <title>CyclingTips</title>
-      <link rel="self" href="https://cyclingtips.com/feed  "/>
-      <link rel="alternate" href="https://velo.outsideonline.com/"/>
     </source>
   </entry>
   <entry>
