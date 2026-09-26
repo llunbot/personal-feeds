@@ -1,0 +1,25 @@
+{
+  "all": "feeds/all.xml",
+  "categories": [
+    {
+      "title": "Apple",
+      "path": "feeds/categories/f223faa96f22916294922b171a2696d868fd1f9129302eb41a45b2a2ea2ebbfd.xml"
+    },
+    {
+      "title": "Cycling",
+      "path": "feeds/categories/5343ac1023785c197e9572ec0010e2cb961b4263590ac974939daf9b34ce7d65.xml"
+    },
+    {
+      "title": "Me",
+      "path": "feeds/categories/d30af076b0dc85cc5b0074b403f74770b73af84a70c2f77f7a3609d0db23112e.xml"
+    },
+    {
+      "title": "Tech",
+      "path": "feeds/categories/d0da7ab8bc927960b4ca3c6678137464baf9266c4fe3281f30e4769f6c4427db.xml"
+    },
+    {
+      "title": "Thai",
+      "path": "feeds/categories/ad705ee19c048a9f50f95320e110b07cd3296c596c2fbdb8e3bd8971ef85efaf.xml"
+    }
+  ]
+}
