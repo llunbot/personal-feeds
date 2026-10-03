@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:12e071ac-0809-57f9-b228-ada53f88e607</id>
   <title>Cycling — Feeds</title>
-  <updated>2026-10-03T14:54:12.000Z</updated>
+  <updated>2026-10-03T15:05:23.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,25 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Cycling</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:2c6db788-b126-5b2d-8855-de90fd4bca7c</id>
+    <title>Dream Season Continues as New World Champ Vollering Defends European Title</title>
+    <updated>2026-10-03T15:05:23.000Z</updated>
+    <author>
+      <name>sstokes</name>
+    </author>
+    <published>2026-10-03T15:05:23.000Z</published>
+    <link rel="alternate" href="https://velo.outsideonline.com/road/road-racing/vollering-defends-european-title/"/>
+    <category term="Cycling"/>
+    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/d9413600f89481693ddc6521ed052ea8fe91fae897dbf6ba0dc6d9237ffaded7.jpg" alt="Dream Season Continues as New World Champ Vollering Defends European Title" /&gt;&lt;/figure&gt;
+&lt;p&gt;Demi Vollering is too strong once again, soloing to second consecutive European champs victory.&lt;/p&gt;
+&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/vollering-defends-european-title/"&gt;Dream Season Continues as New World Champ Vollering Defends European Title&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
+    <source>
+      <title>CyclingTips</title>
+      <link rel="self" href="https://cyclingtips.com/feed  "/>
+      <link rel="alternate" href="https://velo.outsideonline.com/"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:e8426f31-5a2b-5536-aad5-bf06086bd304</id>
     <title>‘Larry! Larry!’: Fans Give Warbasse Royal Treatment in Historic USA Worlds Win</title>
@@ -6268,25 +6287,6 @@ At first it was just the two of us. Over the following months Lachlan, Chris, an
     <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/9bebc5787382c318b6f6f02b860e94b3f23f8f3cbf0b1787028f6e7a8304152b.jpg" alt="World Champion and Worker: Brandon McNulty Can Only Joke about Getting Pulls From Tadej Pogačar" /&gt;&lt;/figure&gt;
 &lt;p&gt;'Maybe Tadej will have to ride for me': Brandon McNulty keeps the rainbow jersey in Team UAE for a third year but he's in no doubt who the boss will be in 2027.&lt;/p&gt;
 &lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/maybe-tadej-will-ride-for-me-world-champion-mcnulty-can-only-joke-about-getting-pulls-from-pogacar/"&gt;World Champion and Worker: Brandon McNulty Can Only Joke about Getting Pulls From Tadej Pogačar&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
-    <source>
-      <title>CyclingTips</title>
-      <link rel="self" href="https://cyclingtips.com/feed  "/>
-      <link rel="alternate" href="https://velo.outsideonline.com/"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:61dab77e-d53c-5a45-aaaa-322656ba93bd</id>
-    <title>‘I Thought My Career Was Done’: Michael Matthews Earns Surprise Silver Medal at Worlds After Major Setbacks</title>
-    <updated>2026-09-28T07:14:29.000Z</updated>
-    <author>
-      <name>Will Tracy</name>
-    </author>
-    <published>2026-09-28T07:14:29.000Z</published>
-    <link rel="alternate" href="https://velo.outsideonline.com/road/road-racing/matthews-earns-surprise-silver-at-worlds/"/>
-    <category term="Cycling"/>
-    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/5e7601fd3dca62ce0be63a748e9fa4059a998a6613f03ad2b965c84c5dcc5e41.jpg" alt="‘I Thought My Career Was Done’: Michael Matthews Earns Surprise Silver Medal at Worlds After Major Setbacks" /&gt;&lt;/figure&gt;
-&lt;p&gt;The 36-year-old Australian has recovered from a pulmonary embolism and two broken wrists in the past year and a half. Silver at worlds has him elated. &lt;/p&gt;
-&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/matthews-earns-surprise-silver-at-worlds/"&gt;‘I Thought My Career Was Done’: Michael Matthews Earns Surprise Silver Medal at Worlds After Major Setbacks&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
     <source>
       <title>CyclingTips</title>
       <link rel="self" href="https://cyclingtips.com/feed  "/>
