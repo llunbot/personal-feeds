@@ -30,7 +30,7 @@
 
 
 
-&lt;p&gt;Following numerous complaints from iPhone 18 Pro Max owners, it’s now been officially acknowledged that some units have a problem placing calls, sending texts, and accessing data. Not by Apple itself, but by the carrier AT&amp;amp;T, which has sent out a message to customers warning about the issue and strongly advising them to update iOS “immediately”. &lt;em&gt;(Update: Apple has now confirmed the problem too. See its statement at the end of this article.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Following numerous complaints from iPhone 18 Pro Max owners, it’s now been officially acknowledged that some units have a problem placing calls, sending texts, and accessing data. Initially by the carrier AT&amp;amp;T, which sent out a message to customers warning about the issue and strongly advising them to update iOS “immediately”. And now by Apple itself.&lt;/p&gt;
 
 
 
@@ -88,31 +88,7 @@
 
 
 
-&lt;p&gt;It would appear that we’re not even close to a resolution, since it isn’t even clear if this is a hardware or software problem, or whether it’s possible to fix it through an iOS update. We’ll keep you updated as we hear more.&lt;/p&gt;
-
-
-
-&lt;h2&gt;Carrier settings update&lt;/h2&gt;
-
-
-
-&lt;p&gt;As of October 3, we may now be closer to that resolution. But it’s not good news.&lt;/p&gt;
-
-
-
-&lt;p&gt;As you can see from Apple’s statement below, the company believes that the problem can be avoided (that’s to say, avoided in the future, not fixed if it’s already happened) if users install iOS 27.0.1 &lt;em&gt;and the latest carrier settings update&lt;/em&gt;. You need both to be protected, apparently. AT&amp;amp;T-based iPhone 18 Pro Max owners should find that the carrier settings update downloads automatically within the next 14 days, but they can manually trigger this process by opening Settings and going to &lt;em&gt;General&lt;/em&gt; &amp;gt; &lt;em&gt;About&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;But this is a prophylactic measure, not a cure. If an iPhone has already been affected and is therefore without service, Apple admits that it cannot be reactivated via software and will require a hardware replacement. In such cases the owner should contact Apple Support or AT&amp;amp;T, or visit an Apple Store or AT&amp;amp;T location.&lt;/p&gt;
-
-
-
-&lt;h2&gt;Company statements&lt;/h2&gt;
-
-
-
-&lt;p&gt;On October 2, AT&amp;amp;T sent us the following statement:&lt;/p&gt;
+&lt;p&gt;After we initially posted this article, AT&amp;amp;T contacted Macworld and asked us to publish a statement:&lt;/p&gt;
 
 
 
@@ -120,11 +96,27 @@
 
 
 
-&lt;p&gt;On October 3, Apple sent us this statement:&lt;/p&gt;
+&lt;p&gt;Based on the unsatisfied responses of affected parties, however, this didn’t seem convincing. At this point it wasn’t even clear if it was a hardware or software problem, let alone whether it was possible to fix it through an iOS update. Resolution looked to be a long way off.&lt;/p&gt;
 
 
 
-&lt;p&gt;“We have identified an issue affecting a small number of iPhone 18 Pro Max users on the AT&amp;amp;T network that may cause a device to lose service and be unable to make calls. We released iOS 27.0.1 earlier this week and strongly encourage all iPhone 18 Pro Max users to update now, and are also issuing a carrier settings update today. These updates together are meant to help prevent this issue from occurring.”&lt;/p&gt;
+&lt;h2&gt;Apple gets involved&lt;/h2&gt;
+
+
+
+&lt;p&gt;On October 3, Apple got in touch to offer a company statement and a fix. But it’s not entirely good news.&lt;/p&gt;
+
+
+
+&lt;p&gt;“We have identified an issue affecting a small number of iPhone 18 Pro Max users on the AT&amp;amp;T network that may cause a device to lose service and be unable to make calls,” said an Apple spokesperson. “We released iOS 27.0.1 earlier this week and strongly encourage all iPhone 18 Pro Max users to update now, and are also issuing a carrier settings update today. These updates together are meant to help prevent this issue from occurring.”&lt;/p&gt;
+
+
+
+&lt;p&gt;The company believes that the problem can be avoided (that’s to say, avoided in the future, not fixed if it’s already happened) if users install iOS 27.0.1 &lt;em&gt;and the latest carrier settings update&lt;/em&gt;. You need both to be protected, apparently. AT&amp;amp;T-based iPhone 18 Pro Max owners should find that the carrier settings update downloads automatically within the next 14 days, but they can manually trigger this process by opening Settings and going to &lt;em&gt;General&lt;/em&gt; &amp;gt; &lt;em&gt;About&lt;/em&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;But this is a prophylactic measure, not a cure. If an iPhone has already been affected and is therefore without service, Apple admits that it cannot be reactivated via software and will require a hardware replacement. In such cases the owner should contact Apple Support or AT&amp;amp;T, or visit an Apple Store or AT&amp;amp;T location.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content>
     <source>
       <title>Macworld</title>

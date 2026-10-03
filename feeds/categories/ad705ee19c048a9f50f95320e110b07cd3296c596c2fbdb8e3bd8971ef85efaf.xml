@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:44ee583a-38ad-5968-af34-ef0b7a33a378</id>
   <title>Thai — Feeds</title>
-  <updated>2026-10-03T12:27:00.000Z</updated>
+  <updated>2026-10-03T15:44:18.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,139 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Thai</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:a9d8b511-a2ca-57f5-a44b-ec137c3cdf62</id>
+    <title>มาลองใช้งาน Stitch CLI สำหรับการออกแบบ user interface กันดู</title>
+    <updated>2026-10-03T15:44:18.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-10-03T15:44:18.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/try-stitch-cli/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/69a204c90d36f3fe3d3794d235e97b6cabe38447a2cb7e208d70302a853f7803.webp" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/69a204c90d36f3fe3d3794d235e97b6cabe38447a2cb7e208d70302a853f7803.webp 150w, https://feeds.llun.dev/media/c6c3825b3771075b59d5e45e9fab1977cb7b7fc5a1616eedf12282f1799773b8.webp 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/30a70c694054852cd98df6f48b25fd284068a21d120adc018108d36dfd54ba48.webp"&gt;&lt;img src="https://feeds.llun.dev/media/30a70c694054852cd98df6f48b25fd284068a21d120adc018108d36dfd54ba48.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ทาง Google ได้ปล่อย &lt;strong&gt;&lt;a href="https://stitch.google.com/docs/cli/overview" target="_blank"&gt;Stitch CLI&lt;/a&gt;&lt;/strong&gt; ออกมาให้ใช้งาน&lt;br /&gt;รวมทั้ง skill /stitch เพื่อใช้งานใน AI Agent for coding ได้แบบง่าย ๆ ได้เลย&lt;br /&gt;ทำให้ workflow การออกแบบและสร้าง user interface ของระบบงานสะดวกมากยิ่งขึ้น&lt;br /&gt;โดยการทำงาน ประกอบไปด้วย&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;ทำการ generate user interface ออกมาให้&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำการแก้ไข user interface และ upload asset หรือ รูปต่าง ๆ เข้ามาได้เลย&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำการจัดการเรื่องของ  design system ของ agent ผ่านไฟล์ DESIGN.md&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำการเชื่อมต่อกับ code ใน local repository ของเราได้เลย (ทั้งเริ่มใหม่ หรือ อ่านจากระบบเดิมใน code)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ทำให้เราสามารถสร้าง prototype ต่าง ๆ ของระบบงานได้สะดวกมากยิ่งขึ้น&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;จากเดิมที่ต้องทำผ่าน web นั่นเอง&lt;br /&gt;ดังนั้นมาลองใช้งานกันดู ว่าเป็นอย่างไรบ้าง ?&lt;/p&gt;
+
+
+
+[gist id="ce68115a01c6b7acf4392a320bda41bd" file="1.txt"]
+
+
+
+&lt;p&gt;จากนั้น  Stitch จะแนะนำให้ติดตั้ง Agent Skills ใน AI Agent for coding&lt;br /&gt;ยกตัวอย่างเช่นใน Claude code&lt;/p&gt;
+
+
+
+[gist id="ce68115a01c6b7acf4392a320bda41bd" file="2.txt"]
+
+
+
+&lt;p&gt;โดยใน skill นี้จะทำการตรวจสอบว่า project ปัจจุบันมีหรือไม่&lt;br /&gt;ถ้ามี code อยู่จะทำการแปลงจาก code มาเป็น design (code-to-design)&lt;br /&gt;ด้วยการสร้างไฟล์ DESIGN.md ออกมาให้&lt;br /&gt;และทำการหา route ต่าง ๆ และ capture screen มาให้เลย&lt;br /&gt;จากนั้นทำการ sync และ validate ต่อไป&lt;br /&gt;และมีการทำ mapping design ต่าง ๆ ให้อีกด้วย&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;มาลองใช้งานแบบไม่มีอะไรเลยดีกว่า&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;มีขั้นตอนการใช้งานดังนี้&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;สร้าง project&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำการสร้างหน้าจอ หรือ screen ด้วยการเขียน prompt และระบุ device (DESKTOP หรือ MOBILE)&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำการ start server และเปิดดูหน้าจอที่สร้างขึ้นมาทั้งใน localhost หรือผ่าน web ของ stitch&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+[gist id="ce68115a01c6b7acf4392a320bda41bd" file="3.txt"]
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/10/stitch-cli-02-scaled.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/24866d3d4a51b94493dd4126a0c6b06adb949bb96d8bb66f45c870fa0473e933.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;และเปิดดูตัวอย่างได้เลยบน localhost&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/10/stitch-cli-03.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/da5fb4736ec053003363029978799f8ff1b9bccfd34c20f67de7ee50ff744588.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ในกรณีที่เราต้องการให้ stitch cli อ่านข้อมูลจาก url  หรือ route จาก project ของเรา&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;เช่นในระบบมี url ชื่อว่า &lt;a href="http://localhost:3000/checkout"&gt;http://localhost:3000/checkout&lt;/a&gt;&lt;br /&gt;สามารถให้ stitch cli อ่านมาเป็น HTML และ capture หน้าจอมาใช้งาน&lt;br /&gt;สามารถทำได้ดังนี้&lt;/p&gt;
+
+
+
+[gist id="ce68115a01c6b7acf4392a320bda41bd" file="4.txt"]
+
+
+
+&lt;p&gt;ลองใช้งานกันดูครับ&lt;br /&gt;เป็นอีกเครื่องมือที่น่าสนใจ&lt;br /&gt;อ่านเอกสารเพิ่มเติมได้ที่  &lt;strong&gt;&lt;a href="https://stitch.google.com/docs/cli/overview/" target="_blank"&gt;Stitch CLI Quickstart&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Reference websites&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kevindavila.dev/en/blog/stitch-cli" target="_blank"&gt;Stitch CLI: Google Brings UI Design to the Terminal (and to Your Agent)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:c69c3046-54b4-5ba5-8463-a8ba0c2cafeb</id>
     <title>Shuhei Yoshida แนะ ยืดอายุ PS5 และ Switch 2 ให้นานที่สุด คนไม่อยากได้คอนโซลใหม่</title>
@@ -1971,75 +2104,6 @@
       <title>markpeak.net</title>
       <link rel="self" href="https://markpeak.net/feed/"/>
       <link rel="alternate" href="https://markpeak.net"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:5a91af16-f0c5-52d9-b7f7-fa6b4bf04078</id>
-    <title>การ replicate ข้อมูลจาก PostgreSQL ไปยัง ClickHouse ด้วย WalShadow</title>
-    <updated>2026-09-21T07:22:37.000Z</updated>
-    <author>
-      <name>somkiat</name>
-    </author>
-    <published>2026-09-21T07:22:37.000Z</published>
-    <link rel="alternate" href="https://www.somkiat.cc/walshadow-replicate-data-from-postgresql-to-clickhouse/"/>
-    <category term="Thai"/>
-    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/45bd61b2aba97da675a3f577c0ab9c043e675644f1d8c82aea09fe3e83443c68.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/45bd61b2aba97da675a3f577c0ab9c043e675644f1d8c82aea09fe3e83443c68.jpg 150w, https://feeds.llun.dev/media/c71e6b2a1b6133293ba5def1325efc23c695d69fb6c6502051c6e51a418fe281.jpg 75w" /&gt;&lt;/p&gt;
-&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/09/walshadow.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/a3f0efa1b2c7671e66183cc414bf4dbad0e9a59f166e1a42a08fc14de391552e.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;ทาง ClickHouse ได้ปล่อย &lt;strong&gt;&lt;a href="https://github.com/ClickHouse/walshadow" target="_blank"&gt;WalShadow&lt;/a&gt;&lt;/strong&gt; ออกมา (ยังเป็น Development Preview !!)&lt;br /&gt;พัฒนาด้วยภาษา Rust&lt;br /&gt;ซึ่งเป็น open source engine สำหรับการ replicate ข้อมูลจาก PostgreSQL ไปยัง ClickHouse&lt;br /&gt;โดยทำการอ่านจากการเปลี่ยนที่ WAL file (Write Ahead Log) นั่นเอง&lt;br /&gt;ซึ่งผลการทดลองพบว่าข้อมูลที่ commit แล้วใน PostgreSQL&lt;br /&gt;จะ replicate ไปยัง ClickHose ใช้เวลาไม่เกิน 200 ms&lt;br /&gt;และรับได้ถึง 289K rows ต่อวินาที ซึ่งใกล้เคียงกับการ replicate ของ PostgreSQL เอง (50 ms)&lt;/p&gt;
-
-
-
-&lt;span&gt;&lt;/span&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;การทำงานของ WalShadow จะไม่เหมือนกับ CDC (Change Data Capture) แบบทั่วไป&lt;/strong&gt;&lt;br /&gt;ที่ทำการ replicate ข้อมูลด้วยการใช้งาน PostgreSQL logical Replication&lt;br /&gt;แต่ทำการอ่านจาก WAL file แทน (WAL stream)&lt;br /&gt;ไฟล์นี้มีไว้เพื่อการทำ replicate และ recovery ของ PostgreSQL&lt;br /&gt;จากนั้นทำการ decode แบบ parallel ให้เหมาะสมกับ target datasource ที่ต้องการ replicate ต่อไป&lt;br /&gt;โดยในตัวนี้จะทำการบันทึกข้อมูลลง ClickHouse แบบ parallel&lt;/p&gt;
-
-
-
-&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/09/Wal_Shadow_Schema_Decoder_Clickhouse_70652d1a69.png"&gt;&lt;img src="https://feeds.llun.dev/media/5f361e1ebf6f16e5b5eec4da779bc5c1615806fbc39d922fb95c25d251898cf1.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;เหตุผลที่ WalShadow เลือก WAL file&lt;/strong&gt;&lt;br /&gt;ด้วยเหตุผลของลดการใช้ resource และลด operation cost&lt;br /&gt;ที่เกิดจาก PostgreSQL logical Replication นั่นเอง&lt;br /&gt;และไม่ต้องการไปรบกวนการทำงานของ PostgreSQL server อีกด้วย&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;ดังนั้นไม่ต้องการติดตั้ง output plugin ใด ๆ&lt;/strong&gt;&lt;br /&gt;หรือไม่ต้องการ Kafka เหมือนกับ CDC อื่น ๆ&lt;br /&gt;หรือพวก JSON serialization&lt;br /&gt;หรือการแปลงรูปแบบของข้อมูล&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;โดย Architecture แบบละเอียดแสดงดังรูป&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/2ebd8250ed2ce8ef0bf4d4934633c86bfb95ebaec859789d122db7556e617043.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/2ebd8250ed2ce8ef0bf4d4934633c86bfb95ebaec859789d122db7556e617043.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;ลองนำมาเล่นกันได้ !!&lt;br /&gt;และยังมีข้อจำกัดตามนี้ &lt;a href="https://github.com/ClickHouse/walshadow/blob/main/docs/limitations.md" target="_blank"&gt;Current Limits&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;ปล. ก่อนนหน้านี้ทาง ClickHouse ก็ได้ &lt;a href="https://clickhouse.com/blog/walrus-postgres-backups-in-rust" target="_blank"&gt;rewrite project WAL-G มาเป็น WAL-RUS&lt;/a&gt; ด้วยเช่นกัน&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Reference Websites&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://clickhouse.com/blog/introducing-walshadow" target="_blank"&gt;Introducing WalShadow: Sub-second Postgres replication to ClickHouse from physical WAL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    <source>
-      <title>cc :: somkiat</title>
-      <link rel="self" href="https://www.somkiat.cc/feed/"/>
-      <link rel="alternate" href="https://www.somkiat.cc"/>
     </source>
   </entry>
   <entry>
