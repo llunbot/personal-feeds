@@ -4700,6 +4700,39 @@ build_flags =
     </source>
   </entry>
   <entry>
+    <id>urn:uuid:b34d6dc0-cc2e-5056-9bab-95fcb6c92ab6</id>
+    <title>0263 | บั๊กตู้ชาร์จ ปตท รุ่นใหม่ๆ</title>
+    <updated>2025-06-30T06:44:41.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2025-06-30T06:44:41.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167563/0263-%e0%b8%9a%e0%b8%b1%e0%b9%8a%e0%b8%81%e0%b8%95%e0%b8%b9%e0%b9%89%e0%b8%8a%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%88-%e0%b8%9b%e0%b8%95%e0%b8%97-%e0%b8%a3%e0%b8%b8%e0%b9%88%e0%b8%99%e0%b9%83%e0%b8%ab"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;พอดีเดินทางแล้วก็ต้องใช้งานตู้ชาร์จรถครับ ล่าสุดไปทะเลาะกับตู้ชาร์จ ปตท รุ่นใหม่ๆ หน่อย ล่าสุดก็คือไอ้ตู้รุ่นนี้ ที่จะมีแขนจับที่ชาร์จห้อยลอยๆ ที่สะดวกดีนะ ยกสายง่ายขึ้นเยอะ&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://feeds.llun.dev/media/417e227601cc8c845d164830bb6707cb7655ecbd1e409eb00d73edf6c8588b86.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/3c87c0ae894e6ed408833d2da10b77b44d84bed42605c5f2ee1dd47270379f92.jpg" alt="" width="768" height="1024" srcset="https://feeds.llun.dev/media/3c87c0ae894e6ed408833d2da10b77b44d84bed42605c5f2ee1dd47270379f92.jpg 768w, https://feeds.llun.dev/media/14625e754ffdfa009efb7cbdc0a0e58ea1de7eb2115ceb5190682a5b074fc437.jpg 225w, https://feeds.llun.dev/media/293ca8e224de989c7a4af3085756209023ed890fac78fb090c1e25177393fd49.jpg 1152w, https://feeds.llun.dev/media/417e227601cc8c845d164830bb6707cb7655ecbd1e409eb00d73edf6c8588b86.jpg 1440w" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ปัญหาคือ &lt;strong&gt;ตู้รุ่นนี้รองรับ auto charge ครับ&lt;/strong&gt; (auto charge คือ function ที่ทำให้เราสามารถเสียบหัวจ่ายไฟของตู้ชาร์จเข้ากับรถ แล้วมันจะเริ่มชาร์จเลยโดยไม่ต้องมาวุ่นวายแสกน qrcode อะไรให้ปวดหัว)&lt;/p&gt;
+&lt;p&gt;ที่เป็นปัญหาขึ้นมาเพราะ&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;รถ (โดยเฉพาะ tesla) มัน support auto charge ด้วย&lt;/li&gt;
+&lt;li&gt;พอเสียบหัวไปปุ๊ป รถกับตู้เห็นว่ารองรับทั้งคู่ มันเลยพยายามเริ่มชาร์จ (ดูบนจอที่ตู้จะขึ้นว่ากำลังเริ่มชาร์จ โดยที่เรายังไม่ได้แสกน qr code)&lt;/li&gt;
+&lt;li&gt;พอตู้ชาร์จคุยกับรถเสร็จ พร้อมเริ่มชาร์จ เลยยิงสัญญาณไปบอกระบบกลาง แต่ระบบกลางไม่มีข้อมูลว่าการชาร์จรถคันนี้ต้องตัดเงินกับใคร (เพราะระบบกลางของ ปตท ยังไม่รองรับ) ระบบเลยสั่งยกเลิกการชาร์จ&lt;/li&gt;
+&lt;li&gt;ตู้ชาร์จเลยตัดการชาร์จ พร้อมขึ้นว่าชาร์จเสร็จแล้ว&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;แนวทางเบื้องต้นของคนใช้รถ (ระหว่างรอ ปตท. แก้)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;อย่าเพิ่งเสียบหัวชาร์จเข้ากับรถ&lt;/li&gt;
+&lt;li&gt;เปิดแอพ แสกน qr code หัวชาร์จ ให้ขึ้นหน้ากดปุ่มเริ่มชาร์จไว้ก่อน&lt;/li&gt;
+&lt;li&gt;เสียบหัวชาร์จเข้ากับรถ พร้อมกับกดปุ่มเริ่มชาร์จให้ได้ภายในไม่เกิน 1 วิ ก่อนตู้กับรถจะเริ่มคุยกัน&lt;/li&gt;
+&lt;li&gt;ภาวนาให้แอพส่งไปบอกระบบกลางก่อนตู้ชาร์จ&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
     <id>urn:uuid:509fd8af-6613-5a94-8bda-25ab5b734282</id>
     <title>AI เขียนโค้ด</title>
     <updated>2025-03-18T01:25:43.000Z</updated>
@@ -4756,6 +4789,107 @@ build_flags =
       <title>LewCPE's Blog</title>
       <link rel="self" href="http://lewcpe.com/blog/feed"/>
       <link rel="alternate" href="https://lewcpe.com/blog"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:f82b29c9-bd28-5ee6-847d-9e3ad172c5b9</id>
+    <title>0262 | freeipa add replica stuck at ‘No status yet’</title>
+    <updated>2025-02-18T07:25:35.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2025-02-18T07:25:35.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167560/0262-freeipa-add-replica-stuck-at-no-status-yet"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;reference: https://lists.fedorahosted.org/archives/list/freeipa-users@lists.fedorahosted.org/thread/OY6EC5XS54OLKBL57S3FJ3HUANWIJQPN/&lt;/p&gt;
+&lt;p&gt;ipa-replica-install stuck with:&lt;/p&gt;
+&lt;pre&gt;
+  [26/40]: setting up initial replication
+Starting replication, please wait until this has completed.
+No status yet
+No status yet
+No status yet
+No status yet
+No status yet
+No status yet
+No status yet
+No status yet
+No status yet
+No status yet
+&lt;/pre&gt;
+&lt;p&gt;step to fix&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cancel the replication process&lt;/li&gt;
+&lt;li&gt;uninstall with &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;/usr/sbin/ipa-server-install --uninstall&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;create file ‘custom.ldif’ with content: &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;
+dn: cn=config
+changetype: modify
+replace: nsslapd-maxsasliosize
+nsslapd-maxsasliosize: 8388608
+replace: nsslapd-sasl-max-buffer-size
+nsslapd-sasl-max-buffer-size: 8388608
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;rerun ipa-replica-install by adding option ‘–dirsrv-config-file=custom.ldif’&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:6554d2b1-b5b4-5ec8-a26a-4d5e8cc43e02</id>
+    <title>0261 | เปิด ripe-atlas probe กันเถอะ</title>
+    <updated>2025-01-14T07:49:53.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2025-01-14T07:49:53.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167557/0261-%e0%b9%80%e0%b8%9b%e0%b8%b4%e0%b8%94-ripe-atlas-probe-%e0%b8%81%e0%b8%b1%e0%b8%99%e0%b9%80%e0%b8%96%e0%b8%ad%e0%b8%b0"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;docker-compose.yml&lt;/p&gt;
+&lt;pre&gt;
+services:
+  ripe-atlas:
+    image: jamesits/ripe-atlas:latest
+    restart: always
+    environment:
+      RXTXRPT: "yes"
+    volumes:
+      - "./etc:/var/atlas-probe/etc"
+      - "./status:/var/atlas-probe/status"
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+      - DAC_OVERRIDE
+      - NET_RAW
+#    mem_limit: "64000000000"
+#    mem_reservation: 64m
+    labels:
+      - "traefik.enable=false"
+      - "com.centurylinklabs.watchtower.enable=true"
+    logging:
+      driver: json-file
+      options:
+         max-size: 10m
+    network_mode: "host" # if possible, avoid double NAT
+    # security_opt:
+    #   - seccomp:unconfined
+&lt;/pre&gt;
+&lt;p&gt;รันแล้วจะได้ไฟล์ public key ใน folder ./etc/probe_key.pub เอาไปใส่ใน https://atlas.ripe.net&lt;/p&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
     </source>
   </entry>
   <entry>
@@ -5042,6 +5176,24 @@ build_flags =
     </source>
   </entry>
   <entry>
+    <id>urn:uuid:d0627185-baeb-54e8-b241-24ce883fd6c2</id>
+    <title>0260 | usb to serial driver สำหรับ windows arm</title>
+    <updated>2024-11-04T18:59:37.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2024-11-04T18:59:37.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167553/0260-usb-to-serial-driver-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%b1%e0%b8%9a-windows-arm"/>
+    <category term="Thai"/>
+    <content type="html">&lt;blockquote&gt;&lt;p&gt;&lt;a href="https://ftdichip.com/drivers/d2xx-drivers/"&gt;D2XX Drivers&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
     <id>urn:uuid:ba89ec01-1371-5516-8262-ae8d5894e0ea</id>
     <title>[InfluxDb] สร้าง Username/Password ผ่าน influxdb-cli บน MacOS</title>
     <updated>2024-11-04T02:31:14.000Z</updated>
@@ -5289,6 +5441,30 @@ build_flags =
       <title>Thanapon</title>
       <link rel="self" href="https://thanapon.info/feed/"/>
       <link rel="alternate" href="https://thanapon.info"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:da8f58ea-5446-5971-bd35-2930b68ec89a</id>
+    <title>0259 | ลง ansible หลาย version ในเครื่องเดียวแบบไม่ให้งง</title>
+    <updated>2024-09-24T11:29:19.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2024-09-24T11:29:19.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167550/ansible-multiple-version-python-virtualenv"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;จดไว้กันลืม&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd ~
+virtualenv ansible-9.10.0
+cd ansible-9.10.0
+source bin/activate
+python3 -m pip install ansible==9.10.0
+python3 -m pip install cryptography==42.0.7 jinja2==3.1.4 jmespath==1.0.1 jsonschema==4.22.0 MarkupSafe==2.1.5 netaddr==1.2.1 pbr==6.0.0 ruamel.yaml==0.18.6 ruamel.yaml.clib==0.2.8
+&lt;/code&gt;&lt;/pre&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
     </source>
   </entry>
   <entry>
@@ -6130,6 +6306,118 @@ update-asset:
     </source>
   </entry>
   <entry>
+    <id>urn:uuid:f6244587-0749-50cf-ba9e-9e7e7ee6b425</id>
+    <title>0258 | EV FAQ</title>
+    <updated>2023-08-28T16:26:44.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2023-08-28T16:26:44.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167533/0258-ev-faq"/>
+    <category term="Thai"/>
+    <content type="html">&lt;h1&gt;แบตเสื่อม&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;อาการ “แบตเสื่อม” มันคือการเก็บประจุได้น้อยลง ให้นึกก็เหมือนใช้รถน้ำมันไปแล้วถังน้ำมันเล็กลง (เติมน้ำมันได้น้อยลง = วิ่งได้ระยะทางน้อยลง)&lt;/li&gt;
+&lt;li&gt;แบตมันจะค่อยๆ เสื่อม (คือระยะทางที่วิ่งได้เมื่อแบตเต็มลดลงเรื่อยๆ) ไม่ใช่ใช้ได้ปกติเรื่อยๆ แล้วพังขับไม่ได้ไปเลย&lt;/li&gt;
+&lt;li&gt;แปลว่าการแบตเสื่อม (ถ้ายังไม่ถึงจุดที่พัง) ไม่ได้ทำให้ใช้งานรถไม่ได้ มันแค่ทำให้ระยะทางวิ่งได้สูงสุดลดลงเฉยๆ&lt;/li&gt;
+&lt;li&gt;แบตไม่ได้เสื่อมง่ายขนาดนั้น เพราะขนาดแบต, เทคโนโลยีแบตของรถยนต์ไฟฟ้าแต่ละรุ่นในตลาดตอนนี้&lt;/li&gt;
+&lt;li&gt;แบตจะเสื่อมถึงขั้นมีปัญหาเมื่อไหร่ ขึ้นกับขนาดแบตของรถ ยิ่งแบตใหญ่ยิ่งได้เปรียบ&lt;/li&gt;
+&lt;li&gt;สมมติว่าแบตเต็มวิ่งได้ 300 km / แบต 1 ลูกจะใช้งานได้ประมาณ 1000-2000 cycle คิดขั้นต่ำที่ 1000 cycle ก็คือใช้ได้อย่างน้อยๆ 300,000 km&lt;/li&gt;
+&lt;li&gt;แบตรถมีความจุสูงมาก ขั้นต่ำๆ 30 kWh ต่อให้เสื่อมไป 50% ก็ยังเหลือ 15 kWh เท่ากับการใช้ไฟทั้งวันของบ้านหลังเล็กๆ หลังนึง&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;ติดที่ชาร์จที่บ้าน&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ไม่จำเป็นต้องใช้ไฟ 3 เฟสก็ได้ เฟสเดียวก็เหลือเฟือ&lt;/li&gt;
+&lt;li&gt;แต่ต้องเดินสายไฟใหม่ เพราะระหว่างชาร์จ มันกินไฟมากกว่าเครื่องทำน้ำอุ่นทั่วไปประมาณสองเท่า + ใช้งานนานต่อเนื่อง&lt;/li&gt;
+&lt;li&gt;ดู spec รถที่จะซื้อ (หรือซื้อมาแล้ว) ด้วยว่ารับกระแสไฟแบบกระแสสลับ (AC) ได้สูงสุดเท่าไหร่กรณีชาร์จ 1 เฟส และ 3 เฟส&lt;/li&gt;
+&lt;li&gt;ไม่ใช่รถทุกรุ่นจะรับไฟ 3 เฟสได้&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;เสียบปลั๊กชาร์จ (ชาร์จฉุกเฉิน)&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;ชาร์จที่บ้านก็พอถูไถ&lt;/li&gt;
+&lt;li&gt;ห้ามใช้ปลั๊กพ่วงเด็ดขาด อันตราย อาจเกิดไฟไหม้ได้&lt;/li&gt;
+&lt;li&gt;ห้ามตั้งกระแสเกิน 16 Amp (ประมาณ 3500 Watt)&lt;/li&gt;
+&lt;/ol&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:6bbe57d5-0a4c-5c30-b44a-f886c1c666b2</id>
+    <title>0257 | Peer กับ Content Provider ต่างประเทศในไทยบน Internet Exchange “ในไทย”</title>
+    <updated>2023-06-21T17:47:41.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2023-06-21T17:47:41.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167530/local-peering-with-global-content-provider-in-thailand-on-internet-exchange"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;ตอนนี้ผู้ให้บริการ Cloud / Content Provider หลายเจ้าเริ่มมาตั้ง node ในไทย และมีการเชื่อมต่อ internet ขาในประเทศกันเรื่อยๆ ก็เลยได้โอกาสขอ Peering กันผ่าน IX ครับ ที่ดังๆ ประมาณนี้&lt;/p&gt;
+&lt;h2&gt;Cloudflare&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/225"&gt;Thailand-IX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;กดขอ peer ผ่านหน้าเว็บได้เลย https://peering.cloudflare.com/&lt;/li&gt;
+&lt;li&gt;Peer แล้วได้ route หา cloudflare วงที่ใช้รับ Traffic จาก Client (ขา Anycast), DNS 1.1.1.1 “ในไทย” เลย&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะได้มาแค่ ip ของ node ของ cloudflare ที่ TH-IX ผ่าน route server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Microsoft&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/225"&gt;Thailand-IX&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;ขอ Peer ผ่าน Azure Portal ตามขั้นตอนในหน้าเว็บ &lt;a href="https://learn.microsoft.com/en-us/azure/internet-peering/howto-exchange-portal"&gt;https://learn.microsoft.com/en-us/azure/internet-peering/howto-exchange-portal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Peer แล้วได้ route หาบริการของ microsoft (มี Github ด้วยนะ) และ Azure Cloud Singapore&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะไม่ได้ route อะไรเลย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Amazon&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/225"&gt;Thailand-IX&lt;/a&gt; และ &lt;a href="https://www.peeringdb.com/ix/1025"&gt;BKNIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ส่งเมลหา contact ตามข้อมูลใน &lt;a href="https://www.peeringdb.com/asn/16509"&gt;peeringdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Peer แล้วได้ route หา Amazon Cloud Singapore กับพวก Anycast และ Cloudfront&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะไม่ได้ route อะไรเลย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Twitch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/225"&gt;Thailand-IX&lt;/a&gt; และ &lt;a href="https://www.peeringdb.com/ix/1025"&gt;BKNIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ส่งเมลหา contact ตามข้อมูลใน &lt;a href="https://www.peeringdb.com/asn/46489"&gt;peeringdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Peer แล้วได้ route หา node CDN ของ Twitch ไว้ดูสตรีมลื่นๆ&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะไม่ได้ route อะไรเลย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Fastly CDN&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/225"&gt;Thailand-IX&lt;/a&gt; และ &lt;a href="https://www.peeringdb.com/ix/1025"&gt;BKNIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ส่งเมลหา contact ตามข้อมูลใน &lt;a href="https://www.peeringdb.com/asn/54113"&gt;peeringdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ได้ route หา CDN Node ของ Fastly ที่อยู่ในไทย&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะได้ route บางส่วนผ่าน route server (แบบไม่ optimize)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Riot Games&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/225"&gt;Thailand-IX&lt;/a&gt; และ &lt;a href="https://www.peeringdb.com/ix/1025"&gt;BKNIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;กรอกฟอร์มตาม link ใน &lt;a href="https://www.peeringdb.com/asn/6507"&gt;peeringdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ได้ Route หาเกม Valorant และเกมในเครือของ Riot Games&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะไม่ได้ route อะไรเลย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TWGate / ChungHwa Telecom Taiwan&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/1025"&gt;BKNIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ส่งเมลหา contact ตามข้อมูลใน &lt;a href="https://www.peeringdb.com/asn/9505"&gt;peeringdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ได้ route ลูกค้าทั้งหมดของ TWGate&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer จะได้ route บางส่วนผ่าน route server + ไม่รับประกาศ route ของเรา&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Hurricane Electric&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Peer อยู่กับ &lt;a href="https://www.peeringdb.com/ix/1025"&gt;BKNIX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ส่งเมลหา contact ตามข้อมูลใน &lt;a href="https://www.peeringdb.com/asn/6939"&gt;peeringdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ได้ route ลูกค้าทั้งหมดของ HE.net (คำเตือน route เยอะมาก ประมาณ 150k prefix) &lt;/li&gt;
+&lt;li&gt;ถ้าไม่ขอ peer ได้ route บางส่วน (ประมาณ 100k prefix) — ถ้าไม่ได้ route ทาง BKNIX อาจ suppress ไว้อยู่ ถ้าอุปกรณ์รับไหวลองบอกให้เค้าปล่อยมาได้&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
     <id>urn:uuid:260ff803-5bd0-50d0-8294-f7d31451e03d</id>
     <title>Prepend line with line length with Linux command</title>
     <updated>2023-06-01T03:44:00.000Z</updated>
@@ -6516,6 +6804,311 @@ update-asset:
       <title>Thanapon</title>
       <link rel="self" href="https://thanapon.info/feed/"/>
       <link rel="alternate" href="https://thanapon.info"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:3a7200b8-bd11-5f57-a148-91b4cfbb33d5</id>
+    <title>0256 | คำถามที่โดนถามบ่อยกับรถยนต์ไฟฟ้า</title>
+    <updated>2022-12-26T10:44:16.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2022-12-26T10:44:16.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167526/0256-ev-frequency-asked-question"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;คุยกะคนโน้นคนนี้แล้วก็เจอคำถามที่ถูกถามบ่อยๆ ได้ตามนี้ครับ&lt;/p&gt;
+&lt;h2&gt;ชาร์จกี่ชั่วโมงถึงเต็ม&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ใช้ไปเท่าไหร่ก็ชาร์จเพิ่มเท่านั้น ไม่ต้องสนใจเวลาชาร์จจาก 0 – 100% ของรถ (ยกเว้นตอนขับทางไกล)&lt;/li&gt;
+&lt;li&gt;เช่น ขับไป 100km เฉลี่ยกินไฟประมาณ 20kWh ก็ชาร์จเพิ่มแค่ 20kWh&lt;/li&gt;
+&lt;li&gt;ถ้าใช้ wall charge 7kW ก็ประมาณ 3 ชั่วโมง (20 kWh / 7 kW = ~ 3 h) หรือถ้าใช้ travel adapter เสียบปลั๊กชาร์จมันจะได้ราวๆ 2-3kW ก็ 7-10 ชั่วโมง&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;แต่ !!!&lt;/strong&gt; เวลาชาร์จแบบนี้ เราไม่ต้องรอ เพราะมันคือการเสียบชาร์จตอนเราเข้าบ้านไปนอน…&lt;/li&gt;
+&lt;li&gt;ถ้าคุณนอนวันละ 6 ชั่วโมง รวมเวลาอาบน้ำแต่งตัวก่อนนอน กับหลังตื่นก็น่าจะมีเวลาให้ชาร์จ 7-8 ชั่วโมง ก็น่าจะพอให้ชาร์จได้เต็มอยู่แล้ว&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;อยู่คอนโดทำไง&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ระหว่างนี้หาที่ชาร์จใกล้ๆ คอนโดก่อนครับ&lt;/li&gt;
+&lt;li&gt;ผลักดันให้คอนโดติดที่ชาร์จ แนะนำให้ติด AC charge เยอะๆ ดีกว่า เพราะค่าที่ชาร์จ DC จุดเดียว อาจจะแพงมากจนติด AC ได้เป็นสิบๆ จุด&lt;/li&gt;
+&lt;li&gt;ถ้าเป็น AC คนก็จอดชาร์จเหมือนอยู่บ้านตามปกติได้เลย ไม่ต้องมาขยับรถ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;หาที่ชาร์จยังไง&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.plugshare.com/"&gt;https://www.plugshare.com&lt;/a&gt; เว็บเดียวจบครับ&lt;/li&gt;
+&lt;li&gt;มีเว็บ &lt;a href="https://www.chargeloma.com/"&gt;https://www.chargeloma.com&lt;/a&gt; อีกอัน แต่ในมือถือ (ipad) แอพมันรวนๆ&lt;/li&gt;
+&lt;li&gt;แต่พอไปใช้จริง ก็ต้องโหลดแอพของผู้ให้บริการชาร์จแต่ละเจ้ามาอยู่ดี หลักๆ ก็ ptt ev station pluz, elexa, pea volta, evolt, sharge, altervim, ea anywhere (7 ราย) — as of 2022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;ขับได้ไกลแค่ไหน&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;แล้วแต่รถ เส้นทาง และความเร็วที่ขับเลยครับ&lt;/li&gt;
+&lt;li&gt;กรณีที่เปลืองไฟมากกว่าปกติคือ ขึ้นเขา หรือขับต้านลม หรือขับเร็วมากๆ ซึ่งก็เหมือนกับรถน้ำมันแหละ&lt;/li&gt;
+&lt;li&gt;แต่ขับลงเขา เราได้ไฟเข้ารถเพิ่มนะ …. ตอนขึ้นดอยสุเทพ ใช้ไฟไป 8% แต่ขาลงได้แบตเพิ่มมา 3% เท่ากับขึ้นแล้วลงใช้แบตไป 5% อะไรงี้ ซึ่งรถน้ำมันทำไม่ได้&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;แบตเสื่อมมั้ย?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;เสื่อมครับ&lt;/li&gt;
+&lt;li&gt;ดูกราฟด้านล่าง ขับมาประมาณ 6,000 กิโล “ค่าประมาณการระยะทางที่ขับได้” ลดลงไปหน่อยนึง ประมาณ 5km (เฉียดๆ 1%)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://feeds.llun.dev/media/f613e960c2974adbaf2c6d2fde09de69fa84c469d390555fca6d20157863bf2a.png" alt="" /&gt;&lt;/p&gt;
+&lt;h2&gt;มีผู้โดยสารเพิ่ม กินไฟเพิ่มมั้ย&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;เทียบระหว่างขับคนเดียว กับผู้โดยสารเต็มคัน (5 คนรวมคนขับ) แทบกินไฟไม่ต่างกันครับ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;ค่าซ่อมบำรุง&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tesla มีแค่สลับล้อ เปลี่ยนกรองแอร์ เปลี่ยนยางตามสภาพยาง เช็คสภาพเบรก (ที่ไม่ค่อยได้ใช้) และเปลี่ยนถ้าจำเป็น&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;กราฟด้านบนเอามาจากไหน&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/adriankumpf/teslamate"&gt;Teslamate&lt;/a&gt; ครับ โหลดมาติดตั้งเองในเครื่อง server&lt;/li&gt;
+&lt;li&gt;ข้อมูลมาจาก api ของเทสลา ที่รถจะส่ง telemetry ไปให้ทางเทสลา “ตลอดเวลา”&lt;/li&gt;
+&lt;li&gt;ถ้าไม่มี server เอง แนะนำให้ใช้ &lt;a href="https://teslafi.com/"&gt;Teslafi&lt;/a&gt; ดีกว่าครับ&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:8c3c5642-e071-5984-adf0-6acd693d557e</id>
+    <title>0255 | ขับเทสล่าไปเชียงใหม่…</title>
+    <updated>2022-11-28T16:19:19.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2022-11-28T16:19:19.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167520/tesla-model-3-lr-roadtrip-to-chiang-mai"/>
+    <category term="Thai"/>
+    <content type="html">&lt;h1&gt;Prelude&lt;/h1&gt;
+&lt;p&gt;ซื้อ Tesla Model 3 Long Range มา(ซักพัก)แล้วครับ… จองปุ๊ปเทสล่าประกาศจดบริษัทเทสล่าในไทย… เจ็บปวดมาก 555 ข้ามเรื่องนี้ไปละกัน หรือใครอยากอ่านแบบสั้นๆ เชิญตามใน &lt;a href="https://twitter.com/icez/status/1597200038223958016"&gt;twitter&lt;/a&gt; ได้ครับ&lt;/p&gt;
+&lt;h1&gt;Planning&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;เว็บ/แอพคู่ใจคนใช้ EV ก็ต้อง &lt;a href="https://www.plugshare.com/"&gt;www.plugshare.com&lt;/a&gt; ครับ เว็บเดียวมีข้อมูลที่ชาร์จแทบจะทุกที่ในไทย มี Trip Planner ให้ใช้ด้วยนะ (แต่ไม่ค่อยเวิร์กเท่าไหร่)&lt;/li&gt;
+&lt;li&gt;แนะนำให้กดหาเส้นทางจากใน PlugShare Trip Planner เทียบกับ Google Maps แล้วดูตำแหน่งที่ชาร์จคร่าวๆ ก่อน&lt;/li&gt;
+&lt;li&gt;พบว่าพอ range รถเยอะมากๆ ทำให้ plan ง่ายขึ้นเยอะ ด้วยการปักตามที่ที่กะแวะกินข้าวไปเลย (ทุกๆ ระยะขับรถ 4-5 ชั่วโมงโดยประมาณ)&lt;/li&gt;
+&lt;li&gt;เตรียมแผนสำรองเผื่อที่ชาร์จใช้ไม่ได้, ไม่ว่าง ไว้ด้วย&lt;/li&gt;
+&lt;li&gt;แอพชาร์จรถทุกค่าย ลง+สมัครไว้ให้ครบ (ptt ev station pluz, elexa, pea volta, ea anywhere) — เดี๋ยวเขียนรีวิวแอพกับตู้ชาร์จแยกอีกอัน&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;วันเดินทางขาไป&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ออกจากบ้านด้วยแบตเต็ม 100% ตอน 08.43 น.&lt;/li&gt;
+&lt;li&gt;ตามแผนคือแวะชาร์จที่ &lt;a href="https://goo.gl/maps/pyqQMhyVc4VnkYkg7"&gt;pea volta ปั๊มบางจากคลองขลุง&lt;/a&gt; หน้าปั๊มมีร้านข้าว, แผนสำรอง ขับเลยไปชาร์จที่ ptt ในเมืองกำแพงเพชร, แผนสำรองกว่าคือเลยไปชาร์จที่ elexa ปั๊ม PT ที่ตาก &lt;/li&gt;
+&lt;li&gt;ไปถึงปั๊มบางจากแล้วหาร้านข้าวไม่เจอ (ซึ่งมันอยู่นอกปั๊ม ต้องเดินออกมานิดนึง) เลยเสียบชาร์จ เข้าห้องน้ำ ยืดเส้นยืดสายนิดหน่อยแล้วก็ออกเลย ชาร์จไป 12 นาทีได้แบตมา 11%
+&lt;ul&gt;
+&lt;li&gt;ตู้บอกว่าจ่ายไฟมา 8.814 หน่วย รถขึ้นว่าได้ไฟ 7.98 หน่วย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;เลยขับไป &lt;a href="https://goo.gl/maps/vTX3mkaR8SovEzWE8"&gt;ptt กำแพงเพชร&lt;/a&gt; เพื่อชาร์จอีกรอบ + ไปหาข้าวกิน (เรื่องนี้ ptt ทำได้ดีจริงๆ ไว้ใจได้ค่อนข้างมากว่าไปแล้วมีของกินแน่ๆ) ปรากฎว่าไปถึงแล้วมีคน(ทะเลาะกับตู้)ชาร์จอยู่ สาย DC ก็เลยไม่ว่าง เราก็เลยเอาสาย AC เสียบ ปรากฎว่าชาร์จไม่เข้า แอพค้างไปเลย คนข้างๆ เค้าโทรคุยกับ cc ให้ cc reset ตู้ให้ ก็เรียบร้อย เสียเวลาไป 15 นาที ชาร์จอีก 23 นาทีได้ไฟมา 5%
+&lt;ul&gt;
+&lt;li&gt;ตู้จ่ายไฟ 4.04 หน่วย รถได้ไฟ 3.91 หน่วย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ระหว่างกินข้าว ความที่มันเป็นชาร์จ AC ไฟเข้าแค่ 11kW ก็คือต้องวางแผนใหม่ ตอนนั้นแบตเหลือ 52% ก็เลยกะว่า ถ้าลากยาวแล้วถึง จะชาร์จที่ลำปางที่ห่างไป 250km &lt;strong&gt;แต่!!!&lt;/strong&gt; ลืมไปว่าระหว่างทางมันขับขึ้นเขา&lt;/li&gt;
+&lt;li&gt;ตอนเลย อ.เมือง ตาก แล้ว ลองสังเกตอัตราการใช้ไฟ กับระยะทางคงเหลือที่ขึ้นมาแล้วก็พบว่าน่าจะเฉียดฉิวเกินไป ก็เลยใช้แผนสำรอง แวะชาร์จที่ &lt;a href="https://goo.gl/maps/ji5VdThBWmSTAv428"&gt;ptt เถิน&lt;/a&gt; แทน ไปถึงไฟเหลือ 19% ชาร์จ 33 นาที ได้ไฟมา 49% (รวมเป็น 68%)
+&lt;ul&gt;
+&lt;li&gt;ตู้จ่ายไฟ 40.6 หน่วย รถได้ไฟ 38.47 หน่วย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;จากเถิน ชาร์จไปขนาดนี้ก็เลยวิ่งยาวถึงเชียงใหม่ 176km ถึงเชียงใหม่ 18.49 น.แบตเหลือ 36% &lt;/li&gt;
+&lt;li&gt;เดินทางไป 681km รถใช้ไฟไป 100.4 หน่วย ใช้เวลาเดินทางประมาณ 10 ชั่วโมง&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://feeds.llun.dev/media/324d3895282349d2e398adb68a9fd4b7dec423e18d97c033d2c0a5abbcf8cc9b.png" alt="" /&gt;&lt;/p&gt;
+&lt;h1&gt;วันเดินทางขากลับ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;จริงๆ ต้องพูดถึงคืนก่อนหน้านั้นก่อน เพราะเอารถไปชาร์จจนแบต 80% ไว้ 5555&lt;/li&gt;
+&lt;li&gt;ออกจากโรงแรม 08.52 น. วางแผนขับ 278km ไปชาร์จที่ &lt;a href="https://goo.gl/maps/nSJ92of2crZSV27NA"&gt;ptt ตาก&lt;/a&gt; คำนวณเวลาแล้วถึงตอนเที่ยงพอดีเป๊ะ จะได้ชาร์จให้ปริ่มๆ 80-90% ปรากฎว่า แอพไม่ให้จอง slot ชาร์จตอนเที่ยง แถมไปถึงแล้วมี&lt;a href="https://www.gwm.co.th/ora-good-cat/"&gt;น้องแมว&lt;/a&gt;ชาร์จไฟอยู่คันนึงอีกต่างหาก &lt;/li&gt;
+&lt;li&gt;ก็เลยซื้อของกินเซเว่น แล้วขับเลยไปอีกนิด ไปชาร์จตู้ &lt;a href="https://goo.gl/maps/i6qMD6233nfUZx1j6"&gt;Elexa ที่ปั๊ม PT&lt;/a&gt; แทน ถึงที่ชาร์จ แบตเหลือ 24% ชาร์จ 29 นาที ได้ไฟมา 56% (รวมเป็น 80%)
+&lt;ul&gt;
+&lt;li&gt;ตู้จ่ายไฟ 46.83 หน่วย รถได้ไฟ 43.46 หน่วย&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;หน้าจอรถขึ้นว่าวิ่งได้อีกเกือบๆ 500km แต่คำนวณเองน่าจะประมาณ 400km ระยะทางถึงบ้าน 410km ก็เลยเล็งที่ชาร์จที่ปั๊ม &lt;a href="https://goo.gl/maps/9KcvHmyjziBQRgsR8"&gt;ptt นครสวรรค์&lt;/a&gt; ไว้อีกที่&lt;/li&gt;
+&lt;li&gt;แล้วก็ลืมนึกไปอีกว่ามันขับลงเนิน ตอนเลยเมืองกำแพงเพชรก็เลยลองคำนวณระยะใหม่อีกรอบพบว่าน่าจะพอแบบพอดีมากๆ (ถึงบ้านอาจจะเหลือ 2-3%) แต่ยังสองจิตสองใจ เลยแวะที่ปั๊ม ptt นครสวรรค์เผื่อๆ ไว้ แต่ไม่ได้ชาร์จเพราะมีคนชาร์จอยู่ ก็เลยตัดสินใจว่ายิงยาวเลยละกัน ระหว่างทางก็ส่อง range รถเทียบกับระยะทางใน google maps ตลอดเลย&lt;/li&gt;
+&lt;li&gt;สรุปว่าขับถึงบ้านได้จริงๆ ด้วย ตอน 17.52 น. แบตเหลือ 3% จริงๆ &lt;/li&gt;
+&lt;li&gt;เดินทางไป 692km รถใช้ไฟไป 104.2 หน่วย ใช้เวลาเดินทางประมาณ 9 ชั่วโมง &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://feeds.llun.dev/media/648f8db55d3bf0289a426df120702c169154cc4cf0d01f8910282750a53957e3.png" alt="" /&gt;&lt;/p&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Range รถเยอะๆ ช่วยให้ชีวิตดีขึ้นจริงๆ ตอนวางแผนเคยลองคำนวณแบบรถแบตเต็มขับได้ 300km ก็คือแทบต้องแวะชาร์จทุก 2 ชั่วโมง แถมแทบพลาดไม่ได้เลยด้วย เพราะที่ชาร์จแต่ละที่ยังห่างกันค่อนข้างเยอะอยู่ (เฉลี่ยๆ ห่างกันทุกๆ 100km)&lt;/li&gt;
+&lt;li&gt;รถ MG แอบได้เปรียบ ตรงที่สามารถชาร์จที่ศูนย์ MG ได้ด้วย ที่รถอื่นไม่มี — รอเทสลาเปิด Supercharger บ้าง&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:fff55858-3307-5e78-a02a-5b1ba62551e7</id>
+    <title>0254 | ต่อ Sofar Inverter HYD 6000-EP เข้า Home Assistant</title>
+    <updated>2022-11-12T15:44:19.000Z</updated>
+    <author>
+      <name>icez</name>
+    </author>
+    <published>2022-11-12T15:44:19.000Z</published>
+    <link rel="alternate" href="https://www.icez.net/blog/167514/0254-integrate-sofar-inverter-hyd-6000-ep-to-home-assistant"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;วิธีนี้สำหรับ Sofar Inverter ที่ตัว logger มี serial ขึ้นต้นด้วย 23xxxxxxxx นะครับ&lt;/p&gt;
+&lt;h3&gt;[แก้ไข]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;เขียนเสร็จปุ๊ป มี update แก้ให้รันใน raspberry pi ได้มาเลย เข้าไปดูได้ที่ repository นี้ &lt;a href="https://github.com/kubaceg/sofar_g3_lsw3_logger_reader"&gt;https://github.com/kubaceg/sofar_g3_lsw3_logger_reader&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;สิ่งที่ต้องมีก่อน&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;home assistant&lt;/li&gt;
+&lt;li&gt;mqtt broker (ใช้ public หรือ private ก็ได้ตามสะดวก)&lt;/li&gt;
+&lt;li&gt;linux x86 ซักเครื่องที่เชื่อมต่อไปหา inverter wifi interface ได้ (ใช้บน raspberry pi/arm ไม่ได้เนื่องจากคนเขียนเค้าบอกว่าเขียนรีบๆ มาใช้เอง)&lt;/li&gt;
+&lt;li&gt;โปรแกรม fetch data =&amp;gt; load ได้จาก &lt;a href="https://github.com/XtheOne/Inverter-Data-Logger/issues/37#issuecomment-1303091265"&gt;XtheOne/Inverter-Data-Logger issue #37&lt;/a&gt; ดู link sofar-export.zip&lt;/li&gt;
+&lt;li&gt;docker compose&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;ขั้นตอน&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;แตกไฟล์ sofar-export.zip แล้วเข้าไปใน folder ที่เก็บไฟล์&lt;/li&gt;
+&lt;li&gt;แก้ไฟล์ Dockerfile เป็นตามนี้&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;FROM golang:1.19-bullseye
+
+ADD . /src
+
+RUN apt update &amp;amp;&amp;amp; apt install -y ca-certificates tzdata &amp;amp;&amp;amp; \
+  cd /src &amp;amp;&amp;amp; go build &amp;amp;&amp;amp; cp -av /src/sofar /
+
+CMD ["/sofar"]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;สร้างไฟล์ docker-compose.yml ตามด้านล่าง ใน folder เดียวกัน แก้ค่าสามจุดตามนี้
+&lt;ul&gt;
+&lt;li&gt;23xxxxxxxx เป็นเลข serial ที่โชว์ในหน้าเว็บที่เข้าไปดู inverter (login user admin/admin)&lt;/li&gt;
+&lt;li&gt;แก้ค่า tcp://user:pass@mqttserverip:mqttport ตาม mqtt broker ที่ใช้&lt;/li&gt;
+&lt;li&gt;แก้ sofarinverterip เป็นเลข IP ของตัว inverter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;services:
+  sofar-export:
+    image: sofar-export
+    build: ./
+    restart: unless-stopped
+    command: /sofar -logger-serial 23xxxxxxxx -mqtt-url tcp://user:pass@mqttserverip:mqttport -port sofarinverterip:8899
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;เสร็จแล้วสั่ง start docker service ขึ้นมา&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;docker compose up -d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;แล้วไปเซ็ต mqtt sensor ใน home assistant (ใส่ใน configuration.yaml) ประมาณนี้ *** parameter ยังไม่ได้ทดสอบ แก้ไขเองตามสะดวก ***&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;mqtt:
+  sensor:
+    - name: inverter_Frequency_Grid
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Frequency_Grid / 100 }}"
+      unit_of_measurement: "Hz"
+      state_class: "measurement"
+      device_class: "frequency"
+    - name: inverter_PV_Generation_Today
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.PV_Generation_Today * 10}}"
+      unit_of_measurement: "Wh"
+      state_class: "measurement"
+      device_class: "energy"
+    - name: inverter_PV_Generation_Total
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.PV_Generation_Total * 100}}"
+      unit_of_measurement: "Wh"
+      state_class: "measurement"
+      device_class: "energy"
+    - name: inverter_ActivePower_Load_Sys
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.ActivePower_Load_Sys * 10}}"
+      unit_of_measurement: "W"
+      state_class: "measurement"
+      device_class: "power"
+    - name: inverter_ActivePower_PV_Ext
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.ActivePower_PV_Ext * 10}}"
+      unit_of_measurement: "W"
+      state_class: "measurement"
+      device_class: "power"
+    - name: inverter_ActivePower_Output_R
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.ActivePower_Output_R * 10}}"
+      unit_of_measurement: "W"
+      state_class: "measurement"
+      device_class: "power"
+    - name: inverter_ActivePower_Output_Total
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.ActivePower_Output_Total * 10}}"
+      unit_of_measurement: "W"
+      state_class: "measurement"
+      device_class: "power"
+    - name: inverter_ActivePower_PCC_R
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.ActivePower_PCC_R * 10}}"
+      unit_of_measurement: "W"
+      state_class: "measurement"
+      device_class: "power"
+    - name: inverter_ActivePower_PCC_Total
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.ActivePower_PCC_Total * 10}}"
+      unit_of_measurement: "W"
+      state_class: "measurement"
+      device_class: "power"
+    - name: inverter_Voltage_Phase_R
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Voltage_Phase_R / 10}}"
+      unit_of_measurement: "V"
+      state_class: "measurement"
+      device_class: "voltage"
+    - name: inverter_Voltage_PV1
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Voltage_PV1 / 10}}"
+      unit_of_measurement: "V"
+      state_class: "measurement"
+      device_class: "voltage"
+    - name: inverter_Voltage_PV2
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Voltage_PV2 / 10}}"
+      unit_of_measurement: "V"
+      state_class: "measurement"
+      device_class: "voltage"
+    - name: inverter_Current_PV1
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Current_PV1 / 100 }}"
+      unit_of_measurement: "A"
+      state_class: "measurement"
+      device_class: "current"
+    - name: inverter_Current_PV2
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Current_PV2 / 100}}"
+      unit_of_measurement: "A"
+      state_class: "measurement"
+      device_class: "current"
+    - name: inverter_Current_Output_R
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Current_Output_R / 100 }}"
+      unit_of_measurement: "A"
+      state_class: "measurement"
+      device_class: "current"
+    - name: inverter_Temperature_Env1
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.Temperature_Env1 }}"
+      unit_of_measurement: "C"
+      state_class: "measurement"
+      device_class: "temperature"
+    - name: inverter_Temperature_HeatSink1
+      state_topic: "/sensors/energy/inverter2/All"
+      value_template: "{{ value_json.HeatSink1 }}"
+      unit_of_measurement: "C"
+      state_class: "measurement"
+      device_class: "temperature"
+&lt;/code&gt;&lt;/pre&gt;</content>
+    <source>
+      <title>icez network</title>
+      <link rel="self" href="https://www.icez.net/blog/feed"/>
+      <link rel="alternate" href="https://www.icez.net/blog"/>
     </source>
   </entry>
   <entry>
