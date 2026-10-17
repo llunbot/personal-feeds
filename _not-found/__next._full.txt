@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/2h02xn5dx8rmw.js"
+3:I[63178,["$2"],"ThemeProvider"]
+4:I[39756,["$2"],"default"]
+5:I[37457,["$2"],"default"]
+b:I[97367,["$2"],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[97367,["$2"],"$e"]
+11:"MetadataBoundary"
+12:I[97367,["$2"],"$11"]
+14:I[68027,["$2"],"default",1]
+:HL["/_next/static/chunks/3pi69cq32ny25.css","style"]
+8:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$La",[["$","script","script-0",{"src":"/_next/static/chunks/0s516wn7eb5hq.js","async":true,"nonce":"$undefined"}]],["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+7:[["children",{"s":"/_not-found","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$8"},"c":"$Q9"}]]
+0:{"P":null,"c":["","_not-found"],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3pi69cq32ny25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/2h02xn5dx8rmw.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"T19VSG_variable _8Li5zG_variable antialiased","children":["$","$L3",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$L6",[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3pi69cq32ny25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"OwIDtqGyTknhqCGgE6UrE"}
+15:"/_next/static/chunks/0s516wn7eb5hq.js"
+16:I[11393,["$2","$15"],"Page"]
+8:C
+6:["$","$L16",null,{"version":"4.9.3","buildTime":"2026-10-17T17:33:34.413Z"}]
+a:["$","$L16",null,{"version":"4.9.3","buildTime":"2026-10-17T17:33:34.413Z"}]
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#ffffff","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#0a0a0a","media":"(prefers-color-scheme: dark)"}]]
+17:I[27201,["$2"],"IconMark"]
+d:null
+13:[["$","title","0",{"children":"Feeds"}],["$","meta","1",{"name":"description","content":"Static Feeds Aggregator"}],["$","link","2",{"rel":"manifest","href":"/site.webmanifest?v=4.9.3","crossOrigin":"$undefined"}],["$","link","3",{"rel":"alternate","type":"application/atom+xml","href":"/feeds/all.xml","title":"All Items — Atom"}],["$","link","4",{"rel":"alternate","type":"application/atom+xml","href":"/feeds/categories/f223faa96f22916294922b171a2696d868fd1f9129302eb41a45b2a2ea2ebbfd.xml","title":"Apple — Atom"}],["$","link","5",{"rel":"alternate","type":"application/atom+xml","href":"/feeds/categories/5343ac1023785c197e9572ec0010e2cb961b4263590ac974939daf9b34ce7d65.xml","title":"Cycling — Atom"}],["$","link","6",{"rel":"alternate","type":"application/atom+xml","href":"/feeds/categories/d30af076b0dc85cc5b0074b403f74770b73af84a70c2f77f7a3609d0db23112e.xml","title":"Me — Atom"}],["$","link","7",{"rel":"alternate","type":"application/atom+xml","href":"/feeds/categories/d0da7ab8bc927960b4ca3c6678137464baf9266c4fe3281f30e4769f6c4427db.xml","title":"Tech — Atom"}],["$","link","8",{"rel":"alternate","type":"application/atom+xml","href":"/feeds/categories/ad705ee19c048a9f50f95320e110b07cd3296c596c2fbdb8e3bd8971ef85efaf.xml","title":"Thai — Atom"}],["$","link","9",{"rel":"icon","href":"/favicon.ico?v=4.9.3","sizes":"any"}],["$","link","10",{"rel":"icon","href":"/icon-32.png?v=4.9.3","sizes":"32x32","type":"image/png"}],["$","link","11",{"rel":"icon","href":"/icon-192.png?v=4.9.3","sizes":"192x192","type":"image/png"}],["$","link","12",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png?v=4.9.3","sizes":"180x180","type":"image/png"}],["$","$L17","13",{}]]
