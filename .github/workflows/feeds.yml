@@ -20,4 +20,8 @@ jobs:
         uses: llun/feeds@4.9.3
         with:
           storageType: files
-          customDomain: feeds.llun.dev
+          # feeds.llun.dev is served by CloudFront with this repository's GitHub
+          # Pages site as its origin, so Pages has no custom domain (no CNAME).
+          # siteUrl keeps the site at the root path and its feed links on
+          # feeds.llun.dev.
+          siteUrl: https://feeds.llun.dev/
