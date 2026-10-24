@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:12e071ac-0809-57f9-b228-ada53f88e607</id>
   <title>Cycling — Feeds</title>
-  <updated>2026-10-24T17:51:08.000Z</updated>
+  <updated>2026-10-24T22:04:49.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,25 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Cycling</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:4d225406-cb82-546c-a61b-09f4274340c4</id>
+    <title>Tour de France 2027: What Do Extra TT Kms Mean for Evenepoel’s Prospects?</title>
+    <updated>2026-10-24T22:04:49.000Z</updated>
+    <author>
+      <name>sstokes</name>
+    </author>
+    <published>2026-10-24T22:04:49.000Z</published>
+    <link rel="alternate" href="https://velo.outsideonline.com/road/road-racing/tour-de-france/extra-tt-kms-remco-evenepoel/"/>
+    <category term="Cycling"/>
+    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/3106b01e8dec2fa7b29c03c4ebec14293e73c7920422fe4a234d52814e321a81.jpg" alt="Tour de France 2027: What Do Extra TT Kms Mean for Evenepoel’s Prospects?" /&gt;&lt;/figure&gt;
+&lt;p&gt;Next year’s Tour plays to the strengths of Remco Evenepoel. Could it be enough for yellow? &lt;/p&gt;
+&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/tour-de-france/extra-tt-kms-remco-evenepoel/"&gt;Tour de France 2027: What Do Extra TT Kms Mean for Evenepoel’s Prospects?&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
+    <source>
+      <title>CyclingTips</title>
+      <link rel="self" href="https://cyclingtips.com/feed  "/>
+      <link rel="alternate" href="https://velo.outsideonline.com/"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:451d2696-df33-58c5-9fb1-e3243dd8eab2</id>
     <title>Why Flying With a Bike is Always a Gamble (And How to Improve Your Odds)</title>
@@ -5809,25 +5828,6 @@ us most.&lt;/p&gt;
       <title>The Radavist</title>
       <link rel="self" href="https://theradavist.com/feed/"/>
       <link rel="alternate" href="https://theradavist.com"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:927f3184-4a6a-5568-aacc-6de46a9f4d6a</id>
-    <title>Daria Pikulik Keeps Olympic Silver Despite 18-Month Whereabouts Ban</title>
-    <updated>2026-10-19T23:02:07.000Z</updated>
-    <author>
-      <name>ahood</name>
-    </author>
-    <published>2026-10-19T23:02:07.000Z</published>
-    <link rel="alternate" href="https://velo.outsideonline.com/news/daria-pikulik-keeps-olympic-silver-despite-18-month-whereabouts-ban/"/>
-    <category term="Cycling"/>
-    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/544e0d4594eedae861557e7cfd7080e79aa1b0455a5af1112d706c9950b9a14e.jpg" alt="Daria Pikulik Keeps Olympic Silver Despite 18-Month Whereabouts Ban" /&gt;&lt;/figure&gt;
-&lt;p&gt;Polish cyclist Daria Pikulik hasn't raced since March after 18-month ban, but she keeps her Paris Olympic medal.&lt;/p&gt;
-&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/news/daria-pikulik-keeps-olympic-silver-despite-18-month-whereabouts-ban/"&gt;Daria Pikulik Keeps Olympic Silver Despite 18-Month Whereabouts Ban&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
-    <source>
-      <title>CyclingTips</title>
-      <link rel="self" href="https://cyclingtips.com/feed  "/>
-      <link rel="alternate" href="https://velo.outsideonline.com/"/>
     </source>
   </entry>
   <entry>
