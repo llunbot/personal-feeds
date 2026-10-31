@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:57d3f462-3c71-59cb-b00d-30597a324979</id>
   <title>Apple — Feeds</title>
-  <updated>2026-10-31T13:00:12.000Z</updated>
+  <updated>2026-10-31T14:24:08.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,47 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Apple</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:5dded833-79f3-5a15-9814-31f385283e06</id>
+    <title>Apple Reveals New iPad Mini's Battery Capacity</title>
+    <updated>2026-10-31T14:24:08.000Z</updated>
+    <author>
+      <name>Joe Rossignol</name>
+    </author>
+    <published>2026-10-31T14:24:08.000Z</published>
+    <link rel="alternate" href="https://www.macrumors.com/2026/10/31/ipad-mini-8-battery-capacity-mah-wh/"/>
+    <category term="Apple"/>
+    <content type="html">Apple has published an &lt;a href="https://regulatoryinfo.apple.com/cwt/api/ext/file?fileId=energyLabels/A3595_V1/A3595/A3595_PIS_LotX_GB_English.pdf"&gt;EU energy label&lt;/a&gt; for the &lt;a href="https://www.macrumors.com/2026/10/26/apple-announces-ipad-mini-with-oled-display/"&gt;iPad mini 8&lt;/a&gt; that reveals the device has a battery capacity of 4,900 mAh, which is slightly lower than the 5,034 mAh capacity of the previous model's battery. However, Apple's website lists identical battery life estimates for both models, so it appears that the improved power efficiency of the A20 Pro chip in the new iPad mini helps to offset its slightly smaller battery. The new model also has an OLED display, which can be more power efficient than an LCD when displaying dark or black content.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/0c0534ca591849ee4a32895e8f5a634b620f2d4fdad8c94e77b93d273667f4ad.jpg" alt="" width="2500" height="1406" /&gt;&#xD;&lt;br /&gt;
+For those who prefer watt-hour figures, Apple's &lt;a href="https://www.apple.com/ipad-mini/specs/"&gt;tech specs&lt;/a&gt; show the new iPad mini has an 18.9 Wh battery, down from 19.3 Wh for the previous model.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;table&gt;&#xD;&lt;br /&gt;
+&lt;tr&gt;&#xD;&lt;br /&gt;
+&lt;th&gt;Model&lt;/th&gt;&#xD;&lt;br /&gt;
+&lt;th&gt;Battery Capacity (mAh)&lt;/th&gt;&#xD;&lt;br /&gt;
+&lt;th&gt;Battery Capacity (Wh)&lt;/th&gt;&#xD;&lt;br /&gt;
+&lt;/tr&gt;&#xD;&lt;br /&gt;
+&lt;tr&gt;&#xD;&lt;br /&gt;
+&lt;td&gt;iPad mini 8&lt;/td&gt;&#xD;&lt;br /&gt;
+&lt;td&gt;4,900 mAh&lt;/td&gt;&#xD;&lt;br /&gt;
+&lt;td&gt;18.9 Wh&lt;/td&gt;&#xD;&lt;br /&gt;
+&lt;/tr&gt;&#xD;&lt;br /&gt;
+&lt;tr&gt;&#xD;&lt;br /&gt;
+&lt;td&gt;iPad mini 7&lt;/td&gt;&#xD;&lt;br /&gt;
+&lt;td&gt;5,034 mAh&lt;/td&gt;&#xD;&lt;br /&gt;
+&lt;td&gt;19.3 Wh&lt;/td&gt;&#xD;&lt;br /&gt;
+&lt;/tr&gt;&#xD;&lt;br /&gt;
+&lt;/table&gt;&#xD;&lt;br /&gt;
+&lt;div&gt;&lt;/div&gt;&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+The new iPad mini features an 8.5-inch OLED display, a new Acoustic Display audio system instead of speaker holes, Wi-Fi 7 support, a 15% thinner and lighter design compared to the previous model, and &lt;a href="https://www.macrumors.com/2026/10/26/new-ipad-mini-12-new-features/"&gt;more&lt;/a&gt;. The device is available to pre-order now and launches on Friday, November 6, with U.S. pricing starting at $699.&lt;div&gt;Related Roundup: &lt;a href="https://www.macrumors.com/roundup/ipad-mini/"&gt;iPad mini&lt;/a&gt;&lt;/div&gt;&lt;div&gt;Buyer's Guide: &lt;a href="https://buyersguide.macrumors.com/#iPad_Mini"&gt;iPad Mini (Buy Now)&lt;/a&gt;&lt;/div&gt;&lt;div&gt;Related Forum: &lt;a href="https://forums.macrumors.com/forums/ipad.137"&gt;iPad&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;This article, "&lt;a href="https://www.macrumors.com/2026/10/31/ipad-mini-8-battery-capacity-mah-wh/"&gt;Apple Reveals New iPad Mini's Battery Capacity&lt;/a&gt;" first appeared on &lt;a href="https://www.macrumors.com/"&gt;MacRumors.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="https://forums.macrumors.com/threads/apple-reveals-new-ipad-minis-battery-capacity.2493319/"&gt;Discuss this article&lt;/a&gt; in our forums&lt;br /&gt;&lt;br /&gt;</content>
+    <source>
+      <title>MacRumors: Mac News and Rumors - All Stories</title>
+      <link rel="self" href="http://feeds.macrumors.com/MacRumors-All"/>
+      <link rel="alternate" href="https://www.macrumors.com"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:ba3db3b4-56b4-58fe-b83c-a3bc22018c6f</id>
     <title>Top Stories: Apple's Big MacBook Pro, iPad mini and iMac Updates</title>
@@ -1526,44 +1567,6 @@ Here is what is new with the HomePod mini 2:&lt;ul&gt;&#xD;&lt;br /&gt;
 &lt;li&gt;Three microphones for Siri, down from four in the previous model. It is unclear if users will notice this difference.&lt;/li&gt;&#xD;&lt;br /&gt;
 &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/10/29/homepod-mini-2-two-tone-colors/"&gt;Two-tone pink, green, and blue color options&lt;/a&gt;, along with white and midnight.&lt;/li&gt;&#xD;&lt;br /&gt;
 &lt;li&gt;3% weight reduction. Huge.&lt;/li&gt;&lt;/ul&gt;The previous HomePod mini was initially $99, but it became $129 after a June price increase. As mentioned, the new model is $149.&lt;div&gt;Related Roundup: &lt;a href="https://www.macrumors.com/roundup/homepod-mini/"&gt;HomePod mini 2&lt;/a&gt;&lt;/div&gt;&lt;div&gt;Buyer's Guide: &lt;a href="https://buyersguide.macrumors.com/#Homepod-Mini"&gt;HomePod Mini (Buy Now)&lt;/a&gt;&lt;/div&gt;&lt;div&gt;Related Forum: &lt;a href="https://forums.macrumors.com/forums/homepod-homeview-carplay-%E2%80%93-home-auto-tech.193"&gt;HomePod, HomeView, CarPlay – Home &amp;amp; Auto Tech&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;This article, "&lt;a href="https://www.macrumors.com/2026/10/30/homepod-mini-2-new-features/"&gt;HomePod Mini 2 Launches Today: All the New Features&lt;/a&gt;" first appeared on &lt;a href="https://www.macrumors.com/"&gt;MacRumors.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="https://forums.macrumors.com/threads/homepod-mini-2-launches-today-all-the-new-features.2493231/"&gt;Discuss this article&lt;/a&gt; in our forums&lt;br /&gt;&lt;br /&gt;</content>
-    <source>
-      <title>MacRumors: Mac News and Rumors - All Stories</title>
-      <link rel="self" href="http://feeds.macrumors.com/MacRumors-All"/>
-      <link rel="alternate" href="https://www.macrumors.com"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:a772a5de-ac7f-5ac8-a594-bf2a2656b728</id>
-    <title>AirTag 2 4-Pack Drops to New Low Price of $69.99</title>
-    <updated>2026-10-30T12:48:50.000Z</updated>
-    <author>
-      <name>Mitchel Broussard</name>
-    </author>
-    <published>2026-10-30T12:48:50.000Z</published>
-    <link rel="alternate" href="https://www.macrumors.com/2026/10/30/airtag-2-new-low-price-of-69-99/"/>
-    <category term="Apple"/>
-    <content type="html">Apple's AirTag 2 has hit &lt;a href="https://www.amazon.com/dp/B0GJTXVN9Z?lv=shuf&amp;amp;linkCode=ogi&amp;amp;th=1&amp;amp;tag=macrumors-20&amp;amp;channelId=1&amp;amp;plpRedirect=mhFallback&amp;amp;gaOptInStatus=false&amp;amp;optOutTS=1789061426122"&gt;&lt;strong&gt;$69.99&lt;/strong&gt;&lt;/a&gt; this week on Amazon and &lt;a href="https://bestbuy.7tiv.net/VO9WxM"&gt;Best Buy&lt;/a&gt;, down from $99.00. This deal is on the 4-Pack of the AirTag 2, and it's a new record low price for the accessory.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;img src="https://feeds.llun.dev/media/7dca9709d574bef7df5f1941bd091e929bb49ef442bb270877333f090b084d2a.jpg" alt="" width="1018" height="572" /&gt;&lt;em&gt;&lt;small&gt;Note: MacRumors is an affiliate partner with Amazon. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running.&lt;/small&gt;&lt;/em&gt;&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-We're also tracking a smaller deal on the AirTag 2 1-Pack, available for &lt;a href="https://www.amazon.com/dp/B0GJTFXNRX?lv=shuf&amp;amp;linkCode=ogi&amp;amp;th=1&amp;amp;tag=macrumors-20&amp;amp;channelId=1&amp;amp;plpRedirect=mhFallback&amp;amp;gaOptInStatus=false&amp;amp;optOutTS=1789061426122"&gt;&lt;strong&gt;$23.00&lt;/strong&gt;&lt;/a&gt;, down from $29.00. This is another record low price on the AirTag 2.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;div&gt;&lt;a href="https://www.amazon.com/dp/B0GJTFXNRX?lv=shuf&amp;amp;linkCode=ogi&amp;amp;th=1&amp;amp;tag=macrumors-20&amp;amp;channelId=1&amp;amp;plpRedirect=mhFallback&amp;amp;gaOptInStatus=false&amp;amp;optOutTS=1789061426122" target="_blank"&gt;&lt;div&gt;&lt;div&gt;$6 OFF&lt;/div&gt;AirTag 2 (1-Pack) for $23.00&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&#xD;&lt;br /&gt;
-&lt;div&gt;&lt;a href="https://www.amazon.com/dp/B0GJTXVN9Z?lv=shuf&amp;amp;linkCode=ogi&amp;amp;th=1&amp;amp;tag=macrumors-20&amp;amp;channelId=1&amp;amp;plpRedirect=mhFallback&amp;amp;gaOptInStatus=false&amp;amp;optOutTS=1789061426122" target="_blank"&gt;&lt;div&gt;&lt;div&gt;$29 OFF&lt;/div&gt;AirTag 2 (4-Pack) for $69.99&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-The new AirTag is equipped with a second-generation Ultra Wideband chip, enabling the Precision Finding feature to work up to 50% farther away from an item compared to the previous-generation model. &#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-If you're on the hunt for more discounts, be sure to visit our &lt;a href="https://www.macrumors.com/roundup/best-apple-deals/"&gt;Apple Deals&lt;/a&gt; roundup where we recap the best Apple-related bargains of the past week.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;hr /&gt;&#xD;&lt;br /&gt;
-&lt;div&gt;&#xD;&lt;br /&gt;
-&lt;h3&gt;Deals Newsletter&lt;/h3&gt;&#xD;&lt;br /&gt;
-Interested in hearing more about the best deals you can find as we head into the holidays? You can &lt;a href="http://eepurl.com/itTnTk"&gt;sign up for our Deals Newsletter&lt;/a&gt; and we'll keep you updated so you don't miss the biggest deals of the season!&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;div&gt;&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&#xD;&lt;br /&gt;
-&lt;/div&gt;&lt;div&gt;Related Roundup: &lt;a href="https://www.macrumors.com/roundup/best-apple-deals/"&gt;Apple Deals&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;This article, "&lt;a href="https://www.macrumors.com/2026/10/30/airtag-2-new-low-price-of-69-99/"&gt;AirTag 2 4-Pack Drops to New Low Price of $69.99&lt;/a&gt;" first appeared on &lt;a href="https://www.macrumors.com/"&gt;MacRumors.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="https://forums.macrumors.com/threads/airtag-2-4-pack-drops-to-new-low-price-of-69-99.2493230/"&gt;Discuss this article&lt;/a&gt; in our forums&lt;br /&gt;&lt;br /&gt;</content>
     <source>
       <title>MacRumors: Mac News and Rumors - All Stories</title>
       <link rel="self" href="http://feeds.macrumors.com/MacRumors-All"/>
@@ -3202,20 +3205,9 @@ https://youtube.com/watch?v=os_LWIWikII%3Ffeature%3Doembed
 					&lt;div&gt;
 						&lt;a href="https://apple.sjv.io/c/321564/435031/7613?subid1=rss&amp;amp;u=https://www.apple.com/shop/buy-mac/mac-studio"&gt;View Deal&lt;/a&gt;					&lt;/div&gt;
 				&lt;/div&gt;
-					&lt;div&gt;				&lt;div&gt;
-					&lt;div&gt;
-													&lt;img width="400px" src="https://feeds.llun.dev/media/a3285f808023dec8fe407b94f7d40059778542fead04816c659b089b79192801.png" alt="Best Buy US" loading="lazy" /&gt;
-											&lt;/div&gt;
-										&lt;div&gt;
-						&lt;span&gt;$2499&lt;/span&gt;					&lt;/div&gt;
-					&lt;div&gt;
-						&lt;a href="https://ncls1.com/irk?enk=bz10dXRoMjEmcz0yNTcyNTEmYj0xNTQ2OSZia2Q9YmVzdGJ1eS5jb20=&amp;amp;subid=macworld.com&amp;amp;di=rss&amp;amp;d=https://www.bestbuy.com/product/apple-mac-studio-m5-max-chip-36gb-memory-512gb-ssd-silver/JJGCQYK7TR"&gt;View Deal&lt;/a&gt;					&lt;/div&gt;
-				&lt;/div&gt;
-					&lt;/div&gt;				&lt;div&gt;
+									&lt;div&gt;
 					&lt;span&gt;
 					Price comparison from over 24,000 stores worldwide					&lt;/span&gt;
-										
-						View more prices					
 									&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
