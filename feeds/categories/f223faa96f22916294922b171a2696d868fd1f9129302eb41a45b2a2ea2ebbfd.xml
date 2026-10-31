@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:57d3f462-3c71-59cb-b00d-30597a324979</id>
   <title>Apple — Feeds</title>
-  <updated>2026-10-31T08:00:00.000Z</updated>
+  <updated>2026-10-31T13:00:12.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,76 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Apple</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:ba3db3b4-56b4-58fe-b83c-a3bc22018c6f</id>
+    <title>Top Stories: Apple's Big MacBook Pro, iPad mini and iMac Updates</title>
+    <updated>2026-10-31T13:00:12.000Z</updated>
+    <author>
+      <name>MacRumors Staff</name>
+    </author>
+    <published>2026-10-31T13:00:12.000Z</published>
+    <link rel="alternate" href="https://www.macrumors.com/2026/10/31/top-stories-apple-macbook-pro-ipad-mini-imac-updates/"/>
+    <category term="Apple"/>
+    <content type="html">One busy week after another for Apple has left our heads spinning, with this week seeing several Mac updates as well as a revamped iPad mini.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/be65438a7e07235b4146515b8de1f25222fa9bef4037a7f6bd749e3591b62a06.jpg" alt="" width="1600" height="900" /&gt;&#xD;&lt;br /&gt;
+All of this week's craziness comes right on the heels of last Friday's iPhone Duo launch, not to mention all of the other products now available or still in pre-order status, so read on below for all of the details!&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h2&gt;Top Stories&lt;/h2&gt;&#xD;&lt;br /&gt;
+&lt;h3&gt;Everything Apple Announced This Week&lt;/h3&gt;&#xD;&lt;br /&gt;
+It's been a busy October for Apple, and the company ended the month with a bang by introducing a number of new products even as some of the previously announced ones from earlier this month have yet to become available.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/cc39fc4cdb91e34646e6cb0f5844c77f2fe63bb5eeee828faf533b1004b51e97.jpg" alt="" width="1920" height="1080" /&gt;&#xD;&lt;br /&gt;
+If you missed the news over the first three days of this week, &lt;a href="https://www.macrumors.com/2026/10/28/apple-announcements-october-2026/"&gt;we've rounded up all our coverage in one spot&lt;/a&gt;, so it's easy to take a look back. All of the new products are available for pre-order now, with a launch set for Friday, November 6.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h3&gt;Apple Announces OLED MacBook Pro With Touch Display&lt;/h3&gt;&#xD;&lt;br /&gt;
+The headliner for the week was Wednesday's &lt;a href="https://www.macrumors.com/2026/10/28/apple-new-macbook-pro/"&gt;introduction of the MacBook Pro with PROLED XDR Display&lt;/a&gt;. It's a mouthful, but it's the culmination of several years of rumors about a MacBook Pro with an OLED touchscreen, plus it includes several other upgrades such as lighter weights, a reinforced hinge to stabilize the display while it's being touched, a Dynamic Island instead of a notch, and even the return of an illuminated Apple logo on the lid.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/7562226d7aad7d3d06393166bbf10cb941a8ca9114a7d84343de25488d462e6d.jpg" alt="" width="2500" height="1406" /&gt;&#xD;&lt;br /&gt;
+The new machines are being sold alongside the previous MacBook Pro models with mini-LED displays, with the PROLED models carrying $400 price premiums over their counterparts even though they use the same M5 Pro and M5 Max chip options.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h3&gt;Apple Announces New 14-Inch MacBook Pro With M6 Chip&lt;/h3&gt;&#xD;&lt;br /&gt;
+The low end of the MacBook Pro family also got an update this week, with Apple &lt;a href="https://www.macrumors.com/2026/10/27/14-inch-macbook-pro-with-m6-chip/"&gt;announcing a speed-bumped M6 version of the 14-inch base model&lt;/a&gt;.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/d9e5215cf5c421f49f42111427892387bc1222acdab4c985549e3a995d9640eb.jpg" alt="" width="2560" height="1440" /&gt;&#xD;&lt;br /&gt;
+The M6 chip in the ‌MacBook Pro‌ features a 12-core CPU with 2 super cores, 4 performance cores, and 6 efficiency cores, paired with a 12-core GPU. This is up from the M5 chip with a 10-core CPU with 4 super cores and 6 efficiency cores, paired with a 10-core GPU.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+Alongside the M6 chip, the new 14-inch ‌MacBook Pro‌ now features support for Wi-Fi 7 and Bluetooth 6 connectivity via Apple's N1 wireless chip. It can also now drive dual external 4K displays at up to 165Hz, up from 144Hz.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h3&gt;Apple Announces New iMac With M6 Chip and More&lt;/h3&gt;&#xD;&lt;br /&gt;
+The &lt;a href="https://www.macrumors.com/2026/10/27/apple-announces-new-imac-with-m6-chip-and-more/"&gt;24-inch iMac also got a speed bump this week&lt;/a&gt;, with Apple's all-in-one desktop moving from the M4 chip to the M6 for faster performance and adding an N1 chip with Wi-Fi 7 and Bluetooth 6 support, faster SSD speeds, and more.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/82806ea4d80def29ca04b90dec7709f71cc78bb13de9b15a49254774af3a17e0.jpg" alt="" width="2560" height="1440" /&gt;&#xD;&lt;br /&gt;
+The new iMac has the same design as the previous model, and the color options remain the same: blue, green, pink, yellow, purple, orange, and silver.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h3&gt;Apple Announces New iPad Mini With 8.5-Inch OLED Display, A20 Pro Chip, and More&lt;/h3&gt;&#xD;&lt;br /&gt;
+This week wasn't all about the Mac lineup, with &lt;a href="https://www.macrumors.com/2026/10/26/apple-announces-ipad-mini-with-oled-display/"&gt;Apple also taking the wraps off of a redesigned iPad mini&lt;/a&gt; featuring a larger 8.5-inch display that uses OLED technology for the first time.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/5fd0fe9f78370b807368bc618ac80ec75b7df106ffececc9321d1fca3f2afb95.jpg" alt="" width="2500" height="1406" /&gt;&#xD;&lt;br /&gt;
+In addition, the new iPad mini features a thinner and lighter design, an A20 Pro chip, a new Acoustic Display audio system that eliminates speaker holes, IP67-rated water and dust resistance, a landscape front camera, Apple's N1 chip with Wi-Fi 7 and Bluetooth 6 support, and more. Altogether, Apple says this amounts to the iPad mini's "biggest update ever."&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h3&gt;Mac Studio With M5 Ultra Now Available With 512GB RAM for $22,299&lt;/h3&gt;&#xD;&lt;br /&gt;
+When Apple introduced the M5 Max and M5 Ultra Mac Studio back in August, it said that a &lt;a href="https://www.macrumors.com/2026/10/28/mac-studio-m5-ultra-512gb-ram/"&gt;high-end M5 Ultra option with 512GB of memory&lt;/a&gt; would become available in late October, and it's finally here for an eye-popping price of $22,299.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/78d67ccffcee57920e147b53c79677d604243934db500fcdf01714d056338210.jpg" alt="" width="2500" height="1406" /&gt;&#xD;&lt;br /&gt;
+This configuration is obviously only intended for hungriest of power users, requiring the highest-end chip with a 36-core CPU and 80-core GPU. The memory upgrade alone to increase from the standard 96GB to 512GB costs $15,500.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h3&gt;Crackgate? iPhone Duo Owners Report Screens Breaking Along the Hinge&lt;/h3&gt;&#xD;&lt;br /&gt;
+With all of the announcements this week, it's easy to forget that the groundbreaking iPhone Duo just launched last Friday, and while early adopters have been enjoying much of what Apple's first foldable phone has to offer, it hasn't been entirely smooth sailing.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;img src="https://feeds.llun.dev/media/c94cd09cac245089d009a452c2f4ad2863b454f9c3af0a9cf70959c82fcc240a.jpg" alt="" width="1205" height="677" /&gt;&#xD;&lt;br /&gt;
+At least a few users have &lt;a href="https://www.macrumors.com/2026/10/23/iphone-duo-screen-cracks/"&gt;experienced sudden interior screen breakage&lt;/a&gt; seemingly caused by something going wrong in the complex hinge of the device. Apple has said that &lt;a href="https://www.macrumors.com/2026/10/26/iphone-duo-crack-apple-response/"&gt;it is aware of the issue&lt;/a&gt; affecting "a small number of iPhone Duo units" and that affected users should contact AppleCare to obtain replacement units.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+&lt;h2&gt;MacRumors Newsletter&lt;/h2&gt;&#xD;&lt;br /&gt;
+Each week, we publish an email newsletter like this highlighting the top Apple stories, making it a great way to get a bite-sized recap of the week hitting all of the major topics we've covered and tying together related stories for a big-picture view.&#xD;&lt;br /&gt;
+&#xD;&lt;br /&gt;
+So if you want to have &lt;a href="https://mailchi.mp/macrumors/oct-29-2026"&gt;top stories&lt;/a&gt; like the above recap delivered to your email inbox each week, &lt;b&gt;&lt;a href="http://eepurl.com/OHdUX"&gt;subscribe to our newsletter&lt;/a&gt;&lt;/b&gt;!&lt;div&gt;Tag: &lt;a href="https://www.macrumors.com/guide/top-stories/"&gt;Top Stories&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;This article, "&lt;a href="https://www.macrumors.com/2026/10/31/top-stories-apple-macbook-pro-ipad-mini-imac-updates/"&gt;Top Stories: Apple's Big MacBook Pro, iPad mini and iMac Updates&lt;/a&gt;" first appeared on &lt;a href="https://www.macrumors.com/"&gt;MacRumors.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="https://forums.macrumors.com/threads/top-stories-apples-big-macbook-pro-ipad-mini-and-imac-updates.2493315/"&gt;Discuss this article&lt;/a&gt; in our forums&lt;br /&gt;&lt;br /&gt;</content>
+    <source>
+      <title>MacRumors: Mac News and Rumors - All Stories</title>
+      <link rel="self" href="http://feeds.macrumors.com/MacRumors-All"/>
+      <link rel="alternate" href="https://www.macrumors.com"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:086a9223-da93-5cc9-82da-c43bc3336d65</id>
     <title>This PDF editor lasts for life, and it’s on sale for $79.99</title>
@@ -1494,38 +1564,6 @@ Interested in hearing more about the best deals you can find as we head into the
 &#xD;&lt;br /&gt;
 &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&#xD;&lt;br /&gt;
 &lt;/div&gt;&lt;div&gt;Related Roundup: &lt;a href="https://www.macrumors.com/roundup/best-apple-deals/"&gt;Apple Deals&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;This article, "&lt;a href="https://www.macrumors.com/2026/10/30/airtag-2-new-low-price-of-69-99/"&gt;AirTag 2 4-Pack Drops to New Low Price of $69.99&lt;/a&gt;" first appeared on &lt;a href="https://www.macrumors.com/"&gt;MacRumors.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="https://forums.macrumors.com/threads/airtag-2-4-pack-drops-to-new-low-price-of-69-99.2493230/"&gt;Discuss this article&lt;/a&gt; in our forums&lt;br /&gt;&lt;br /&gt;</content>
-    <source>
-      <title>MacRumors: Mac News and Rumors - All Stories</title>
-      <link rel="self" href="http://feeds.macrumors.com/MacRumors-All"/>
-      <link rel="alternate" href="https://www.macrumors.com"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:0332ff2d-c687-5e3d-a055-34003f55e59c</id>
-    <title>Rian Johnson's iPhone Camera App Goes Viral</title>
-    <updated>2026-10-30T12:23:15.000Z</updated>
-    <author>
-      <name>Hartley Charlton</name>
-    </author>
-    <published>2026-10-30T12:23:15.000Z</published>
-    <link rel="alternate" href="https://www.macrumors.com/2026/10/30/rian-johnson-iphone-camera-app/"/>
-    <category term="Apple"/>
-    <content type="html">Filmmaker Rian Johnson, best known for writing and directing "Knives Out," "Glass Onion," and "Star Wars: The Last Jedi," has seen his new iPhone photography app &lt;a href="https://apps.apple.com/us/app/chromagraph-camera/id6803329435"&gt;Chromagraph Camera&lt;/a&gt; climb to the top of the paid &lt;a href="https://www.macrumors.com/guide/app-store/"&gt;App Store&lt;/a&gt; charts after attracting attention on social media this week.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;img src="https://feeds.llun.dev/media/08e88d0d2ce6db3ad996a04178808db064ecaca6f89750694ed32bc76f2ffa1a.jpg" alt="" width="1600" height="900" /&gt;&#xD;&lt;br /&gt;
-Johnson developed the app with his longtime cinematographer Steve Yedlin and programmer Eric Cameron, bringing image processing techniques from their films to iPhone still photography. Chromagraph currently ranks No. 1 in Photo &amp;amp; Video on the &lt;a href="https://apps.apple.com/us/app/chromagraph-camera/id6803329435"&gt;U.S. App Store&lt;/a&gt;.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-Johnson's announcement on X accumulated six million views within a day, while users have been sharing their results, with some photo posts attracting thousands of likes.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-&lt;div&gt;&lt;blockquote&gt;&lt;a href="https://twitter.com/rianjohnson/status/2115436064458621189"&gt;&lt;/a&gt;&lt;/blockquote&gt;&lt;/div&gt;&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-Chromagraph shoots RAW photos and processes them using techniques Yedlin developed for his films, giving pictures a distinctive treatment of color, contrast, and grain. It also adds halation, a soft glow around bright areas. Users can adjust the look with controls for color, tone, and texture.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-The effect appears after taking a photo, when users open the app's gallery. Original RAW files are kept intact, so edits can be changed later.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-For sharing, photographs can be exported as JPEG or HEIC files with the processing applied. An automatic export option also sends each finished photo to the user's photo library.&#xD;&lt;br /&gt;
-&#xD;&lt;br /&gt;
-Chromagraph Camera costs $12.99 as a one-time purchase on the &lt;a href="https://apps.apple.com/us/app/chromagraph-camera/id6803329435"&gt;App Store&lt;/a&gt; and requires iOS 17 or later.&lt;br /&gt;This article, "&lt;a href="https://www.macrumors.com/2026/10/30/rian-johnson-iphone-camera-app/"&gt;Rian Johnson's iPhone Camera App Goes Viral&lt;/a&gt;" first appeared on &lt;a href="https://www.macrumors.com/"&gt;MacRumors.com&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href="https://forums.macrumors.com/threads/rian-johnsons-iphone-camera-app-goes-viral.2493228/"&gt;Discuss this article&lt;/a&gt; in our forums&lt;br /&gt;&lt;br /&gt;</content>
     <source>
       <title>MacRumors: Mac News and Rumors - All Stories</title>
       <link rel="self" href="http://feeds.macrumors.com/MacRumors-All"/>
