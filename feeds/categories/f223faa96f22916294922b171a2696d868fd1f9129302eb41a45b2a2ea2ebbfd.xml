@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:57d3f462-3c71-59cb-b00d-30597a324979</id>
   <title>Apple — Feeds</title>
-  <updated>2026-11-07T14:28:23.000Z</updated>
+  <updated>2026-11-07T15:58:46.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,65 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Apple</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:de2c3ce4-82fe-5e54-87dd-e04dff1a5d23</id>
+    <title>Revealed: Apple’s secret list of slurs, insults, and political phrases that can’t be swiped</title>
+    <updated>2026-11-07T15:58:46.000Z</updated>
+    <author>
+      <name>Macworld</name>
+    </author>
+    <published>2026-11-07T15:58:46.000Z</published>
+    <link rel="alternate" href="https://www.macworld.com/article/3279221/revealed-apples-secret-list-of-slurs-insults-and-political-phrases-that-cant-be-swiped.html"/>
+    <category term="Apple"/>
+    <content type="html">&lt;p&gt;&lt;a href="https://www.macworld.com/"&gt;Macworld&lt;/a&gt;&lt;/p&gt;
+&lt;div&gt;
+		&lt;div&gt;
+					  &lt;div&gt;
+						&lt;div&gt;
+&lt;section&gt;&lt;div&gt;&lt;/div&gt;&lt;/section&gt;
+
+
+
+&lt;p&gt;According to a research project by Derik Kauffman, Apple has a built-in list of words and phrases that the keyboard suggested words will never complete, and the swiping keyboard will not produce. This isn’t a censorship list—typing individual characters always works—but it can slow you down if you’re looking to use swiping or suggested words to speed up your iPhone typing.&lt;/p&gt;
+
+
+
+&lt;p&gt;The project is detailed at &lt;a href="https://swipeblocked.com/"&gt;Swipeblocked.com&lt;/a&gt;, with additional code and data &lt;a href="https://github.com/derikk/swipeblocked"&gt;hosted on GitHub&lt;/a&gt;. There, Kauffman details his forensics to discover this feature and the blocked phrases.&lt;/p&gt;
+
+
+
+&lt;p&gt;Here’s how it works: Apple has built into iOS a hash table of “blocked” phrases. It’s not storing plain text of words, but rather matching hashes of word IDs to a set of banned hashes. If there’s a match, the iOS keyboard will not suggest the word. And if you are swiping, it will either input some other word for your swiped word or replace an earlier word in your phrase with a different word that has a similar swipe pattern.&lt;/p&gt;
+
+
+
+&lt;p&gt;The list of phrases has not been made public by Apple, and the company does not disclose how it chooses what goes on it. Kauffman reverse-engineered it from the hash table within iOS.&lt;/p&gt;
+
+
+
+&lt;p&gt;The phrases are mostly what you would expect. They include vulgarities, politically and socially charged phrases, rascist terms, various forms of bigotry, and so on. You can literally type out the phrase, “smoking weed,” but if you type “smoking wee…” then the keyboard suggestions to finish off that second word will never include the obvious “weed.” Instead, you’ll get “weekend” or “weekly.” And if you’re using Apple’s QuickPath (Slide to Type), you’ll get “smoking Wed” or some other word, no matter how precise you are about swiping the word “weed” correctly.&lt;/p&gt;
+
+
+
+&lt;p&gt;The Swipeblocked site has a &lt;a href="https://swipeblocked.com/list"&gt;list of all the English-language banned phrases&lt;/a&gt; in iOS 27. &lt;em&gt;Warning: Many of them are not safe for work and highly offensive.&lt;/em&gt; But some are things that you may very well wish to type or swipe, especially in a particular context (illegal immigrant, NBA surveillance, etc.), and the refusal of the iOS keyboard to complete swiping entry or suggest the natural next word is one reason users are frustrated with it.&lt;/p&gt;
+
+
+
+&lt;p&gt;In addition to the phrases that are blocked from the suggested word area or swiping, there is a mechanism to prevent the autocomplete and suggested word list from suggesting &lt;em&gt;individual words&lt;/em&gt;. The iOS dictionary labels words as either vulgar, offensive, or sensitive. Vulgar words are not suggested until the user manually types them three times. Offensive words are never suggested or completed by swiping (though you can always type them out yourself). Sensitive words are similarly never offered as a prediction or completion, and some of them can’t be swiped.&lt;/p&gt;
+
+
+
+&lt;p&gt;Why does Apple do all this? It’s likely less about policing your speech than it is about avoiding lawsuits and bad PR. All it takes is one person posting a screenshot of the iOS keyboard suggesting the word “good” after they type “The Nazis were” or “real” after Santa isn’t” (both included in the list) to cause a bad viral moment criticizing Apple’s intentions, even if the keyboard suggestions would only suggest things that the user had typed several times before.&lt;/p&gt;
+
+
+
+&lt;p&gt;However, it’s still overreaching. A good solution would be to give users a choice. Allow a keyboard setting, enabled by default, to moderate the suggested word list and swipe keyboard to avoid offensive content, but also give users the ability to turn it off. But until then, you’ll need to type a little more slowly if you want to write certain phrases.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content>
+    <source>
+      <title>Macworld</title>
+      <link rel="self" href="http://www.macworld.com/index.rss"/>
+      <link rel="alternate" href="https://www.macworld.com"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:7dbd0f76-00d3-5338-b08a-117a333bc912</id>
     <title>Early Apple Black Friday Deals on Apple Watch, MacBook Air, and More</title>
@@ -12286,65 +12345,6 @@ After Australia and New Zealand, sales and deliveries of the new Macs and ‌iPa
 
 
 &lt;h2&gt;&lt;/h2&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content>
-    <source>
-      <title>Macworld</title>
-      <link rel="self" href="http://www.macworld.com/index.rss"/>
-      <link rel="alternate" href="https://www.macworld.com"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:e862524f-af6b-535a-998b-bf64f741173d</id>
-    <title>Apple reportedly slashes employee AI usage limits amid ‘cost-cutting effort’</title>
-    <updated>2026-11-05T14:11:40.000Z</updated>
-    <author>
-      <name>Macworld</name>
-    </author>
-    <published>2026-11-05T14:11:40.000Z</published>
-    <link rel="alternate" href="https://www.macworld.com/article/3277678/apple-reportedly-slashes-employee-ai-usage-limits-amid-cost-cutting-effort.html"/>
-    <category term="Apple"/>
-    <content type="html">&lt;p&gt;&lt;a href="https://www.macworld.com/"&gt;Macworld&lt;/a&gt;&lt;/p&gt;
-&lt;div&gt;
-		&lt;div&gt;
-					  &lt;div&gt;
-						&lt;div&gt;
-&lt;section&gt;&lt;div&gt;&lt;/div&gt;&lt;/section&gt;
-
-
-
-&lt;p&gt;Apple took its time jumping on the AI bandwagon, announcing Apple Intelligence as late as 2024 (nearly three and a half years after the release of DALL-E, and one and a half after ChatGPT) then delaying some of the platform’s flagship features for years after that. But these days the company is a committed proponent of “truly helpful AI that’s centered around you and your needs,” as it writes on the &lt;a href="https://apple.sjv.io/c/321564/435031/7613?subid1=rss&amp;amp;u=https://www.apple.com/apple-intelligence/"&gt;dedicated Apple Intelligence page&lt;/a&gt; on its website.&lt;/p&gt;
-
-
-
-&lt;p&gt;Product pages for the iPhone 18 Pro and iPhone Duo extol their ability to handle AI workloads, and similar language is used to market the iMac, iPad mini, Apple Watch Series 12, HomeView, and pretty much every other product Apple sells. Former CEO Tim Cook said AI is critical to Apple’s products &lt;a href="https://www.macworld.com/article/2020243/tim-cook-ai-machine-learning-chatgpt.html"&gt;back in 2023&lt;/a&gt;, while new boss John Ternus told Wired &lt;a href="https://www.wired.com/story/i-spent-30-minutes-with-apples-ceo-now-i-know-why-john-ternus-got-the-job/"&gt;last month&lt;/a&gt; that the company is “absolutely going to leverage AI” to build incredible products.&lt;/p&gt;
-
-
-
-&lt;p&gt;However, as much as it encourages customers to enjoy the benefits of AI, Apple has seemingly soured on excessive use of the technology by its own employees. In a new report, &lt;a href="https://www.bloomberg.com/news/articles/2026-11-04/apple-cuts-internal-ai-usage-budgets-in-move-to-reduce-spending"&gt;Bloomberg&lt;/a&gt; claims the company has begun “reducing employee budgets for artificial intelligence usage as part of a cost-cutting effort.”&lt;/p&gt;
-
-
-
-&lt;p&gt;Citing anonymous people with knowledge of the change, leaker Mark Gurman says Apple last month reduced the daily AI spending cap for some engineers from $300 to $200, and is planning to make further cuts which could see limits drop as low as $100. “Many groups outside of engineering already face a $100 daily cap, but Apple has considered reducing that limit to as little as $25 for some teams,” Gurman adds. Staff who believe these limits will impede their ability to do their job can ask for an exemption.&lt;/p&gt;
-
-
-
-&lt;p&gt;The spending limits relate to the tokens used by AI providers to track the volume and nature of usage, and to set fees. Complex, data-intensive tasks such as debugging code may cost more tokens than the lighter usage typical among consumers.&lt;/p&gt;
-
-
-
-&lt;p&gt;Some Apple employees will therefore need to be more conservative in the data-processing demands they place on AI. But others, apparently, won’t need to change anything about their approach. Gurman’s sources claim that “few workers were using their full $300 daily allowances, making the previous limits unnecessarily generous,” which suggests the savings obtained through the measure will be small.&lt;/p&gt;
-
-
-
-&lt;p&gt;Aside from those public comments praising the usefulness of AI, this is a surprising stance from a company which in its &lt;a href="https://www.macworld.com/article/3275094/apple-posts-record-revenue-on-strong-iphone-mac-sales.html"&gt;most recent financial disclosure&lt;/a&gt; announced its “best fiscal year ever.” But Apple has long been a company obsessed with spotting and eliminating unnecessary costs, with Cook (who came from an operations background) famous for his ability to optimise a supply chain.&lt;/p&gt;
-
-
-
-&lt;p&gt;Last month’s initial AI spending cut, while it happened on Ternus’s watch, may have been a decision made, or at least floated, while Cook was still in charge. But the plan to cut deeper shows that Ternus is just as keen as his predecessor on running an efficient company.&lt;/p&gt;
-
-
-
-&lt;p&gt;And after all, as he said in the Wired interview linked above, “We don’t want to ship AI for AI’s sake. When we’re doing it right, people won’t have to think about whether it was AI that made this happen or more traditional software. What matters is, did we build something that they really love?”&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content>
     <source>
       <title>Macworld</title>
