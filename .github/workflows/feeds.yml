@@ -17,7 +17,7 @@ jobs:
       issues: write
     steps:
       - name: Run Action
-        uses: llun/feeds@4.9.3
+        uses: llun/feeds@5.0.0
         with:
           storageType: files
           # feeds.llun.dev is served by CloudFront with this repository's GitHub
