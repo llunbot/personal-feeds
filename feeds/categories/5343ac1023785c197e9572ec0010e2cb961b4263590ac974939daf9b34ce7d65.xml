@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:12e071ac-0809-57f9-b228-ada53f88e607</id>
   <title>Cycling — Feeds</title>
-  <updated>2026-11-21T02:09:22.000Z</updated>
+  <updated>2026-11-21T12:12:07.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,25 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Cycling</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:74a529de-f4c9-5c7f-8f19-fcc373a0ce3d</id>
+    <title>Bradley Wiggins Says No One Else Will Win the Tour de France Until Tadej Pogačar Retires</title>
+    <updated>2026-11-21T12:12:07.000Z</updated>
+    <author>
+      <name>ahood</name>
+    </author>
+    <published>2026-11-21T12:12:07.000Z</published>
+    <link rel="alternate" href="https://velo.outsideonline.com/road/road-racing/bradley-wiggins-pogacar-next-tour-winner-2027/"/>
+    <category term="Cycling"/>
+    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/b40cc2a1e7723dd5ccd0f53740d8c3edab967c92aa79e5b4f3b6d97b8e596340.jpg" alt="Bradley Wiggins Says No One Else Will Win the Tour de France Until Tadej Pogačar Retires" /&gt;&lt;/figure&gt;
+&lt;p&gt;'Tadej all the way': Wiggins says the 2027 Tour de France route won’t stop Pogačar. The 2012 winner explains why he sees no one who can beat him for years to come.&lt;/p&gt;
+&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/bradley-wiggins-pogacar-next-tour-winner-2027/"&gt;Bradley Wiggins Says No One Else Will Win the Tour de France Until Tadej Pogačar Retires&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
+    <source>
+      <title>CyclingTips</title>
+      <link rel="self" href="https://cyclingtips.com/feed  "/>
+      <link rel="alternate" href="https://velo.outsideonline.com/"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:bba7c8e7-b76f-5ad6-9830-b8e8664c3826</id>
     <title>The Future is Bright: NICA Expands with Its First Western Regional Event in St. George, Utah</title>
@@ -5219,25 +5238,6 @@ As a thank you for supporting us early, riders in this first batch get introduct
       <title>The Radavist</title>
       <link rel="self" href="https://theradavist.com/feed/"/>
       <link rel="alternate" href="https://theradavist.com"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:fc1731ab-fe3c-561f-b1c1-a41b2267fb9b</id>
-    <title>Time for Tour de France Hommes? Marlen Reusser Thinks So</title>
-    <updated>2026-11-17T14:05:35.000Z</updated>
-    <author>
-      <name>ahood</name>
-    </author>
-    <published>2026-11-17T14:05:35.000Z</published>
-    <link rel="alternate" href="https://velo.outsideonline.com/road/road-racing/tour-de-france/time-for-tour-de-france-hommes-marlen-reusser-thinks-so/"/>
-    <category term="Cycling"/>
-    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/d40047c0890c1342de2aaa3efcaf41ba5f7db887a283d11d97efba501faeabbb.jpg" alt="Time for Tour de France Hommes? Marlen Reusser Thinks So" /&gt;&lt;/figure&gt;
-&lt;p&gt;'I don’t want to be a decoration of a male sport': Marlen Reusser explains why the men's Tour de France needs to add 'Hommes' to its name.&lt;/p&gt;
-&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-racing/tour-de-france/time-for-tour-de-france-hommes-marlen-reusser-thinks-so/"&gt;Time for Tour de France Hommes? Marlen Reusser Thinks So&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
-    <source>
-      <title>CyclingTips</title>
-      <link rel="self" href="https://cyclingtips.com/feed  "/>
-      <link rel="alternate" href="https://velo.outsideonline.com/"/>
     </source>
   </entry>
   <entry>
