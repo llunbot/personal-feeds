@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>urn:uuid:12e071ac-0809-57f9-b228-ada53f88e607</id>
   <title>Cycling — Feeds</title>
-  <updated>2026-11-21T12:12:07.000Z</updated>
+  <updated>2026-11-21T13:01:19.000Z</updated>
   <author>
     <name>Feeds</name>
   </author>
@@ -11,6 +11,44 @@
   <link rel="alternate" type="text/html" href="https://feeds.llun.dev/"/>
   <subtitle>Distinct stored items belonging to Cycling</subtitle>
   <icon>https://feeds.llun.dev/favicon.ico</icon>
+  <entry>
+    <id>urn:uuid:0120119a-5d67-55cc-a78e-500553f9a3e5</id>
+    <title>Close Enough to Touch—All the Details of Brandon McNulty’s Colnago Y1Rs</title>
+    <updated>2026-11-21T13:01:19.000Z</updated>
+    <author>
+      <name>Logan Jones-Wilkins</name>
+    </author>
+    <published>2026-11-21T13:01:19.000Z</published>
+    <link rel="alternate" href="https://velo.outsideonline.com/road/road-gear/brandon-mcnultys-colnago-y1rs/"/>
+    <category term="Cycling"/>
+    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/bdb050d2da7684c25f92bdc6ea13c6eadb4304d441dd93c60dfb1196d0b50e59.jpg" alt="Close Enough to Touch—All the Details of Brandon McNulty's Colnago Y1Rs" /&gt;&lt;/figure&gt;
+&lt;p&gt;All the details of the American's custom Colnago as McNulty makes an appearance at El Tour de Tucson. &lt;/p&gt;
+&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-gear/brandon-mcnultys-colnago-y1rs/"&gt;Close Enough to Touch—All the Details of Brandon McNulty’s Colnago Y1Rs&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
+    <source>
+      <title>CyclingTips</title>
+      <link rel="self" href="https://cyclingtips.com/feed  "/>
+      <link rel="alternate" href="https://velo.outsideonline.com/"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:6d0d86c0-6997-5b3d-8450-e53c97f9b238</id>
+    <title>You Don’t Need to Spin at 90 RPM—That’s a ’90s Myth</title>
+    <updated>2026-11-21T13:00:54.000Z</updated>
+    <author>
+      <name>Josh Ross</name>
+    </author>
+    <published>2026-11-21T13:00:54.000Z</published>
+    <link rel="alternate" href="https://velo.outsideonline.com/road/road-gear/cycling-cadence-myth-90-rpm/"/>
+    <category term="Cycling"/>
+    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/ccc16b10c6e14759f21de43f4741fc9624224fcb76ba4ba465169b1b2ef6105d.jpg" alt="You Don’t Need to Spin at 90 RPM—That’s a ’90s Myth" /&gt;&lt;/figure&gt;
+&lt;p&gt;High cadence made sense for WorldTour pros on EPO. For the rest of us, pedaling slower is often more efficient, and you can probably skip the cadence drills.&lt;/p&gt;
+&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/road/road-gear/cycling-cadence-myth-90-rpm/"&gt;You Don’t Need to Spin at 90 RPM—That’s a ’90s Myth&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
+    <source>
+      <title>CyclingTips</title>
+      <link rel="self" href="https://cyclingtips.com/feed  "/>
+      <link rel="alternate" href="https://velo.outsideonline.com/"/>
+    </source>
+  </entry>
   <entry>
     <id>urn:uuid:74a529de-f4c9-5c7f-8f19-fcc373a0ce3d</id>
     <title>Bradley Wiggins Says No One Else Will Win the Tour de France Until Tadej Pogačar Retires</title>
@@ -5075,25 +5113,6 @@ Here’s to more women out there, more adventures by bicycle, and the courage to
     </source>
   </entry>
   <entry>
-    <id>urn:uuid:64dc4dd3-4ecb-5f5e-9f7b-d4fdabb6d10b</id>
-    <title>You Don’t Need Separate Bikepacking, Gravel, and Race Bikes. You Just Need the Shafer.</title>
-    <updated>2026-11-17T17:00:33.000Z</updated>
-    <author>
-      <name>Alison Jaksen</name>
-    </author>
-    <published>2026-11-17T17:00:33.000Z</published>
-    <link rel="alternate" href="https://velo.outsideonline.com/gravel/you-dont-need-separate-bikepacking-gravel-and-race-bikes-you-just-need-the-shafer/"/>
-    <category term="Cycling"/>
-    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/f6c11da2edad4c27dbd66685918fac207b57c02f8919e28c2e2cb29fcf0e4a52.jpg" alt="You Don’t Need Separate Bikepacking, Gravel, and Race Bikes. You Just Need the Shafer." /&gt;&lt;/figure&gt;
-&lt;p&gt;The lightweight carbon Shafer (and its pedal-assist version, the Shafer HP) are designed to handle everything from gravel races to singletrack to multiday adventure&lt;/p&gt;
-&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/gravel/you-dont-need-separate-bikepacking-gravel-and-race-bikes-you-just-need-the-shafer/"&gt;You Don’t Need Separate Bikepacking, Gravel, and Race Bikes. You Just Need the Shafer.&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
-    <source>
-      <title>CyclingTips</title>
-      <link rel="self" href="https://cyclingtips.com/feed  "/>
-      <link rel="alternate" href="https://velo.outsideonline.com/"/>
-    </source>
-  </entry>
-  <entry>
     <id>urn:uuid:edf30f33-443c-5b3c-a3b2-c1d6ba8c868f</id>
     <title>Buena Onda Bikes: Taiwan Made Batch Built Titanium Hardtail Pre-Order</title>
     <updated>2026-11-17T16:27:25.000Z</updated>
@@ -5157,25 +5176,6 @@ As a thank you for supporting us early, riders in this first batch get introduct
       <title>The Radavist</title>
       <link rel="self" href="https://theradavist.com/feed/"/>
       <link rel="alternate" href="https://theradavist.com"/>
-    </source>
-  </entry>
-  <entry>
-    <id>urn:uuid:34c39fbe-a9c5-52fc-8a60-69b6ba711195</id>
-    <title>The U.S. Has a New UCI Gravel Race, and It Is a Stunner</title>
-    <updated>2026-11-17T16:24:52.000Z</updated>
-    <author>
-      <name>Logan Jones-Wilkins</name>
-    </author>
-    <published>2026-11-17T16:24:52.000Z</published>
-    <link rel="alternate" href="https://velo.outsideonline.com/gravel/uci-announces-borderlands-gravel/"/>
-    <category term="Cycling"/>
-    <content type="html">&lt;figure&gt;&lt;img src="https://feeds.llun.dev/media/e421f93f3021f8220dd07e5c689b351e30f07dc7a9dcedd4215b8acaa9bda3b3.jpg" alt="The U.S. Has a New UCI Gravel Race, and It Is a Stunner" /&gt;&lt;/figure&gt;
-&lt;p&gt;Borderlands Gravel in Arizona joins BWR Utah and Highlands Gravel on the UCI Gravel World Series in 2027&lt;/p&gt;
-&lt;p&gt;Read the full article at &lt;a href="https://velo.outsideonline.com/gravel/uci-announces-borderlands-gravel/"&gt;The U.S. Has a New UCI Gravel Race, and It Is a Stunner&lt;/a&gt; on &lt;a href="https://velo.outsideonline.com/"&gt;Velo&lt;/a&gt;.&lt;/p&gt;</content>
-    <source>
-      <title>CyclingTips</title>
-      <link rel="self" href="https://cyclingtips.com/feed  "/>
-      <link rel="alternate" href="https://velo.outsideonline.com/"/>
     </source>
   </entry>
   <entry>
