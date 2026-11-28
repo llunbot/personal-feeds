@@ -75,6 +75,264 @@
     </source>
   </entry>
   <entry>
+    <id>urn:uuid:237cdf19-85fc-52e9-9baa-375fe4ee6933</id>
+    <title>มาดูแนวทางการทำ Synthetic Testing จาก Airbnb กัน</title>
+    <updated>2026-11-27T16:52:27.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-27T16:52:27.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/synthetic-testing-from-airbnb/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/4506245d2c0ce9030ddfd2b8a65295739ee0a47cd7a6bc1b965f3e816056028e.png" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/4506245d2c0ce9030ddfd2b8a65295739ee0a47cd7a6bc1b965f3e816056028e.png 150w, https://feeds.llun.dev/media/c6ce0766ecb0228cd3f417a3c2b47b79c5363803ec45a44e344456f9a51cb27d.png 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/synthetic-testing-01.png"&gt;&lt;img src="https://feeds.llun.dev/media/3f9f659e51a46dc3f0797c4b697b17d5a64542367f5041f19b3f0728babec384.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ทาง Airbnb เขียนบทความเรื่อง &lt;br /&gt;&lt;strong&gt;&lt;a href="https://airbnb.tech/infrastructure/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb/" target="_blank"&gt;Beyond synthetic testing: Capturing and replaying real database workloads at Airbnb&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;โดยจะทำการ capture และ replay ข้อมูลจริง ๆ จาก production workload&lt;br /&gt;และนำมาจัดเก็บใน database ต่อไป (backup/restore)&lt;br /&gt;เพื่อนำมาใช้ในการทำ load testing, plan capacity และลดความเสี่ยงจากการ upgrade ระบบงาน&lt;br /&gt;มาดูกันว่ามีแนวทางอย่างไรบ้าง ?&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ก่อนอื่นต้องเข้าใจก่อนว่า &lt;a href="https://www.manageengine.com/products/applications_manager/blog/28/synthetic-monitoring-101-a-comprehensive-guide-to-synthetic-monitoring.html" target="_blank"&gt;Synthetic Testing&lt;/a&gt; คืออะไร มีเป้าหมายอย่างไร ?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;เป็นแนวทางหนึ่งในการทดสอบและตรวจสอบระบบงาน&lt;br /&gt;ด้วยการจำลองข้อมูลต่าง ๆ ของระบบจากข้อมูลหรือพฤติกรรมของการใช้งานจริง ๆ&lt;br /&gt;เพื่อตรวจหาปัญหา และ คอขวดต่าง ๆ ของระบบ ก่อนที่จะส่งมอบหรือกระทบกับผู้ใช้งานจริง ๆ&lt;br /&gt;ตัวอย่างเช่น&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;ทดสอบตาม use journey สำคัญ ๆ ของระบบ เช่น การ login/pin การค้นหาสินค้าและการชำระเงินเป็นต้น&lt;/li&gt;
+
+
+
+&lt;li&gt;ทดสอบ performance และ availability ของระบบ API ด้วยการยิง request ผ่าน HTTPs/DNS จาก location ต่าง ๆ เพื่อดูการใช้งานและ response time ว่าช้าเร็วอย่างไรบ้าง หรือมีปัญหาหรือไม่&lt;/li&gt;
+
+
+
+&lt;li&gt;ทดสอบก่อน release ให้ลูกค้าใช้งาน&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;รูปเปรียบเทียบกับ RUM(REal User Monitoring)&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/synthetic-testing-02.png"&gt;&lt;img src="https://feeds.llun.dev/media/aa380b594a084654921f1c9ce071119386b1ca4ce41b693ac6b68026e24563f0.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;กลับมาที่ระบบของ Airbnb ซึ่งเก็บข้อมูลหลักไว้ใน MySQL cluster มีจำนวน node หลายร้อยเครื่อง&lt;/strong&gt;&lt;br /&gt;ซึ่งมีการใช้งานมากกว่า  1 ล้าน query ต่อวินาที (QPS-Query per second)&lt;br /&gt;ดังนั้นปัญหาในการจัดการต่าง ๆ จะเยอะมาก ๆ&lt;br /&gt;ทั้งการ scaling&lt;br /&gt;ทั้งการ upgrade version และ migration&lt;br /&gt;รวมทั้งการ reproduce ปัญหาที่เกิดบน production เพื่อทำการหาปัญหาและแก้ไขต่อไป&lt;br /&gt;โดยหนึ่งในแนวทางการแก้ไขปัญหาเหล่านี้&lt;br /&gt;&lt;strong&gt;คือการ capture ข้อมูลจาก traffic ที่เข้าใช้งาน database ไว้&lt;br /&gt;แล้วนำมา replay ในระบบต่าง ๆ ไม่ว่าจะเป็น Test, SIT, UAT และ Staging/pre-prod&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;โดยทาง architecture การจัดการแบบดั้งเดิม&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;จะใช้งานผ่าน logger ของแต่ละระบบ ซึ่งจะทำการส่ง SQL query  ต่าง ๆ ผ่าน log&lt;br /&gt;และทำส่งไปยัง Apache Kafka เพื่อจัดเก็บไว้&lt;br /&gt;จากนั้นก็สร้าง consumer ขึ้นมาเพื่อดึงข้อมูล ๆ จาก topic ใน Apache Kafka&lt;br /&gt;เพื่อนำมา replay ไปยังระบบต่าง ๆ ต่อไป&lt;br /&gt;ซึ่งนำแนวคิดมาจากระบบ observalibility นั่นเอง แสดงดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/synthetic-testing-03.png"&gt;&lt;img src="https://feeds.llun.dev/media/97b3b61180d19ee4892cdb772df622301f593d149946620308abb726fa78beae.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;แต่ architecture นี้มีปัญหาเรื่องของความถูกต้องของข้อมูลที่กระจัดกระจาย &lt;br /&gt;SQL query ที่มาจาก version ของ database ที่แตกต่างกัน&lt;br /&gt;ยากที่จะทำให้เห็นภาพรวมของ transaction นั้น ๆ&lt;br /&gt;ซึ่งทำให้การจะนำมา replay ไปยัง database ต่าง ๆ ทำได้ยากมาก ๆ&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ดังนั้นจึงพยายามสร้างระบบที่ทำการ capture และ replay ใหม่&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;โดยมีเป้าหมายของระบบดังนี้&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;สามารถทำ &lt;strong&gt;Load testing with real production traffic&lt;/strong&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;SQL query ต้อง compatibility จาก version ต่าง ๆ ได้ เพื่อให้ง่ายต่อการ upgrade และ migration&lt;/li&gt;
+
+
+
+&lt;li&gt;สามารถทำ performance debugging ได้ง่าย เพื่อให้ replay ปัญหาขึ้นมาได้ ซึ่งช่วยให้ง่ายต่อการหาต้นเหตุของปัญหา&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;และเป้าหมายที่สำคัญคือ application/service ไม่ต้องแก้ไขใด ๆ&lt;br /&gt;ดังนั้นจึงทำการพัฒนาการ capture และ replay ข้อมูลอยู่บน &lt;a href="https://proxysql.com/" target="_blank"&gt;ProxySQL&lt;/a&gt;&lt;br /&gt;ซึ่งอยู่ระหว่าง application/service กับ database แสดงดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/50456ea6420c9dc0d5bd30cf54e4e5ed7e05f3d15f993456e88487d48735f9fd.png"&gt;&lt;img src="https://feeds.llun.dev/media/50456ea6420c9dc0d5bd30cf54e4e5ed7e05f3d15f993456e88487d48735f9fd.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ดังนั้นทุก ๆ request จาก application/service จะผ่าน Proxy เสมอ&lt;br /&gt;จากนั้นทางทีมของ Airbnb ทำการสร้าง Log Mover &lt;br /&gt;ซึ่งเป็น sidecar ที่พัฒนาอยู่บน &lt;a href="https://proxysql.com/documentation/query-logging/" target="_blank"&gt;Query logging&lt;/a&gt;&lt;br /&gt;เพื่อจัดเก็บ SQL query จาก proxy มา แล้วจึงส่งไปจัดเก็บต่อไป&lt;br /&gt;แสดงการทำงานดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/a66aa3ecfdc51c28c51cbcd3b33b3f95fdf47dadc173010586a9f862b8ad35e8.png"&gt;&lt;img src="https://feeds.llun.dev/media/a66aa3ecfdc51c28c51cbcd3b33b3f95fdf47dadc173010586a9f862b8ad35e8.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;เมื่อได้ log ที่เป็น raw data แล้ว ก่อนนำไปใช้งานก็ต้องทำการ pre-processing ก่อน &lt;br /&gt;หรือ data pipeline นั่นเอง เช่น parsing, grouping, ordering, query rewrite (data transformation)&lt;br /&gt;โดยในบทความจะเรียกว่า &lt;strong&gt;Log processor&lt;/strong&gt;&lt;br /&gt;แสดงการทำงานดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/94c94e3dbc4684e77d3cc90947c148cd7bc67f556e30812e694f48b36ad4ead5.png"&gt;&lt;img src="https://feeds.llun.dev/media/94c94e3dbc4684e77d3cc90947c148cd7bc67f556e30812e694f48b36ad4ead5.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;เมื่อทำการ process ข้อมูลเรียบร้อยแล้ว&lt;br /&gt;ก็นำไป replay ไปยัง database ที่ต้องการผ่าน &lt;strong&gt;Log replayer&lt;/strong&gt; ต่อไป&lt;br /&gt;ซึ่งระบบ log replayer เป็น web application ที่มีความสามารถดังนี้&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;เลือก database cluster ที่ต้องการทั้ง source และ target&lt;/li&gt;
+
+
+
+&lt;li&gt;เลือกช่วงเวลาของข้อมูลที่ต้องการ&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำการเลือก mode ของการ replay ว่าจะทำ load testing หรือ compatability testing&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;แสดงการทำงานดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/synthetic-testing-06.png"&gt;&lt;img src="https://feeds.llun.dev/media/d97f0862a9aa42a38eac425b7e4e3baf6339246b0e74e6a8ce498ff53eebb7f9.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;เป็นอีกแนวทางที่น่าสนใจสำหรับการทดสอบระบบงาน&lt;br /&gt;โดยที่ใช้ workload จาก production&lt;br /&gt;เพื่อทำให้มั่นใจว่าระบบงานสามารถรองรับ workload ได้&lt;br /&gt;รวมทั้งยังใช้ในการ migrate/update database และลดปัญหาหรือ incident บน production ลงไปอีก&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:88fbc8c4-8243-5c8a-baa3-a3aa3d5a6b12</id>
+    <title>สรุปการอ่านเรื่อง Redesign how your team ships software with AI agents จาก GitLab</title>
+    <updated>2026-11-27T06:18:41.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-27T06:18:41.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/note-redesign-how-your-team-ships-software-with-ai-agents/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/1ceff8aba28be79736bb26c8a82e6c83dcbe0f94e946ae0dda445c589e0af4b0.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/1ceff8aba28be79736bb26c8a82e6c83dcbe0f94e946ae0dda445c589e0af4b0.jpg 150w, https://feeds.llun.dev/media/0054fc0eb8916c5516c708c980e5f64cdf055d64252719c43c9a39104af4f88e.jpg 75w" /&gt;&lt;/p&gt;
+&lt;p&gt;ทาง GitLab ได้ปล่อยบทความเกี่ยวกับ&lt;br /&gt;การเปลี่ยนแปลงกระบวนการส่งมอบ software ในยุคของ AI Agent ออกมา&lt;br /&gt;ในหัวข้อ &lt;strong&gt;&lt;a href="https://about.gitlab.com/blog/redesign-how-your-team-ships-software-with-ai-agents/" target="_blank"&gt;Redesign how your team ships software with AI agents&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;ซึ่งเป็น guildline ที่น่าสนใจสำหรับ AI-native engineering&lt;br /&gt;โดยในบทความจะเน้นไปที่การหาและวิเคราะห์ปัญหาต่าง ๆ ก่อนว่า&lt;br /&gt;มีจุดไหนที่ทำให้การส่งมอบ software ช้า เพื่อแก้ไขต่อไป&lt;br /&gt;ตั้งแต่ request ของการเปลี่ยนแปลงที่ส่งเข้ามาไปจนถึงส่งมอบขึ้น production&lt;br /&gt;แน่นอนว่า ปัญหาคอขวดหลัก ๆ คือ คน นั่นเอง !!&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;แต่ว่าอยู่ในขั้นตอนไหนบ้าง ?&lt;br /&gt;เพื่อทำการปรับปรุงให้ดียิ่งขึ้น ทั้งรวดเร็วขึ้นและคุณภาพที่สูงเช่นกัน&lt;br /&gt;ยกตัวอย่างเช่น ต้องรอหลายวันเพื่อให้คนมา approve เป็นต้น&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/gitlab-ai-native-01.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/cd515fd0cb0913e6567b3be2b0756e91793ca7a85abb61d00716579751145088.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ในบทความได้อธิบาย stage ของการทำงานของคนกับ AI Agent ไว้ 4 stage ดังนี้&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;โดยในแต่ละ stage นั้นขึ้นอยู่กับใครเป็นคน verify หรือตรวจสอบ output นั่นเอง&lt;br /&gt;ประกอบไปด้วย&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Stage 1 :: Manual&lt;/strong&gt;&lt;br /&gt;ในทุก ๆ ขั้นตอนมีคนเข้ามาในกระบวนการเสมอ &lt;br /&gt;หรือ ให้คนตรวจสอบผลการทำงานนั่นเอง&lt;br /&gt;โดยการทำงานทั้งหมดยังเป็นคนเท่านั้น&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Stage 2 :: Suggest&lt;/strong&gt;&lt;br /&gt;ยังมีคนอยู่ในกระบวนการเช่นเดิม แต่กำหนดกรอบการทำงานให้ AI Agent&lt;br /&gt;หรือให้ทาง AI Agent ทำการ draft สิ่งที่ต้องการออกมาตามกรอบที่กำหนด&lt;br /&gt;จากนั้นคนทำการตรวจสอบเพื่อให้ AI Agent แก้ไขต่อไป (human in the loop)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Stage 3 :: Execute&lt;/strong&gt;&lt;br /&gt;ใน stage นี้จะให้ AI Agent ทำงานตาม flow หรือ การทำงานปกติทั้งหมด&lt;br /&gt;ยกเว้นเกิดปัญหา หรือมี flow อื่น ๆ เกิดขึ้นมา จึงจะให้คนเข้ามาดูหรือทำต่อไป&lt;br /&gt;เมื่อการทำงานแบบ end-to-end เสร็จสิ้นแล้ว&lt;br /&gt;คนจะเข้ามาทำการตรวจสอบและ approve ต่อไป หรือ human out the loop ไปแล้ว&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Stage 4 :: Act within guardrails&lt;/strong&gt;&lt;br /&gt;ในส่วนนี้ AI Agent ทำงานเองแบบ end-to-end ไปเลย&lt;br /&gt;จะมีคนเข้ามาก็ต่อเมื่อเกิดข้อผิดพลาดตามที่กำหนด % ไว้เท่านั้น&lt;br /&gt;หรือมีการสร้าง guardrail เอาไว้ เพื่อเป็นตัวตัดสินใจหรือบอก AI Agent นั่นเอง&lt;br /&gt;ดังนั้นคนจะทำเพียงบอกความต้องการ หรือ goal หรือจัดการปัญหาสำคัญ ๆ เท่านั้น&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/gitlab-ai-native-02.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/c1afb419fda0e40655e34969cb58ed46a76a83a3e974fceb16b2c5a797cdf175.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ในหัวข้อต่อมาคือ จะทำการ review code ที่ AI Agent สร้างขึ้นมาอย่างไร ?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;เนื่องจาก code ที่ถูกสร้างขึ้นมาเยอะมาก ๆ &lt;br /&gt;ดังนั้นจะทำการ review อย่างไร ซึ่งเป็นคำถามที่ทุก ๆ คนต้องตอบให้ได้&lt;br /&gt;แน่นอนว่า ถ้าใช้คนเหมือนเดิม ปัญหาคอขวดจะหนักมาก ๆ&lt;br /&gt;และขั้นตอนการ review แบบเดิม ไม่ได้ถูกออกแบบมาเพื่อ AI Agent เลย&lt;br /&gt;ดังนั้นสิ่งที่น่าสนใจในบทความนี้คือ&lt;br /&gt;การใช้งาน &lt;strong&gt;&lt;a href="https://about.gitlab.com/ai-native-playbook/topics/governing-and-scaling/verify-what-agents-produce/" target="_blank"&gt;Layered verification system&lt;/a&gt;&lt;/strong&gt; นั่นเอง&lt;/p&gt;
+
+
+
+&lt;p&gt;โดยในขั้นตอนการทำงานต่าง ๆ นั้น&lt;br /&gt;จะไม่ใช้คนก็ต่อเมื่อมีความเสี่ยงที่ต่ำ หรือ สามารถจัดการความเสี่ยงได้ (Risk assessment)&lt;br /&gt;รวมทั้งในการตรวจสอบมีหลักฐานต่าง ๆ ชัดเจน ไม่ได้คิดไปเอง (static code analysis, test script, CI/CD)&lt;br /&gt;ส่วนอะไรที่มีความเสี่ยงสูง ๆ จะมีขั้นตอนการ review และ approve ทั้งจากคนและ AI Agent มากยิ่งขึ้น&lt;br /&gt;แสดงการทำงานดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/Screenshot-2569-11-27-at-1.13.24-PM.png"&gt;&lt;img src="https://feeds.llun.dev/media/3c0c8d54ece346743d31eb16759ad3ddb32f72db89359943f1f3d02d09da1ea1.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;โดยทาง GitLab ได้ปล่อย &lt;a href="https://about.gitlab.com/ai-native-playbook/" target="_blank"&gt;The AI-Native Engineering Plabook&lt;/a&gt; ออกมา ประกอบไปด้วย&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;Redesigning the work&lt;/li&gt;
+
+
+
+&lt;li&gt;Working with agents&lt;/li&gt;
+
+
+
+&lt;li&gt;Governing and scaling&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;สามารถเข้าไปศึกษาเพิ่มเติมได้&lt;br /&gt;และลองนำมาประยุกต์ใช้งานกันดูครับ&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
+  <entry>
     <id>urn:uuid:f3121735-0504-5e04-ba58-b9f475386ee8</id>
     <title>Satya Nadella ยอมรับไมโครซอฟท์มองพลาด ไม่เห็นว่า Claude Code จะมาฆ่า IDE</title>
     <updated>2026-11-27T03:47:58.000Z</updated>
@@ -159,6 +417,111 @@
       <title>Blognone</title>
       <link rel="self" href="https://www.blognone.com/node/feed"/>
       <link rel="alternate" href="https://www.blognone.com/"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:bf491956-3b5f-5560-9d40-9590546f36c8</id>
+    <title>มาใช้งาน Modern Web Guidance 1.0  จาก Google Chrome กัน</title>
+    <updated>2026-11-26T16:52:33.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-26T16:52:33.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/google-modern-web-guidance-v1/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/5f05cfa902bf52b408731e1af6cede27807314599ecb93f5d1aea30f7dd652c0.png" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/5f05cfa902bf52b408731e1af6cede27807314599ecb93f5d1aea30f7dd652c0.png 150w, https://feeds.llun.dev/media/741d0ea4c78aea20b5a96654218ed3276cc0d0a58a6a4011c46134750b327757.png 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/card-v1-announcement.png"&gt;&lt;img src="https://feeds.llun.dev/media/dd0114a48abc6173938dfa8a4ca8420d23ac2469c51f527eb588cc517d9dbe9c.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ทางทีม Google Chrome เพิ่งปล่อย &lt;strong&gt;&lt;a href="https://developer.chrome.com/blog/modern-web-guidance-v1" target="_blank"&gt;Modern Web Guidance 1.0&lt;/a&gt;&lt;/strong&gt; ออกมาให้ใช้งาน&lt;br /&gt;ซึ่งก่อนหน้านี้ได้แนะนำใน &lt;a href="https://www.somkiat.cc/agent-skills-modern-web-guidance/" target="_blank"&gt;blog&lt;/a&gt; นี้แล้ว&lt;br /&gt;คือ Agent skills สำหรับการพัฒนา web application ตาม pattern ใหม่ ๆ&lt;br /&gt;รวมทั้งความสามารถใหม่ ๆ เช่น dialog, popover, view transitions หรือ container queries เป็นต้น&lt;br /&gt;อีกทั้งยังสามารถ review code เดิม เพื่อสรุปว่ามี code ส่วนไหนบ้างที่มีรูปแบบเก่า ๆ ที่ควรแก้ไขหรือปรับปรุงต่อไป&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;เป้าหมายของ Modern Web Guidance คือ&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;"Coding agents often default to older patterns &lt;br /&gt;because LLM training data contains vast amounts of legacy code"&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;รวมทั้งการเขียน code ให้น้อยลง แต่ยังคงทำงานได้เหมือนเดิม&lt;br /&gt;โดยใช้ feature หรือความสามารถของ web browser ให้มากยิ่งขึ้น&lt;br /&gt;นั่นหมายความว่าถ้าให้ AI Agent เขียน code ให้แล้ว&lt;br /&gt;จำนวน token ที่ใช้งานก็น้อยลงเช่นกัน&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/how-modern-web-guidance-works-four-steps.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/2dc3fb0fca03638505303ed5ac7d66aae86fa45dc2be0177df2fc8d502ee7ff9.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;โดยทางทีมทำการสรุปเรื่อง &lt;a href="https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev" target="_blank"&gt;Top 10 things AI gets wrong in web development&lt;/a&gt; ออกมา&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;สรุปความผิดพลาดที่ AI Agent สร้าง code ในส่วนของ web application ออกมา&lt;br /&gt;ซึ่งพบว่าผิดพลาดจากการตรวจสอบมากกว่า 50%&lt;br /&gt;แต่เมื่อให้ใช้งาน Modern Web Guidance แล้วข้อผิดพลาดมีไม่ถึง 10% !!&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/f553a955e6f5637d96134f9cb14c900cd030d3309d8e500ac7723d3f1d4e8176.png"&gt;&lt;img src="https://feeds.llun.dev/media/f553a955e6f5637d96134f9cb14c900cd030d3309d8e500ac7723d3f1d4e8176.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ความผิดพลาดเหล่านั้นประกอบไปด้วย&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;Web accessibility&lt;/li&gt;
+
+
+
+&lt;li&gt;User experience&lt;/li&gt;
+
+
+
+&lt;li&gt;Performance&lt;/li&gt;
+
+
+
+&lt;li&gt;Security&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;และที่น่าสนใจคือสนับสนุน Web MCP อีกด้วย&lt;/strong&gt;&lt;br /&gt;ช่วยให้ AI Agent ทำการควบคุมและจัดการข้อมูลต่าง ๆ ในหน้า web ได้ง่าย&lt;br /&gt;ยกตัวอย่างเช่น การจัดการข้อมูลใน form เป็นต้น&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ลองทำการสร้าง web ง่าย ๆ&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/Screenshot-2569-11-26-at-11.49.14-PM.png"&gt;&lt;img src="https://feeds.llun.dev/media/420f53644e3abf30f262cc005b787ce9968b8d655a95d9b104d4decd3cda70d4.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;เข้าไปดูในส่วนของ WebMCP&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/Screenshot-2569-11-26-at-11.50.02-PM-scaled.png"&gt;&lt;img src="https://feeds.llun.dev/media/df32f85dcc272714613988bc4f615f9bcf8a2b9e234dbb86ebf443a4f9487e32.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ดังนั้นทำการติดตั้งหรือ update ได้เลยครับ&lt;br /&gt;&lt;strong&gt;&lt;em&gt;$npx modern-web-guidance@latest install&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
     </source>
   </entry>
   <entry>
@@ -381,6 +744,75 @@
     </source>
   </entry>
   <entry>
+    <id>urn:uuid:3cdfc386-f3e7-5aef-8d6d-6c637c3a911d</id>
+    <title>NPKill ออก version 1 มาแล้ว</title>
+    <updated>2026-11-23T11:40:07.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-23T11:40:07.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/npkill-version-1/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/4980c8625f47dc961f3731db8234d2294c67cde0192c166df9d16abdf1c0c982.webp" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/4980c8625f47dc961f3731db8234d2294c67cde0192c166df9d16abdf1c0c982.webp 150w, https://feeds.llun.dev/media/608038cc828f41afc4fd057484a86e53964ee85ccf0149866b496967e3d3b3e7.webp 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/npkill-1.webp"&gt;&lt;img src="https://feeds.llun.dev/media/36acdbd93d76072576359188b8c0c16da6f8edbe22fd169cebb96a7f3765d5f8.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.somkiat.cc/delete-node-modules-with-npkill/" target="_blank"&gt;npkill&lt;/a&gt;&lt;/strong&gt; ปล่อย &lt;strong&gt;&lt;a href="https://github.com/voidcosmos/npkill/releases" target="_blank"&gt;version  1.0&lt;/a&gt;&lt;/strong&gt; ออกมาแล้ว&lt;br /&gt;เป็นเครื่องมือสำหรับลบ &lt;strong&gt;node_modules&lt;/strong&gt; ออกไปจากเครื่อง&lt;br /&gt;โดยใน version แรกนั้นเป็น script เพียง 200 บรรทัดเท่านั้น&lt;br /&gt;แต่ใน version นี้ทำการเพิ่มความสามารถเข้ามา&lt;br /&gt;ทำให้เราสามารถ scan หา folder ตามภาษาโปรแกรมและ framework ต่าง ๆ ได้มากขึ้น&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;โดยจะเรียกว่า &lt;strong&gt;&lt;a href="https://github.com/voidcosmos/npkill/blob/main/docs/profiles.md" target="_blank"&gt;profiles&lt;/a&gt;&lt;/strong&gt; ​ซึ่งจะแยกตามภาษาโปรแกรมให้เลย&lt;br /&gt;ไม่ว่าจะเป็น python, rust, java, dotnet, go, android, elm และ php เป็นต้น&lt;br /&gt;แสดงดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/npkill-profiles.webp"&gt;&lt;img src="https://feeds.llun.dev/media/5cb9df73b51e2524019091a40290667c9f945375e350d0f36fce73fa9dbfb4bf.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;อีกทั้งยังสามารถสร้าง custom profile ได้เองอีกด้วย&lt;br /&gt;ทำการสร้างในไฟล์ &lt;strong&gt;npkillrc&lt;/strong&gt;&lt;br /&gt;ตัวอย่างเช่น&lt;/p&gt;
+
+
+
+[gist id="f9ff7724311adc50db85f34ecc1afda1" file="1.txt"]
+
+
+
+&lt;p&gt;ลองใช้งานกันดูครับ &lt;strong&gt;$npx npkill@latest&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;สามารถดู profiles ที่มีให้ทั้งหมด ดังนี้&lt;/p&gt;
+
+
+
+[gist id="f9ff7724311adc50db85f34ecc1afda1" file="2.txt"]
+
+
+
+&lt;p&gt;&lt;strong&gt;Reference websites&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://zaldih.com/en/post/npkill-1-0-0/" target="_blank"&gt;npkill 1.0: modern development ate your disk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
+  <entry>
     <id>urn:uuid:3209ec59-9254-55b6-bd46-263b209f8e3e</id>
     <title>ทำเว็บแปลงยอดเงินเป็นตัวอักษร+คิดภาษีมาฝากครับ</title>
     <updated>2026-11-16T13:20:07.000Z</updated>
@@ -415,6 +847,108 @@
       <title>iannnnn.com</title>
       <link rel="self" href="https://iannnnn.com/feed"/>
       <link rel="alternate" href="https://iannnnn.com"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:811bd165-7660-5bdb-aa33-d3af0d23513f</id>
+    <title>มาดูการปรับปรุง performance ของ Agent Browser 0.43</title>
+    <updated>2026-11-15T10:32:48.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-15T10:32:48.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/inprove-performance-of-agent-browser/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/0d871ee39976bacddf67db6c3c49318aef83a930fcbca352f0d0f3e13a100975.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/0d871ee39976bacddf67db6c3c49318aef83a930fcbca352f0d0f3e13a100975.jpg 150w, https://feeds.llun.dev/media/29f3cbbf80ebffac70c68efd5856bca1755f796b319e01c4dffc08fc29c50810.jpg 75w" /&gt;&lt;/p&gt;
+&lt;p&gt;ทาง  Vercel เพิ่งปล่อย &lt;strong&gt;&lt;a href="https://www.somkiat.cc/try-agent-browser-cli/" target="_blank"&gt;Agent Browser&lt;/a&gt;&lt;/strong&gt; 0.43 ออกมา&lt;br /&gt;ซึ่งใช้สำหรับการควบคุม web browser ทั้งจากระบบงานและ AI agent&lt;br /&gt;โดยใน version นี้มีการปรับปรุง performance เยอะมาก ๆ&lt;br /&gt;มาดูกันหน่อยว่าเป็นอย่างไรบ้าง&lt;br /&gt;รวมทั้ง command หรือ operation ต่าง ๆ ว่าเร็วขึ้นอย่างไรบ้าง ?&lt;br /&gt;แถมได้เพิ่ม &lt;strong&gt;&lt;a href="https://developer.chrome.com/docs/modern-web-guidance" target="_blank"&gt;Modern Web Guidance skill&lt;/a&gt;&lt;/strong&gt; เข้ามาให้อีกด้วย&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;เริ่มด้วย&lt;a href="https://x.com/ctatedev/status/2121362980466245787/photo/1"&gt;ขนาดของ program ที่เล็กลง และ startup time ที่เร็วขึ้น&lt;/a&gt;อย่างมาก&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/agent-browser-01.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/dc8885eb5b6f9a52e6bc72183c7349c4365eb89a02d870bedc114ca56ff244e4.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;จากเดิมที่จะทำการติดตั้งทุก ๆ อย่างตั้งแต่เริ่มต้น และ binary ทุก ๆ platform&lt;br /&gt;แต่ใน version นี้ทำการ download ตาม platform นั้น ๆ เลย&lt;br /&gt;ทำให้ startup time เร็วขึ้นอย่างมาก&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/agent-browser-02.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/b88a4ee0d5deb5295308f1b26e86d0139b342b33ea2dc382ba1da7e85e5e2cfd.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;จากนั้นลองเขียน benchmark เพื่อดูการทำงานของแต่ละ command&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;โดยทดสอบผ่าน static html และ run บน Google Chrome แบบ headless&lt;br /&gt;พบว่าโดยรวม ๆ แล้วเร็วขึ้นประมาณ 2.5 เท่า ดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/agent-browser-03.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/0ff0126fb06e0f977b442a263e2fa58621623f9655daec997696ca6a7dbef3c1.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ลองทำการ upgrade หรือติดตั้งกันดูครับ&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:fc7bce1d-7f4d-5100-b4e0-47a8f2b155dd</id>
+    <title>การเปลี่ยนแปลงใน Spring Boot 4.2 RC2</title>
+    <updated>2026-11-13T06:30:48.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-13T06:30:48.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/try-spring-boot-4-2-rc2/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/18cf860e9815884252b7e5e41ee9fb2c4a648b5975035f38df0cab2540bf4152.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/18cf860e9815884252b7e5e41ee9fb2c4a648b5975035f38df0cab2540bf4152.jpg 150w, https://feeds.llun.dev/media/ddc16f13274343fe169f6abea0371a76879029bda011383b33c3859c45e68052.jpg 75w" /&gt;&lt;/p&gt;
+&lt;p&gt;ตอนนี้ทาง Spring ได้ปล่อย Spring Boot 4.2 RC2 ออกมาให้ทดลองใช้งาน&lt;br /&gt;ซึ่งใกล้จะเป็นตัว final release แล้ว&lt;br /&gt;ดังนั้นมาดูกันหน่อยว่าใน version นี้ มีการเปลี่ยนแปลงอะไรที่น่าสนใจกันบ้าง&lt;br /&gt;มาเริ่มกันเลย&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;ก่อนอื่นจะใช้งาน &lt;strong&gt;Spring Framework 7.1&lt;/strong&gt; (HTTP QUERY, Problem detail)&lt;br /&gt;และ Spring Security 7.2&lt;br /&gt;&lt;br /&gt;และถ้าใครใช้งาน RestTemplate และ RestTemplateBuilder ในการเรียกใช้งาน API ผ่าน HTTPs แล้ว&lt;br /&gt;จะถูก deprecated แล้ว นั่นหมายความว่าใน version ต่อ ๆ ไป จะถูกลบทิ้งไป&lt;br /&gt;ดังนั้นถ้าใครใช้อยู่ แนะนำให้ย้ายไปใช้ &lt;strong&gt;RestClient&lt;/strong&gt; และ &lt;strong&gt;HTTP Interface Client &lt;/strong&gt;แทน&lt;br /&gt;และแน่นอนว่า TestRestTemplate ในการทดสอบ ก็ถูก depreacted ด้วยเช่นกัน&lt;br /&gt;ให้เปลี่ยนไปใช้งาน &lt;strong&gt;RestTestClient&lt;/strong&gt; แทน&lt;/p&gt;
+
+
+
+&lt;p&gt;เพิ่ม property ชื่อว่า &lt;a href="https://github.com/spring-projects/spring-boot/pull/51855" target="_blank"&gt;spring.properties.migrator.fail&lt;/a&gt; เข้ามา&lt;br /&gt;เพื่อทำการแสดงปัญหาต่าง ๆ ออกมาใน console ของการ startup &lt;br /&gt;ทั้งการลบและเปลี่ยนชื่อของ property ต่าง ๆ&lt;br /&gt;รวมทั้งถ้าไม่ถูกต้องก็ fail หรือ start ไม่ขึ้น&lt;br /&gt;โดยค่าที่กำหนดได้คือ never, on-error, on-warning&lt;/p&gt;
+
+
+
+&lt;p&gt;จากนั้นก็ทำการ improve performance ของการทำงาน&lt;br /&gt;ทั้งการ buildpacks image ที่ดีขึ้น ด้วยการเปลี่ยน builder image ซึ่งจะไม่มี shell อีกต่อไป (Support GraalVM)&lt;br /&gt;ทั้งการสร้าง JAR file ให้ startup time เร็วขึ้น&lt;/p&gt;
+
+
+
+&lt;p&gt;ดังนั้นลองเล่นกันดูครับ&lt;br /&gt;เพื่อให้พร้อมต่อการ upgrade version กัน&lt;br /&gt;และตอนนี้ default JAVA จาก Spring Boot จะเป็น 21 แล้ว&lt;br /&gt;อ่านเพิ่มเติมใน &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.2.0-RC2-Release-Notes" target="_blank"&gt;Release notes&lt;/a&gt; กัน&lt;br /&gt;และ &lt;a href="https://docs.spring.io/spring-boot/4.2/index.html" target="_blank"&gt;Document&lt;/a&gt; ได้เลย&lt;br /&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/springboot-42-rc-scaled.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/c8b55b8718f41d364299049f567a9fbfd22043af829e0484281e3b90ca53ac78.jpg" alt="" /&gt;&lt;/a&gt;&lt;figcaption&gt;Screenshot&lt;/figcaption&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
     </source>
   </entry>
   <entry>
@@ -473,6 +1007,163 @@
       <title>Blognone</title>
       <link rel="self" href="https://www.blognone.com/node/feed"/>
       <link rel="alternate" href="https://www.blognone.com/"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:04bcbf71-bbab-59b6-8a56-eb63c25eb8a5</id>
+    <title>แนวทางการ query ข้อมูลจำนวนมาก ๆ จาก database</title>
+    <updated>2026-11-11T11:55:16.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-11T11:55:16.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/postgresql-slow-query-and-locked/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/9f04cd72baef323e46b8a3eaac82f20e5f2121f2a8b6595a84bfe42a13bc287a.webp" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/9f04cd72baef323e46b8a3eaac82f20e5f2121f2a8b6595a84bfe42a13bc287a.webp 150w, https://feeds.llun.dev/media/0a9265bf39cc76dc708cb028bb000c057381d0ca99c571f4ae17c66a89d76f53.webp 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/sql-slow-01.webp"&gt;&lt;img src="https://feeds.llun.dev/media/59b2766769892d4f2dc26203ea8e725561b82147b2f1f5517af993c8828f259c.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ไปเจอ &lt;strong&gt;&lt;a href="https://www.facebook.com/profile.php?id=61587611497226" target="_blank"&gt;post ใน facebook&lt;/a&gt;&lt;/strong&gt; น่าสนใจดี เกี่ยวกับการ query ข้อมูลจาก database จำนวนมาก (&amp;gt;10 ล้าน)&lt;br /&gt;แล้วทำงานช้า และ locked db กันไปเลย&lt;br /&gt;ซึ่งมีแนวทางการแก้ไขทั้งใช้งาน Index, Temp table และ CTE(Common Table Expression) มาช่วย&lt;br /&gt;ดังนั้นเพื่อความสนุก เรามาทำ workshop ง่าย ๆ เล่นกันดีกว่า&lt;br /&gt;ว่าถ้าเจอปัญหาแบบนี้จะมีวิธีแก้ไขอะไรบ้าง&lt;br /&gt;แล้วทำอย่างไร&lt;br /&gt;จะเลือกใช้วิธีใดก็แล้วแต่ use case กันไปเลย&lt;br /&gt;มาเริ่มกัน โดยใน workshop จะใช้งาน PostgreSQL 18 นะครับ&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;เรื่องแรกต้องรู้ก่อนว่า ปัญหาการ lock database/table มาจากอะไรบ้าง ?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;คร่าว ๆ น่าจะมีประมาณนี้&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;มีการ query ข้อมูลแบบ full table scan ดังนั้นยิ่งข้อมูลเยอะ ยิ่ง lock นาน&lt;/li&gt;
+
+
+
+&lt;li&gt;มี transaction ขนาดใหญ่ (UPDATE และ DELETE เยอะ ๆ) ยิ่งทำให้การ lock หนักขึ้น&lt;/li&gt;
+
+
+
+&lt;li&gt;มีการอ่านและเขียนข้อมูลเดียวกัน ทำให้รอกันไปมา ทำให้ lock เกิดขึ้น มันมาจากเรื่องของ Isolation level ของ database นั่นเอง&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;และเราสามารถดูได้ว่า ตอนนี้มี lock อะไรอยู่บ้าง&lt;br /&gt;และการ analyze query ด้วย&lt;/p&gt;
+
+
+
+[gist id="a0dc5b1ae8391184362173e739e5935f" file="1.txt"]
+
+
+
+&lt;p&gt;&lt;strong&gt;จากนั้นมาดูหน่อยว่า มีแนวทางการแก้ไขปัญหาอย่างไรบ้าง ?&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;คงไม่ใช่ไปขยายเครื่อง เพิ่ม memory และ CPU นะ !!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;เริ่มด้วยเรื่องของการ Explain และ analyze query ก่อนเสมอ&lt;br /&gt;และจำลองสถานการณ์จริง ๆ ของข้อมูลใน table ต่าง ๆ ด้วย&lt;br /&gt;จากนั้นทำการแก้ไข SQL ให้มันดี ๆ &lt;br /&gt;หลัก ๆ จะเป็นปัญหามาจากเรื่อง &lt;strong&gt;&lt;a href="https://en.wikipedia.org/wiki/Sargable" target="_blank"&gt;sargable&lt;/a&gt;&lt;/strong&gt; (Search ARGument ABLE&lt;/p&gt;
+
+
+
+&lt;p&gt;ปล. ในการสร้าง table ก็ระวังการใช้งานเรื่อง ON DELETE, ON DELETE ด้วย&lt;br /&gt;มักจะมีการสร้าง index ให้อัตโนมัติ&lt;br /&gt;และระวังเรื่อง index bloat อีกด้วย&lt;/p&gt;
+
+
+
+[gist id="a0dc5b1ae8391184362173e739e5935f" file="2.txt"]
+
+
+
+&lt;p&gt;&lt;strong&gt;ต่อมาอาจจะใช้วิธี Temp table เข้ามาช่วย&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;สำหรับการอ่านข้อมูลจาก table ใหญ่ ๆ ซ้ำ ๆ เช่น report ต่าง ๆ&lt;br /&gt;ดังนั้นสามารถใช้งาน temp table เข้ามาช่วยได้&lt;br /&gt;เพื่อ copy ข้อมูลที่จะใช้มาพักไว้ใน temp table ก่อน&lt;/p&gt;
+
+
+
+[gist id="a0dc5b1ae8391184362173e739e5935f" file="3.txt"]
+
+
+
+&lt;p&gt;&lt;strong&gt;จากนั้นมีเรื่องการใช้งาน CTE(Common Table Expression)&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;โดยตัว CTE เองไม่ได้ช่วยเรื่องความเร็ว&lt;br /&gt;แต่มันมีเป้าหมายเพื่อช่วยให้อ่าน query ได้ง่ายขึ้น (readability)&lt;br /&gt;ทำงานแบบ recursion ได้&lt;br /&gt;ทำการวาง logic และขั้นตอนการทำงานได้ง่าย&lt;br /&gt;ดังนั้นจะให้ได้ผลดีขึ้น&lt;br /&gt;ต้องใช้งานร่วมกับ MATERIALIZED มันคือการ snapshot ข้อมูล (เหมือนกับ temp table เลย)&lt;/p&gt;
+
+
+
+[gist id="a0dc5b1ae8391184362173e739e5935f" file="4.txt"]
+
+
+
+&lt;p&gt;ถ้าข้อมูลมีเยอะ ๆ แต่ข้อมูลที่ผ่านการ filter มาแล้วจำนวนไม่เยอะ&lt;br /&gt;เราสามารถสร้าง View เข้ามาช่วยได้&lt;br /&gt;แต่ใน PostgreSQL มี View และ &lt;strong&gt;MATERIALIZED view&lt;/strong&gt; (snapshot)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ดังนั้นถ้าใช้บ่อย ๆ และต้องการทำ pre-aggregation ไว้ สามารถใช้งาน MATERIALIZED view ได้&lt;/strong&gt;&lt;/p&gt;
+
+
+
+[gist id="a0dc5b1ae8391184362173e739e5935f" file="5.txt"]
+
+
+
+&lt;p&gt;หรือถ้าข้อมูลเยอะมาก ๆ สามารถแบ่ง &lt;strong&gt;&lt;a href="https://www.somkiat.cc/postgresqhttps://www.somkiat.cc/postgresql-with-partitioning-table/l-with-partitioning-table/" target="_blank"&gt;partition&lt;/a&gt;&lt;/strong&gt; ข้อมูลก่อนได้&lt;br /&gt;จะช่วยลดปัญหาได้เยอะมาก ๆ&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ลืมไปว่า อาจจะมีเรื่องของการดึงข้อมูลเป็น paging อีก !!&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;ซึ่งเป็นสาเหตุหนึ่งเลยของความช้า !!&lt;br /&gt;เพราะว่าไปใช้ &lt;strong&gt;OFFSET&lt;/strong&gt; นั่นเอง ยิ่ง page ยิ่งมาก ก็ยิ่งช้า&lt;br /&gt;ดังนั้นควรใช้งานว่า PK key (Primary key) ไปเลย และเรียงลำดับอยู่แล้ว เช่น ตัวเลข หรือ UUID V7 เป็นต้น&lt;br /&gt;หรือใช้ผ่าน &lt;strong&gt;KeySet&lt;/strong&gt; สำหรับ column ที่ซ้ำ และใช้เรียงลำดับข้อมูล&lt;/p&gt;
+
+
+
+[gist id="a0dc5b1ae8391184362173e739e5935f" file="6.txt"]
+
+
+
+&lt;p&gt;&lt;strong&gt;ในกรณีของปัญหาการ Lock ที่เกิดขึ้น มีหลายสาเหตุ หนึ่งในนั้นคือการ Update หรือ Delete ข้อมูลจำนวนมาก ในหนึ่ง transaction&lt;/strong&gt; !!&lt;/p&gt;
+
+
+
+&lt;p&gt;ดังนั้นในส่วนนี้ถ้าเราทำแบบนี้แล้ว&lt;br /&gt;ก็จะทำงานนาน lock นาน&lt;br /&gt;WAL มีขนาดใหญ่&lt;br /&gt;การ replicate ข้อมูลก็บ่อย&lt;br /&gt;ดังนั้นสิ่งที่ควรต้องทำคือ การทำ batching ของทำงาน&lt;br /&gt;เช่นถ้าต้องลบข้อมูล 100,000 rows สามรถแบ่งเป็น batch ละ 10,000 rows&lt;br /&gt;ก็จะได้ 10 batch หรือ 10 รอบ&lt;br /&gt;ก็ให้ทำการ lock และ release ทุก ๆ  รอบนั่นเอง&lt;br /&gt;จะช่วยลดเวลาการ lock ลงไปได้&lt;/p&gt;
+
+
+
+&lt;p&gt;หรือบาง use case ถ้าเราไม่ต้องการให้เกิดการ lock ขึ้นมา&lt;br /&gt;และข้อมูลสามารถผิดได้&lt;br /&gt;บางครั้งก็ไปกำหนด &lt;strong&gt;Isolation level &lt;/strong&gt;ของ database เป็น &lt;strong&gt;NOLOCK หรือ READ UNCOMMITTED&lt;/strong&gt; ได้เลย&lt;br /&gt;กลับไปสู่เรื่องพื้นฐานว่า Isolation level แต่ละตัวคืออะไร&lt;br /&gt;และใช้งานเมื่อไรบ้าง มีข้อดีและเสียอย่างไร&lt;/p&gt;
+
+
+
+&lt;p&gt;หรือเพิ่ม replica database server เข้ามาใช้สำหรับการอ่านข้อมูล&lt;/p&gt;
+
+
+
+&lt;p&gt;หรือการทำ house keeping ก็มองข้ามไม่ได้เลย&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;หรือบ่อยครั้ง สิ่งที่เราออกมาแบบไม่สนับสนุนสิ่งที่ต้องการ&lt;br /&gt;ดังนั้นควรกลับมาสู่จุดเริ่มต้น คือ การออกแบบนั่นเอง&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;ทั้ง data model ที่ใช้งาน&lt;br /&gt;ทั้ง database ที่เลือกใช้งาน&lt;strong&gt;&lt;em&gt;&lt;br /&gt;เราออกแบบโดยมีเป้าหมายอะไร เช่น design for read or design for write ?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;มาถึงตรงนี้จะเห็นว่า แนวทางการแก้ไขมีเยอะมาก ๆ&lt;/strong&gt;&lt;br /&gt;ก่อนจะเลือกทางไหน แนะนำให้ศึกษาแต่ละแนวทางก่อน ให้รู้และเข้าใจ &lt;br /&gt;จะได้มีทางเลือกมากยิ่งขึ้น ความรู้จะได้เยอะมากขึ้น (ความรู้พื้นฐานเป็นสิ่งสำคัญ)&lt;br /&gt;ลองศึกษากันดูครับ&lt;br /&gt;ใครมีแนวทางอื่น ๆ แนะนำได้ครับ&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
     </source>
   </entry>
   <entry>
@@ -626,6 +1317,361 @@
       <title>Blognone</title>
       <link rel="self" href="https://www.blognone.com/node/feed"/>
       <link rel="alternate" href="https://www.blognone.com/"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:d3d2bf40-f258-5d12-b7a9-4c67c91fa6e4</id>
+    <title>ลองใช้งาน Reylo :: ทำการ import .sql มาใช้ใน TypeScript ได้เลย</title>
+    <updated>2026-11-04T05:49:25.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-04T05:49:25.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/hello-reylo-import-sql/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/b16217c942c6bbd3fa1236b47f38ba3d243cbea5ff135081fefbea8b98381597.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/b16217c942c6bbd3fa1236b47f38ba3d243cbea5ff135081fefbea8b98381597.jpg 150w, https://feeds.llun.dev/media/e96a63d102d04abdaad8ca7c482cd462b821dd4a14b715ededd76cd43f45d610.jpg 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/reylo-01.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/cd9adf4ed46d4dcca610637c58114f12181377b7f029c26fdebd64f7d0fa7b55.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;มี project เล็ก ๆ พัฒนาขึ้นมาแล้วต้องเชื่อมต่อ database &lt;br /&gt;แล้วไปเจอ &lt;strong&gt;&lt;a href="https://reylo.dev/" target="_blank"&gt;Reylo project&lt;/a&gt;&lt;/strong&gt; ผู้พัฒนาเดียวกับ &lt;a href="https://zod.dev/" target="_blank"&gt;Zod&lt;/a&gt; นั่นเอง&lt;br /&gt;มีแนวคิดง่าย ๆ คือ ถ้าเราเขียนไฟล์ sql สำหรับจัดการข้อมูลใน RDBMS database แล้ว&lt;br /&gt;สามารถ import เข้ามาใช้งานได้เลย&lt;br /&gt;ไม่มีการ generate code ใด ๆ &lt;br /&gt;น่าจะสะดวกต่อการใช้งานและพัฒนาหรือไม่ ?&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;โดย project นี้ได้ใช้ความสามารถใหม่ใน &lt;a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/" target="_blank"&gt;TypeScript 7.1 beta&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;นั่นคือ &lt;a href="https://github.com/mdx-js/mdx-analyzer/issues/533"&gt;Content mappers&lt;/a&gt;&lt;br /&gt;หรือเป็น plugin for TypeScript นั่นเอง&lt;br /&gt;จะทำการสร้าง static type ให้แบบอัตโนมัติจาก external file ต่าง ๆ เช่น md และ vue เป็นต้น&lt;br /&gt;และทำการ integrate เข้าไปยังการ compile ของ tsc ให้เลย&lt;br /&gt;ยกตัวอย่างเช่น ไฟล์ md หรือ Markdown&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/content-mapper-ts71.jpeg"&gt;&lt;img src="https://feeds.llun.dev/media/c16669f05e4c2380beaa464845322564c292a43caf71d5e4e3ad619f84594bc2.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;ส่วน Reylo project นั้นทำการ import หรืออ่านจากไฟล์ SQL นั่นเอง&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;ถ้าเป็นแต่ก่อนนึกถึงพวก SQL mapper เลย แต่ต้องสร้าง model/entity มารับอีกที&lt;br /&gt;แต่ในตัวนี้จะสร้างขึ้นมาให้ทั้งหมดเลยแบบอัตโนมัติตามคำสั่ง SQL เลย&lt;br /&gt;และสามารถปรับเปลี่ยน database ได้ตามที่ต้องการ&lt;br /&gt;โดยสนับสนุน database ต่าง ๆ ดังนี้&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+
+
+
+&lt;li&gt;PostgreSQL&lt;/li&gt;
+
+
+
+&lt;li&gt;MySQL&lt;/li&gt;
+
+
+
+&lt;li&gt;DuckDB&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;และ runtime ที่สนับสนุนเช่น Node, Bun และ Cloudflare Workers เป็นต้น&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;มาลองใช้งานกันดีกว่า&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;สำหรับใครขี้เกียจก็ทำการ copy agent prompt ได้เลย&lt;br /&gt;ทาง website สร้างมาให้แล้ว&lt;br /&gt;จะสร้างทั้ง Agent, Skills ให้เลย รวมทั้ง setup project และ code ต่าง ๆ ให้ครบ&lt;/p&gt;
+
+
+
+[gist id="25769eed4eee9df4cb7246910d7e178f" file="1.txt"]
+
+
+
+&lt;p&gt;หรือทำการสร้างเองก็ได้ ยกตัวอย่างเช่น&lt;br /&gt;และ config ให้ import file SQL ได้&lt;/p&gt;
+
+
+
+[gist id="25769eed4eee9df4cb7246910d7e178f" file="2.txt"]
+
+
+
+&lt;p&gt;จากนั้นทำการสร้างไฟล์ SQL ขึ้นมา&lt;/p&gt;
+
+
+
+[gist id="25769eed4eee9df4cb7246910d7e178f" file="list_posts.sql"]
+
+
+
+&lt;p&gt;เขียน program เพื่อใช้งานไฟล์ SQL ได้เลย&lt;br /&gt;และทำการตรวจสอบ error ต่าง ๆ ให้ด้วย เช่น ไม่มี column เป็นต้น&lt;/p&gt;
+
+
+
+[gist id="25769eed4eee9df4cb7246910d7e178f" file="main.ts"]
+
+
+
+&lt;p&gt;ใน code editor สามารถดู type ของทั้ง User และ Posts ได้เลย&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/code-sql-01.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/288add286f18b4298ed67fc6c796a5a503ba393233a27e9a32a0afd0fb976661.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ส่วน database นั้นสามารถ config ในไฟล์ .env ได้เลย&lt;br /&gt;ยกตัวอย่าง ผมใช้ PostgreSQL ผ่าน &lt;a href="https://www.somkiat.cc/pgx-postgres-for-ai-agents/" target="_blank"&gt;pgx&lt;/a&gt;&lt;/p&gt;
+
+
+
+[gist id="25769eed4eee9df4cb7246910d7e178f" file="3.txt"]
+
+
+
+&lt;p&gt;และตอน run นั้นต้อง start database ก่อนเสมอ !!&lt;br /&gt;ลองใช้กันดูครับ (NodeJS 24+ และ TypeScript 7.1 เท่านั้น)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:b239a1de-4c1c-5dca-bd09-413d6b5bf418</id>
+    <title>อย่าลืม scan Agent Skills ก่อนใช้งานด้วยนะ !!</title>
+    <updated>2026-11-03T14:38:10.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-03T14:38:10.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/scan-agent-skills-before-use/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/b0e980e53e8f08968cce5eb35e9df25f1b3cd29437d4f84ad59867eab73c9f7e.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/b0e980e53e8f08968cce5eb35e9df25f1b3cd29437d4f84ad59867eab73c9f7e.jpg 150w, https://feeds.llun.dev/media/f103f9e98f8ad3a75934aca42e8516b2a9be0cf827927c8fde4ca20e88ec53db.jpg 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/skill-inspector.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/116741ca532ff16f973330900ed6da0c734102c2760253b6bca4f415ec20e647.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ปัญหาที่เกิดจากการนำ &lt;a href="https://agentskills.io/home" target="_blank"&gt;Agent Skills&lt;/a&gt; มาใช้งานใน AI Agent ต่าง ๆ นั้น&lt;br /&gt;จาก internet หรือตาม repository ต่าง ๆต้องพึงระวังการใช้งานอย่างมาก&lt;br /&gt;เนื่องจาก Agent Skills ต่าง ๆ นั้นสามารถทำงานได้เยอะมาก ๆ&lt;br /&gt;สามารถ run คำสั่งต่าง ๆ ในเครื่องของเราได้อีก&lt;br /&gt;ทำให้ตกเป็นเป้าหมายของผู้ไม่หวังดี&lt;br /&gt;ทั้งเรื่อง supply-chain attack&lt;br /&gt;ทั้งเรื่องของ malware ต่าง ๆ&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ดังนั้นสิ่งที่ต้องทำก่อนติดตั้งหรือใช้งาน มีดังนี้&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;กรุณาอ่านไฟล์ SKILL.md ของ skills นั้น ๆ ก่อนว่าทำอะไรบ้าง&lt;/li&gt;
+
+
+
+&lt;li&gt;จากนั้นดูว่ามี scripts และ reference อะไรบ้าง ทำงานอะไร&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;จากการพูดคุยพบว่า มีคนที่ไม่อ่านอะไรเลยเยอะมาก ๆ&lt;br /&gt;จากนั้นก็ใช้งานเลย&lt;br /&gt;พอมีปัญหาก็โทษใครดีละ !!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ต่อมาเพื่อความปลอดภัยมากขึ้น ให้ทำการ scan Agent Skills&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;หลาย ๆ คนใช้งาน Agent Skills มา review และ scan skill อีก&lt;br /&gt;ว่าแต่ไว้ใจได้ไหม ?  เช่น &lt;a href="https://github.com/nvidia/skillspector" target="_blank"&gt;NVIDIA Skill Specter&lt;/a&gt; เป็นต้น&lt;br /&gt;แต่ถ้าไม่ไว้ใจ แนะนำให้ใช้เครื่องมือ scan&lt;br /&gt;เช่น &lt;a href="https://github.com/snyk/agent-scan" target="_blank"&gt;Snyk Agent Scan&lt;/a&gt; และ Mitiga Skillgate เป็นต้น&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;จากนั้น Environment ในการ run &lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;ถ้ายังไม่มั่นใจแนะนำให้ run ใน sandbox environment ก่อน&lt;br /&gt;หรือสร้าง environment ใหม่แยกออกไปเลย&lt;br /&gt;หรือกำหนด permission ให้น้อยที่สุดเท่าที่จะทำได้ (least privilege)&lt;/p&gt;
+
+
+
+&lt;p&gt;ลองดูปัญหาเพิ่มเติมได้ที่ &lt;a href="https://owasp.org/projects/agentic-skills-top-10" target="_blank"&gt;OWASP Agentic Skills Top 10&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/owasp-skills-en.webp"&gt;&lt;img src="https://feeds.llun.dev/media/2040ed6c0daa9313483facdc88c2e30765c4235e0a488ae6c6fe2705ab163692.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
+    </source>
+  </entry>
+  <entry>
+    <id>urn:uuid:b57689bf-f6fd-5d5c-beaa-232adb40a60d</id>
+    <title>บันทึกการอ่านเรื่องการ scale Cloudflare’s D1</title>
+    <updated>2026-11-02T14:37:32.000Z</updated>
+    <author>
+      <name>somkiat</name>
+    </author>
+    <published>2026-11-02T14:37:32.000Z</published>
+    <link rel="alternate" href="https://www.somkiat.cc/note-scale-cloudflares-d1/"/>
+    <category term="Thai"/>
+    <content type="html">&lt;p&gt;&lt;img width="150" height="150" src="https://feeds.llun.dev/media/b779a5ebabdb2f4bc90a35eec6f3bf23ea756ee5825395925f41a12fb0500ea0.jpg" alt="" loading="lazy" srcset="https://feeds.llun.dev/media/b779a5ebabdb2f4bc90a35eec6f3bf23ea756ee5825395925f41a12fb0500ea0.jpg 150w, https://feeds.llun.dev/media/665ccc1c28a9d6fac093bf02d231fe212a01b57033e8dcbe3e992f2d8594311a.jpg 75w" /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/60ac5f2b66cd86439d21d1d1c7bdb408fb55455766a4ba8292b268c5603ec4db.jpg"&gt;&lt;img src="https://feeds.llun.dev/media/60ac5f2b66cd86439d21d1d1c7bdb408fb55455766a4ba8292b268c5603ec4db.jpg" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;จากบทความเรื่อง &lt;strong&gt;&lt;a href="https://blog.cloudflare.com/d1-control-plane/" target="_blank"&gt;Under the hood, off the hot path: How D1 scales to millions of databases&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;เป็น Cloud managed database ของ Cloudflare &lt;br /&gt;ซึ่งเป็น serverless database ที่ทำงานอยู่บน SQLite database&lt;br /&gt;ทำการอธิบายและตอบคำถามว่า &lt;strong&gt;&lt;a href="https://developers.cloudflare.com/d1/" target="_blank"&gt;D1&lt;/a&gt;&lt;/strong&gt; นั้นทำการ scaling อย่างไร&lt;br /&gt;ให้รองรับผู้ใช้งานและ database จำนวนมาก ๆ&lt;br /&gt;โดยที่ไม่มีปัญหาคอขวด และ  slow query ?&lt;/p&gt;
+
+
+
+&lt;span&gt;&lt;/span&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;สิ่งแรกที่ต้องกลับมาดูก่อนคือเรื่องของ Architecture ของระบบว่าเป็นอย่างไร&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;ถ้าแบบเดิมคือมี server ใหญ่ ๆ และเพิ่ม node ต่าง ๆ ใน cluster ไป&lt;br /&gt;จากนั้นเรื่องของ connection ก็ต้องมี layer ของการจัดการ connection pooling ออกมาอีก&lt;br /&gt;แสดงดังรูป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://feeds.llun.dev/media/bef225ea1195afea5cabb84fa8b6ab77776e469b290007fc3ce0d8d056a4900f.png"&gt;&lt;img src="https://feeds.llun.dev/media/bef225ea1195afea5cabb84fa8b6ab77776e469b290007fc3ce0d8d056a4900f.png" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;มาดูแนวคิดสำหรับการออกแบบ D1 เพื่อรองรับจำนวนการใช้งาน database ที่สูงขึ้น&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;จากสถิติการใช้งาน active database รายวัน (มีการ query ข้อมูลอย่างน้อย 1 ครั้ง)&lt;br /&gt;มีจำนวนมากขึ้นจากปัที่ผ่านมาถึง 18 เท่า&lt;/p&gt;
+
+
+
+&lt;p&gt;โดยที่ Cloudflare จะมี guideline เดียวกันในการสร้างระบบต่าง ๆ ประกอบไปด้วย&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;ในการออกแบบทุก ๆ ขั้นตอนจะ focus ที่ failure และ idempotency เสมอ เนื่องจากความผิดพลาดเกิดขึ้นได้ตลอด ดังนั้นจะทำอย่างไรทำงานต่อไปได้ และสามารถทำงานได้อย่างถูกต้องอีกด้วย&lt;/li&gt;
+
+
+
+&lt;li&gt;หลีกเลี่ยงการออกแบบ component หรือส่วนง่ายต่าง ๆ ที่เป็น centralized single-region หรือตัวกลางที่อยู่ในเพียง region เดียว มันก่อให้เกิดปัญหาได้ (single-point of failure) เช่นการ query ข้อมูล ที่ถูกใช้เยอะมาก ๆ (hot path)&lt;/li&gt;
+
+
+
+&lt;li&gt;มีการใช้งาน caching ข้อมูลเสมอ โดยจะใช้ Workers KV นั่นเอง เป็น global distributed Key-value store เพื่อลดภาระการเข้าถึง database ที่ไม่จำเป็น&lt;/li&gt;
+
+
+
+&lt;li&gt;ในการเข้าถึง database จะใช้งานผ่าน &lt;a href="https://developers.cloudflare.com/hyperdrive/" target="_blank"&gt;Hyperdrive&lt;/a&gt; คือตัวกลางสำหรับจัดการ connection pooling การ routing request การทำ caching และทำการอ่านจาก replica database server ถ้ามีความจำเป็น&lt;/li&gt;
+
+
+
+&lt;li&gt;มีการทำ pre-aggregation สำหรับข้อมูลและ query ต่าง ๆ เพื่อลดการ query และ scan data จาก database ตรง ๆ&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำงานแบบ eventual consistency แทนที่จะเป็น strong consistency&lt;/li&gt;
+
+
+
+&lt;li&gt;ทำ load testing จาก traffic การใช้งานจริงเสมอ เพื่อหาว่าส่วนใหญ่ติดขัดหรือมีปัญหา เพื่อที่จะทำการ optimize ให้ดีตั้งแต่เนิ่น ๆ&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;โดยที่ high level architecture ของ D1 เป็นดังรูป&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;จะแยกการทำงานของ CRUD endpoints และ Query endpointsข้อมูลออกจากกัน&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data plane&lt;/strong&gt; สำหรับดึงข้อมูลให้เร็วที่สุดเท่าที่จะเป็นไปได้&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Control plane&lt;/strong&gt; สำหรับการจัดการภายใน ไม่ได้มาจากผู้ใช้งาน&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Background asynchronous plane&lt;/strong&gt; สำหรับระบบ analytic, limit usage และ billing ต่าง ๆ&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/d1-architecture-01.webp"&gt;&lt;img src="https://feeds.llun.dev/media/2681ffe5b8982e9c70538c407742f9413b8543aef2857171bc8630c6793bab6f.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Flow ในการสร้าง database ใน D1 เป็นดังนี้&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;ในแต่ละขั้นตอนต้องมีการ design for failure เสมอ&lt;br /&gt;และสุดท้ายข้อมูลจะ sync ไปยัง Workers KV แบบ asynchronous เสมอ&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/d1-flow-02.webp"&gt;&lt;img src="https://feeds.llun.dev/media/a6a07bd2fb45a2f28f85cf7c2df733066ebdc59525d64ca3c43811916bb149ac.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ส่วน operation การดึงข้อมูลจาก user (Hot path ) จะผ่าน Workers KV เสมอ&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;ต้องการหลีกเลี่ยงการเข้าถึง Postgres database&lt;br /&gt;เพื่อให้การดึงข้อมูลเร็วที่สุดเท่าที่จะเป็นไปได้&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/d1-flow-03.webp"&gt;&lt;img src="https://feeds.llun.dev/media/981956a58695bd8afd57d48c3c311f60129319ff85998b554bb3bec9aafbff8b.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;ตัวอย่าง flow ของการคิดคำนวณ limit และ billing ต่าง ๆ&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;จะทำงานใน Background asynchronous plane &lt;br /&gt;ซึ่งจะโยนการใช้งานต่าง ๆ ของ D1 object ไปยัง Kafka&lt;br /&gt;จากนั้นให้ consumer มา process การทำงานอีกทีเพื่อตรวจสอบ limit และ billing ต่อไป&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/d1-flow-04.webp"&gt;&lt;img src="https://feeds.llun.dev/media/319bddc5fa71f7c9957027ad6228ab3c49b705b0e7706280e45851cb5021d897.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ส่วนการนับ limit แบบ Row usage จะใช้ผ่าน ClickHouse&lt;/p&gt;
+
+
+
+&lt;figure&gt;&lt;a href="https://www.somkiat.cc/wp-content/uploads/2026/11/d1-flow-05.webp"&gt;&lt;img src="https://feeds.llun.dev/media/0afccdd30809f1e94262ad434ea1d0e001e70c2123848b69ec57f23deaa16d22.webp" alt="" /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;ยังมีอีกหลายเรื่องที่น่าสนใจ&lt;br /&gt;แต่สิ่งที่ชอบมาก ๆ สำหรับบทความนี้คือ  &lt;strong&gt;flow การทำงานต่าง ๆ ของระบบ&lt;/strong&gt;&lt;br /&gt;ที่แยกออกแบบเป็นแต่ละ flow&lt;br /&gt;ช่วยให้เราเข้าใจการทำงานของระบบแบบ end-to-end ได้ดียิ่งขึ้น (เราไม่รู้หรอกว่าจริงหรือไม่ ?)&lt;br /&gt;แต่น่าจะเป็นตัวอย่าง ให้เรานำไปปรับใช้กับการออกแบบระบบได้&lt;br /&gt;ทั้งเรื่องของ design for failure, idempotency และ eventual consistency&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Reference websites&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.algomaster.io/p/top-15-database-scaling-techniques" target="_blank"&gt;Top 15 Database Scaling Techniques&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <source>
+      <title>cc :: somkiat</title>
+      <link rel="self" href="https://www.somkiat.cc/feed/"/>
+      <link rel="alternate" href="https://www.somkiat.cc"/>
     </source>
   </entry>
   <entry>
